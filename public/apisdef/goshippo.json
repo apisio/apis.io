@@ -1,0 +1,37 @@
+{
+  "name": "Shippo",
+  "description": "We've built an API that makes shipping cheap and easy for e-commerce stores. We make shipping cheap by aggregating the shipping volume of our customers and thus get steep discounts from the carriers, which we can pass on to the stores. At the moment we are at 70% off retail prices.",
+  "image": "https://shippo-static.s3.amazonaws.com/img/logo/logo_v2_withicon_darkgrey.svg",
+  "apis": [
+    {
+      "name": "Shippo",
+      "description": "We've built an API that makes shipping cheap and easy for e-commerce stores. We make shipping cheap by aggregating the shipping volume of our customers and thus get steep discounts from the carriers, which we can pass on to the stores. At the moment we are at 70% off retail prices.",
+      "image": "https://shippo-static.s3.amazonaws.com/img/logo/logo_v2_withicon_darkgrey.svg",
+      "humanURL": "https://goshippo.com/",
+      "tags": "shipping, compare,labels",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://goshippo.com/register/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/goshippo"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://goshippo.com",
+      "name": "Shippo",
+      "twitter": "http://twitter.com/goshippo",
+      "github": "http://github.com/goshippo",
+      "organizationName": "Shippo",
+      "image": "https://shippo-static.s3.amazonaws.com/img/logo/logo_v2_withicon_darkgrey.svg"
+    }
+  ],
+  "tags": "shipping, labels"
+}

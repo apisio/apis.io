@@ -1,0 +1,42 @@
+{
+  "name": "StackExchange",
+  "description": "Stack Exchange is a network of question and answer websites on diverse topics in many different fields, each site covering a specific topic, where questions, answers, and users are subject to a reputation award process.",
+  "url": "http://apis.io/apisdef/stackexchange.json",
+  "image": "https://cdn.sstatic.net/apiv2/img/big-logo.png?v=2",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "StackExchange API",
+      "description": "Stack Exchange is a network of question and answer websites on diverse topics in many different fields, each site covering a specific topic, where questions, answers, and users are subject to a reputation award process.",
+      "image": "https://cdn.sstatic.net/apiv2/img/big-logo.png?v=2",
+      "humanURL": "https://api.stackexchange.com/docs",
+      "machineURL": "http://api.stackoverflow.com/2.2/",
+      "urls": [
+        {
+          "type": "terms",
+          "url": "http://stackexchange.com/legal/api-terms-of-use"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/stackexchange"
+        }
+      ],
+      "tags": "community, forum, q&a"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "StackExchange",
+      "url": "http://stackexchange.com",
+      "organizationName": "StackExchange",
+      "image": "https://cdn.sstatic.net/apiv2/img/big-logo.png?v=2",
+      "twitter": "http://twitter.com/stackexchange",
+      "github": "https://github.com/stackexchange"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.227Z",
+  "created": "2014-06-05T00:41:57.227Z",
+  "tags": "community, forum, q&a"
+}

@@ -1,0 +1,5 @@
+.meteor/
+.meteor/local
+.meteor/meteorite
+
+settings.json

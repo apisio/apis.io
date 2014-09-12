@@ -1,0 +1,42 @@
+{
+  "name": "Facebook",
+  "description": "Facebook OpenGraph API",
+  "url": "http://apis.io/apisdef/facebook.json",
+  "image": "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1271084_10152203108461729_809245696_o.png?dl=1",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Facebook API",
+      "description": "Facebook OpenGraph API",
+      "image": "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1271084_10152203108461729_809245696_o.png?dl=1",
+      "humanURL": "http://developers.facebook.com/",
+      "machineURL": "https://graph.facebook.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://developers.facebook.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/facebook"
+        }
+      ],
+      "tags": "social network, OpenGraph,photos"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Facebook",
+      "url": "http://developers.facebook.com",
+      "organizationName": "Facebook",
+      "image": "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1271084_10152203108461729_809245696_o.png?dl=1",
+      "twitter": "http://twitter.com/facebook",
+      "github": "http://github.com/facebook"
+    }
+  ],
+  "modified": "2014-06-05T00:37:56.832Z",
+  "created": "2014-06-05T00:37:56.832Z",
+  "tags": "social network, OpenGraph,photos"
+}

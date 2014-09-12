@@ -1,0 +1,41 @@
+{
+  "name": "EU VAT Number Validator",
+  "description": "Validate VAT ID's / Number's in a RESTful way. This API wraps the EU VIES SOAP services.  ",
+  "url": "http://apis.io/apisdef/euvat.json",
+  "image": "http://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "EU VAT Number Validator API",
+      "description": "Validate VAT ID's / Number's in a RESTful way. This API wraps the EU VIES SOAP services.  ",
+      "image": "http://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
+      "humanURL": "http://vatid.eu",
+      "machineURL": "http://vatid.eu",
+      "urls": [
+        {
+          "type": "documentation",
+          "url": "http://vatid.eu"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/mmriis"
+        }
+      ],
+      "tags": "europe, tax, VAT"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Morten Møller Riis",
+      "url": "http://whatastruggle.com/",
+      "image": "http://www.greenfluids.org/images/EU_logo.jpg",
+      "twitter": "http://twitter.com/mmriis",
+      "github": "https://github.com/mmriis"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.752Z",
+  "created": "2014-06-05T00:41:56.752Z",
+  "tags": "europe, tax, VAT"
+}

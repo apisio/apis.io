@@ -1,0 +1,42 @@
+{
+  "name": "USA.gov",
+  "description": "The Social Media Registry is an official source of information about social media accounts that represent official U.S. federal government agencies, elected officials, or members of the President’s Cabinet.",
+  "url": "http://apis.io/apisdef/usagov.json",
+  "image": "http://www.usa.gov/resources/images/usagov_logo1.gif",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "USA.gov Social Media Registry API",
+      "description": "The Social Media Registry is an official source of information about social media accounts that represent official U.S. federal government agencies, elected officials, or members of the President’s Cabinet.",
+      "image": "http://www.usa.gov/resources/images/usagov_logo1.gif",
+      "humanURL": "http://registry.usa.gov/",
+      "machineURL": "http://registry.usa.gov/accounts.json",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://registry.usa.gov/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/USAgov"
+        }
+      ],
+      "tags": "government, social media"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "USA.gov",
+      "url": "http://registry.usa.gov",
+      "organizationName": "USA.gov",
+      "image": "http://www.usa.gov/resources/images/usagov_logo1.gif",
+      "twitter": "http://twitter.com/USAgov",
+      "github": "https://github.com/usagov"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.226Z",
+  "created": "2014-06-05T00:41:57.226Z",
+  "tags": "government, social media"
+}

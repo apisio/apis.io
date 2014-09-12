@@ -1,0 +1,46 @@
+{
+  "name": "Bit.ly",
+  "description": "Bitly API is helping developers to shorten links, bundle links, or retrieve link-level or user-level analytics programmatically.",
+  "type": "default",
+  "url": "http://dev.bitly.com/",
+  "image": "http://static.bitly.com/graphics/logo/bitly_logo.png",
+  "apis": [
+    {
+      "name": "Bit.ly API",
+      "description": "Bitly API is helping developers to shorten links, bundle links, or retrieve link-level or user-level analytics programmatically.",
+      "image": "http://static.bitly.com/graphics/logo/bitly_logo.png",
+      "humanURL": "http://dev.bitly.com/",
+      "tags": "shortener, analytics, ",
+      "urls": [
+        {
+          "type": "console",
+          "url": "http://dev.bitly.com/console.html"
+        },
+        {
+          "type": "documentation",
+          "url": "http://dev.bitly.com/api.html"
+        },
+        {
+          "type": "forum",
+          "url": "https://groups.google.com/forum/#!forum/bitly-api"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "api@bitly.com"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Bitly",
+      "twitter": "http://twitter.com/Bitly",
+      "github": "https://github.com/bitly",
+      "email": "api@bitly.com"
+    }
+  ],
+  "tags": "url shortener, analytics",
+  "modified": "05/13/2014"
+}

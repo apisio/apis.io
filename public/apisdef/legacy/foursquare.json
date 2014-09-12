@@ -1,0 +1,46 @@
+{
+  "name": "Foursquare",
+  "description": "The Foursquare API gives you access to our world-class places database and the ability to interact with Foursquare users and merchants. Start using the only location API you'll ever need.",
+  "url": "http://apis.io/apisdef/foursquare.json",
+  "image": "https://ss1.4sqi.net/img/chrome/logo-de7fc2f067289aee69031144ced1736e.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Foursquare API",
+      "description": "The Foursquare API gives you access to our world-class places database and the ability to interact with Foursquare users and merchants. Start using the only location API you'll ever need.",
+      "image": "https://ss1.4sqi.net/img/chrome/logo-de7fc2f067289aee69031144ced1736e.png",
+      "humanURL": "https://developer.foursquare.com/",
+      "machineURL": "https://api.foursquare.com/v2",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://foursquare.com/developers/apps/"
+        },
+        {
+          "type": "tutorials",
+          "url": "https://developer.foursquare.com/overview/samples"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/foursquare"
+        }
+      ],
+      "tags": "places, map, poi,geolocation"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Foursquare",
+      "url": "http://developer.foursquare.com",
+      "organizationName": "Foursquare",
+      "image": "https://ss1.4sqi.net/img/chrome/logo-de7fc2f067289aee69031144ced1736e.png",
+      "twitter": "https://twitter.com/foursquare",
+      "github": "https://github.com/foursquare"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.005Z",
+  "created": "2014-06-05T00:41:56.005Z",
+  "tags": "places, map, poi,geolocation"
+}

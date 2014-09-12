@@ -1,0 +1,37 @@
+{
+  "name": "VehicleData.co",
+  "description": "Need up-to-date information about cars? Never maintain your own updates, even for simple stuff like creating menus to let users select a specific year, make, model, trim & transmission. RESTful interface, redundant hosting, client libs - all that you need to not have to worry about collecting, hosting and maintaining data about vehicle types.",
+  "url": "http://apis.io/apisdef/legacy/vehicledata.json",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "VehicleData.co API",
+      "description": "Need up-to-date information about cars? Never maintain your own updates, even for simple stuff like creating menus to let users select a specific year, make, model, trim & transmission. RESTful interface, redundant hosting, client libs - all that you need to not have to worry about collecting, hosting and maintaining data about vehicle types.",
+      "humanURL": "http://www.vehicledata.co/docs/",
+      "machineURL": "http://www.vehicledata.co",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.vehicledata.co/signup/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "info@vehicledata.co"
+        }
+      ],
+      "tags": "car, directory"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "VehicleData.co API",
+      "url": "http://www.vehicledata.co",
+      "organizationName": "VehicleData.co API"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.612Z",
+  "created": "2014-06-05T00:41:56.612Z",
+  "tags": "car, directory"
+}

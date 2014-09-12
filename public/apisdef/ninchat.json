@@ -1,0 +1,41 @@
+{
+	"name": "Ninchat",
+	"description": "Ninchat is a powerful real time communication engine for web and mobile sites.  Ninchat can be used for private customer care chat or for live group discussions embedded on site.  Ninchat is secure, scalable and customizable.",
+	"image": "https://ninchat.com/asset/logo300x300.png",
+	"url": "https://ninchat.com/apis.json",
+	"tags": "chat, customer service, shoutbox",
+	"created": "07/01/2014",
+	"modified": "07/01/2014",
+	"specificationVersion": "0.13",
+	"apis": [
+		{
+			"name": "Ninchat API",
+			"image": "https://ninchat.com/asset/logo300x300.png",
+			"humanURL": "https://ninchat.com/api",
+			"machineURL": "https://api.ninchat.com",
+			"APIVersion": "2",
+			"tags": "asynchronous, binary, HTTP, HTTPS, JSON, stream, WebSocket",
+			"contact": [
+				{
+					"type": "email",
+					"url": "admin@ninchat.com"
+				},
+				{
+					"type": "twitter",
+					"url": "https://twitter.com/NinchatCom"
+				}
+			]
+		}
+	],
+	"maintainers": [
+		{
+			"name": "Ninchat",
+			"organizationName": "Somia Reality Oy",
+			"twitter": "NinchatCom",
+			"github": "https://github.com/ninchat",
+			"url": "https://ninchat.com",
+			"email": "admin@ninchat.com",
+			"image": "https://ninchat.com/asset/logo300x300.png"
+		}
+	]
+}

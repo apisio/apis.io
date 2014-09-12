@@ -1,0 +1,46 @@
+{
+  "name": "Eventbrite",
+  "description": "Eventbrite brings people together around the power of live events. Founded in 2006, the innovative ticketing, registration, and event discovery platform has sold more than 140M tickets in 176 countries, and processed over $2B in gross ticket sales (25% of the in the last six months). We’re transforming the ticketing and registration industry from the ground up, and we're looking for amazing people to help us change the way people get together.",
+  "url": "http://apis.io/apisdef/eventbrite.json",
+  "image": "http://ebmedia.eventbrite.com/s3-build/20370-rc2014-05-26-c83848a/django/images/logos/eb_home_tm-trans.png",
+  "specificationVersion": "1",
+  "apis": [
+    {
+      "name": "Eventbrite API",
+      "description": "Eventbrite brings people together around the power of live events. Founded in 2006, the innovative ticketing, registration, and event discovery platform has sold more than 140M tickets in 176 countries, and processed over $2B in gross ticket sales (25% of the in the last six months). We’re transforming the ticketing and registration industry from the ground up, and we're looking for amazing people to help us change the way people get together.",
+      "image": "http://ebmedia.eventbrite.com/s3-build/20370-rc2014-05-26-c83848a/django/images/logos/eb_home_tm-trans.png",
+      "APIVersion": "3",
+      "humanURL": "http://developer.eventbrite.com/",
+      "tags": "events, ticketing",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.eventbrite.com/api/key/"
+        },
+        {
+          "type": "forum",
+          "url": "https://groups.google.com/forum/#!forum/eventbrite-api"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/eventbriteapi"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://www.eventbrite.com",
+      "name": "Eventbrite",
+      "twitter": "eventbrite",
+      "github": "https://github.com/eventbrite",
+      "organizationName": "Eventbrite",
+      "image": "http://ebmedia.eventbrite.com/s3-build/20370-rc2014-05-26-c83848a/django/images/logos/eb_home_tm-trans.png"
+    }
+  ],
+  "tags": "events, ticketing,",
+  "modified": "05/30/2014",
+  "created": "05/30/2014"
+}

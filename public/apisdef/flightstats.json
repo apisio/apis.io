@@ -1,0 +1,43 @@
+{
+  "name": "Flightstats",
+  "description": "FlighStats provides a wide variety of information related to air travel, as scheduling and flight delays, aircraft current position and route tracking, on-time and service ratings, weather affecting aviation, and airport info.",
+  "url": "http://apis.io/apisdef/flightstats.json",
+  "image": "https://developer.flightstats.com/fs-dev-logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Flightstats API",
+      "description": "FlighStats provides a wide variety of information related to air travel, as scheduling and flight delays, aircraft current position and route tracking, on-time and service ratings, weather affecting aviation, and airport info.",
+      "image": "https://developer.flightstats.com/fs-dev-logo.png",
+      "APIVersion": "2",
+      "humanURL": "https://developer.flightstats.com/",
+      "machineURL": "https://api.flightstats.com/",
+      "tags": "transport, flight",
+      "urls": [
+        {
+          "type": "getting started",
+          "url": "https://developer.flightstats.com/getting-started"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/flightstats"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://flightstats.com",
+      "name": "Flightstats",
+      "twitter": "http://twitter.com/flightstats",
+      "github": "http://github.com/flightstats",
+      "organizationName": "Flightstats",
+      "image": "https://developer.flightstats.com/fs-dev-logo.png"
+    }
+  ],
+  "tags": "transport, flight",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

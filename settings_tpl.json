@@ -1,0 +1,28 @@
+{
+	"public":{
+		"specVersions":["0.14"],
+		"ga": {
+	      "account":"YOUR_GOOGLE_ANALYTICS_ID"
+	    }
+	},
+
+	"private":{
+		"keen":{
+			"projectId":"YOUR_KEEN_PROJECTID",
+			"writeKey":"YOUR_KEEN_WRITEKEY"
+		},
+		"kadira":{
+			"dev":{
+				"key":"YOUR_KADIRA_KEY",
+				"secret":"YOUR_KADIRA_SECRET"
+			},
+			"prod":{
+				"key":"YOUR_KADIRA_KEY",
+				"secret":"YOUR_KADIRA_SECRET"
+			}
+		},
+		"recaptcha":{
+			"privateKey":"YOUR_RECAPTCHA_PRIVATEKEY"
+		}
+	}
+}

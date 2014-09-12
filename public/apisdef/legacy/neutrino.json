@@ -1,0 +1,61 @@
+{
+  "name": "Neutrino",
+  "description": "Neutrino API empowers developers by providing a set of useful and time saving functions. We maintain and aggregate a huge collection high quality data sources and algorithms.\nOne of the primary drivers for the API was to ensure that developers could utilize an accurate, reliable and low-latency platform which they can depend on for day to day operations.\nWe believe we have met that goal and we have a top of the line crew to back it up.",
+  "url": "http://apis.io/apisdef/neutrino.json",
+  "image": "http://www.neutrinoapi.com/img/neutron-logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Email Validate API",
+      "description": "Parse, validate and clean an email address.\r\nThis API performs the following functions:\r\n\r\nSyntax Checks - Check if the email address is RFC822 / RFC2822 compliant\r\n\r\nDNS Checks - Check if the email address domain resolves correctly and has valid MX (mail exchanger) records\r\n\r\nTypo Fixing - Fix common domain, TLD (top-level domain) and freemail email address typos\r\n\r\nFreemail Check - Determine if the email address is a freemail registered email address (i.e. not a commercial address)\r\n\r\n",
+      "image": "http://www.neutrinoapi.com/img/neutron-logo.png",
+      "humanURL": "http://www.neutrinoapi.com/api/email-validate/",
+      "machineURL": "https://neutrinoapi.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.neutrinoapi.com/api/email-validate/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "ops@neutrinoapi.com"
+        }
+      ],
+      "tags": "email"
+    },
+    {
+      "name": "Phone Validation API",
+      "description": "Parse, validate and get location information about a phone number. Use this API to validate local and international phone numbers.\nYou can determine what kind of number this is (e.g. fixed line or mobile), the location of the number and also reformat the number into local and international dialing formats",
+      "image": "http://www.neutrinoapi.com/img/neutron-logo.png",
+      "humanURL": "http://www.neutrinoapi.com/api/phone-validate/",
+      "machineURL": "https://neutrinoapi.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.neutrinoapi.com/api/phone-validate/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "ops@neutrinoapi.com"
+        }
+      ],
+      "tags": "phone"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Neutrino",
+      "url": "http://www.neutrinoapi.com",
+      "organizationName": "Neutrino",
+      "image": "http://www.neutrinoapi.com/img/neutron-logo.png",
+      "github": "https://github.com/NeutrinoAPI"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.003Z",
+  "created": "2014-06-05T00:41:57.003Z",
+  "tags": "email, geocoding, geolocation, phone, currency"
+}

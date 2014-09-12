@@ -1,0 +1,21 @@
+<template name="APIlint">
+	<h1>APIs.json validator</h1>
+	<h4>Paste your apis.json and validate your file</h4>
+	<p>APIs.json format version accepted: {{{displaySpecVersions}}}</p>
+	{{> selectSpecVersions}}
+	{{> schemaLinter}}
+</template>
+
+<template name="selectSpecVersions">
+	<label>Select the APIs.json spec. version</label>
+	<select id="specMenu" name="selectSpecVersion">
+		{{#each specVersions}}
+			  <option value="{{.}}">{{.}}</option> 
+		{{/each}}
+	</select>
+</template>
+
+<template name="schemaLinter">
+	<textarea rows="30" placeholder="Enter apis.json to validate, or a URL to an apis.json file to validate." cols="100" id="apijsonContent" wrap="off" style="resize: both; width: 889px; max-width: 883px;"></textarea>
+	<button class="btn btn-primary" style=" margin-top:10px;">Validate</button>
+</template>

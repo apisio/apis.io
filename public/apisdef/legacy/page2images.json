@@ -1,0 +1,41 @@
+{
+  "name": "Page2Images",
+  "description": "\r\n\r\nThe Page2Images REST web service interface allow you to get a screenshot of one target web page by sending us the URL of that page. You can also choose which device of the page screenshot should be take on, the screen size of that device and the image size you want to get. We also allow you to create a full page screenshot which will include everything in one image.\r\n\r\nSince the it is based on REST protocol, it is very easy and quick to write and run applications. You can use the browsers to access URLs as well as pretty much any other HTTP clients in any coding language to access with the API. If you are a linux guy, you allow can use CURL command to simulate a HTTP client.\r\n",
+  "url": "http://apis.io/apisdef/page2images.json",
+  "image": "http://www.page2images.com/resources/img/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Website Screenshot API",
+      "description": "\r\n\r\nThe Page2Images REST web service interface allow you to get a screenshot of one target web page by sending us the URL of that page. You can also choose which device of the page screenshot should be take on, the screen size of that device and the image size you want to get. We also allow you to create a full page screenshot which will include everything in one image.\r\n\r\nSince the it is based on REST protocol, it is very easy and quick to write and run applications. You can use the browsers to access URLs as well as pretty much any other HTTP clients in any coding language to access with the API. If you are a linux guy, you allow can use CURL command to simulate a HTTP client.\r\n",
+      "image": "http://www.page2images.com/resources/img/logo.png",
+      "humanURL": "http://www.page2images.com/website_thumbnail_api_document",
+      "machineURL": "http://api.page2images.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.page2images.com/website_thumbnail_api_document"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/page2images"
+        }
+      ],
+      "tags": "screenshot"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Page2Images",
+      "url": "http://www.page2images.com",
+      "organizationName": "Page2Images",
+      "image": "http://www.page2images.com/resources/img/logo.png",
+      "twitter": "https://twitter.com/page2images"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.801Z",
+  "created": "2014-06-05T00:41:56.801Z",
+  "tags": "screenshot"
+}

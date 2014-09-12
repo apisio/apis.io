@@ -1,0 +1,23 @@
+<template name="maintainerShow">
+	<h1>{{$or maintainer.name maintainer.FN}}</h1>
+
+	{{#if maintainer.twitter}}
+		<a href="{{displayTwitter maintainer.twitter}}"><i class="fa fa-twitter"></i></a>
+	{{/if}}
+
+	{{#if maintainer.email}}
+		<a href="mailto:{{maintainer.email}}"><i class="fa fa-envelope"></i></a>
+	{{/if}}
+	
+	<h3>APIs</h3>
+	<ul>
+		{{#each apiFiles}}
+			<li><a href="{{pathFor 'showAPIFile'}}">{{name}}</a></li>
+			<ul>
+				{{#each apis}}
+					<li><a href="{{humanURL}}">{{name}}</a></li>
+				{{/each}}
+			</ul>
+		{{/each}}
+	</ul>
+</template>

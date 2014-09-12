@@ -1,0 +1,40 @@
+<template name="aboutPage">
+	<h1>About</h1>
+
+	<p>APIs.io is an experimental API Search engine which uses the <a href="http://apisjson.org/" target="_blank">APIs.json</a> format to find and list APIs. The search engine is maintained by <a href="http://3scale.net" target="_blank">3scale</a> and supported by <a href="http://3scale.net" target="_blank">3scale</a>, <a href="http://apievangelist.com" target="_blank">APIEvangelist</a> and <a href="http://apitools.com" target="_blank">APItools.com</a>.</p>
+	<ul>
+		<li>APIs.json is a draft format for API metadata - you can find out more <a href="http://apisjson.org/" target="_blank">here</a>.</li>
+		<li>The search engine here is experimental and provides:
+			<ul>
+				<li><a href="{{ pathFor 'home'}}">Search</a></li>
+				<li><a href="{{ pathFor 'lint'}}">A validator for APIs.json</a></li>
+			 	<li><a href="{{ pathFor 'builder'}}">A generator for APIs.json</a></li>
+			 </ul>
+		</li>
+		<li>The search engine is also open source so you can run your own. The source can be found on <a href="https://github.com/apisio/apis.io" target="_blank">github</a>.</li>
+		<li>There will also shortly be an API Available to grab the full index from APIs.io.</li>
+	</ul>
+
+	<h2>Original APIs.io</h2>
+	<p>
+	If you’re looking for the previous version of APIs.io which was started and run by Chris Matthiew at SkyNet M2M:</p>
+
+	<ul>
+	 <li>you can still find this here: <a href="http://legacy.apis.io">legacy.apis.io</a></li>
+	 <li>the source code is available on <a href="https://github.com/apisio/legacy.apis.io" target="_blank">github</a></li>
+	</ul>
+
+	<h2>Keep in touch:</h2>
+
+	<ul>
+	 <li>Follow us on Twitter at apis.io <a href="https://twitter.com/apisio" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @apisio</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+</ul>
+	 <!-- <li>Join the mailing list for format an search engine updates [TBD].</li>-->
+	<h2>Powered by:</h2>
+	<ul>
+	 <li><a href="http://3scale.net" target="_blank">3scale</a></li>
+	 <li><a href="http://apievangelist.com" target="_blank">APIEvangelist</a></li>
+	 <li><a href="http://apitools.com" target="_blank">APItools.com</a></li>
+	 </ul>
+</template>

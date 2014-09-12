@@ -1,0 +1,42 @@
+{
+  "name": "MindMeld",
+  "description": "The MindMeld API is an advanced developer platform and cloud-based service to power a new generation of anticipatory computing applications.",
+  "url": "http://apis.io/apisdef/mindmeld.json",
+  "image": "https://developer.expectlabs.com/public/images/MindMeldAPILogo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "MindMeld API",
+      "description": "The MindMeld API is an advanced developer platform and cloud-based service to power a new generation of anticipatory computing applications.",
+      "image": "https://developer.expectlabs.com/public/images/MindMeldAPILogo.png",
+      "humanURL": "https://developer.expectlabs.com/docs",
+      "machineURL": "https://mindmeldv2.expectlabs.com/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.expectlabs.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/GetMindMeld"
+        }
+      ],
+      "tags": "search, data mining"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "ExpectLabs",
+      "url": "http://developer.expectlabs.com",
+      "organizationName": "ExpectLabs",
+      "image": "https://developer.expectlabs.com/public/images/MindMeldAPILogo.png",
+      "twitter": "https://twitter.com/expectlabs",
+      "github": "https://github.com/expectlabs"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.252Z",
+  "created": "2014-06-05T00:41:57.252Z",
+  "tags": "search, data mining"
+}

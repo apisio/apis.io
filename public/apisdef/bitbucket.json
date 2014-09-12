@@ -1,0 +1,36 @@
+{
+  "name": "Bitbucket",
+  "description": "The Bitbucket REST API allows third-party application developers the means for writing applications for the Bitbucket service.",
+  "type": "default",
+  "url": "https://confluence.atlassian.com/display/BITBUCKET/Use+the+Bitbucket+REST+APIs",
+  "image": "https://www.hipchat.com/img/atlassian_logo_small.png",
+  "apis": [
+    {
+      "name": "Bitbucket REST APIs",
+      "description": "Work with Bitbucket repositories, users,  or teams.",
+      "image": "https://www.hipchat.com/img/atlassian_logo_small.png",
+      "humanURL": "https://confluence.atlassian.com/display/BITBUCKET/Use+the+Bitbucket+REST+APIs",
+      "tags": "version control, git, mercurial",
+      "urls": [
+        {
+          "type": "console",
+          "url": "http://restbrowser.bitbucket.org/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/bitbucket"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Bitbucket",
+      "twitter": "https://twitter.com/bitbucket"
+    }
+  ],
+  "tags": "version control, git, mercurial,collaboration",
+  "modified": "05/13/2014"
+}

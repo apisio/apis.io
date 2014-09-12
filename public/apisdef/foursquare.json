@@ -1,0 +1,47 @@
+{
+  "name": "Foursquare",
+  "description": "The Foursquare API gives you access to our world-class places database and the ability to interact with Foursquare users and merchants. Start using the only location API you'll ever need.",
+  "type": "community",
+  "url": "https://developer.foursquare.com/",
+  "image": "https://ss0.4sqi.net/img/chrome/logo-de7fc2f067289aee69031144ced1736e.png",
+  "apis": [
+    {
+      "name": "Foursquare API",
+      "description": "The Foursquare API gives you access to our world-class places database and the ability to interact with Foursquare users and merchants. Start using the only location API you'll ever need.",
+      "image": "https://ss0.4sqi.net/img/chrome/logo-de7fc2f067289aee69031144ced1736e.png",
+      "humanURL": "https://developer.foursquare.com/",
+      "machineURL": "https://api.foursquare.com/v2/",
+      "tags": "geolocation, places, check-in",
+      "urls": [
+        {
+          "type": "explorer",
+          "url": "https://developer.foursquare.com/docs/explore"
+        },
+        {
+          "type": "blog",
+          "url": "http://engineering.foursquare.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/foursquareAPI"
+        },
+        {
+          "type": "email",
+          "url": " api@foursquare.com"
+        }
+      ],
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Foursquare",
+      "twitter": "http://twitter.com/foursquareAPI",
+      "github": "https://github.com/foursquare",
+      "email": "api@foursquare.com"
+    }
+  ],
+  "tags": "geolocation, places, POI, check-in",
+  "modified": "05/16/2014"
+}

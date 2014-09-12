@@ -1,0 +1,42 @@
+{
+  "name": "Blizzard",
+  "description": "This is the documentation for the RESTful APIs exposed through the World of Warcraft community site as a service to the World of Warcraft community.",
+  "url": "http://apis.io/apisdef/legacy/blizzard.json",
+  "image": "http://upload.wikimedia.org/wikipedia/en/3/34/BattleNet.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "World of Warcraft community API",
+      "description": "The Blizzard Community Platform API provides a number of resources for developers and Wow enthusiasts to gather data about their characters, guilds and arena teams. This documentation is primarily for developers and third parties.",
+      "image": "http://upload.wikimedia.org/wikipedia/en/3/34/BattleNet.png",
+      "humanURL": "http://blizzard.github.com/api-wow-docs/",
+      "machineURL": "http://eu.battle.net/api/wow/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://blizzard.github.com/api-wow-docs/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/Warcraft"
+        }
+      ],
+      "tags": "wow, blizzard, game"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Blizzard",
+      "url": "http://blizzard.github.com",
+      "organizationName": "Blizzard",
+      "image": "http://upload.wikimedia.org/wikipedia/en/3/34/BattleNet.png",
+      "twitter": "https://twitter.com/Warcraft",
+      "github": "https://github.com/blizzard"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.875Z",
+  "created": "2014-06-05T00:41:56.875Z",
+  "tags": "wow, blizzard, game"
+}

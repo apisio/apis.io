@@ -1,0 +1,64 @@
+{
+  "name": "Twitter",
+  "description": "Twitter is a real-time information network that connects you to the latest stories, ideas, opinions and news about what you find interesting. Simply find the accounts you find most compelling and follow the conversations.",
+  "type": "community",
+  "image": "https://g.twimg.com/Twitter_logo_blue.png",
+  "apis": [
+    {
+      "name": "REST API",
+      "description": "Twitter is a real-time information network that connects you to the latest stories, ideas, opinions and news about what you find interesting. Simply find the accounts you find most compelling and follow the conversations.",
+      "image": "https://g.twimg.com/Twitter_logo_blue.png",
+      "humanURL": "https://dev.twitter.com/docs/api/1.1",
+      "tags": "social network, tweets",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://dev.twitter.com/user/login?destination=home"
+        },
+        {
+          "type": "status",
+          "url": "https://dev.twitter.com/status"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/twitterapi"
+        }
+      ]
+    },
+    {
+      "name": "Streaming API",
+      "description": "Twitter is a real-time information network that connects you to the latest stories, ideas, opinions and news about what you find interesting. Simply find the accounts you find most compelling and follow the conversations.",
+      "image": "https://g.twimg.com/Twitter_logo_blue.png",
+      "humanURL": "https://dev.twitter.com/docs/api/streaming",
+      "tags": "social network, tweets, stream",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://dev.twitter.com/user/login?destination=home"
+        },
+        {
+          "type": "support",
+          "url": "https://dev.twitter.com/tags/streaming-api"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/twitterapi"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Twitter",
+      "twitter": "https://twitter.com/twitterapi",
+      "github": "https://github.com/twitter",
+      "organizationName": "Twitter",
+      "image": "https://g.twimg.com/Twitter_logo_blue.png"
+    }
+  ],
+  "tags": "social network"
+}

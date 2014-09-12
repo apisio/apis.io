@@ -1,0 +1,42 @@
+{
+  "name": "Email YoYo",
+  "description": "The API service from Email YoYo is used to check and validate a email address in real-time and is integrated with your email capture application like a subscriber box or registration process. We are able to validate the email address all the way down to the user’s mailbox level. You then can benefit by keeping fake emails, spammers, or incorrectly entered emails off your application lists.",
+  "url": "http://apis.io/apisdef/legacy/emailyoyo.json",
+  "image": "https://scontent-a.xx.fbcdn.net/hphotos-xfa1/t1.0-9/1969117_805862802774468_923819385_n.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Email Verification API",
+      "description": "The API service from Email YoYo is used to check and validate a email address in real-time and is integrated with your email capture application like a subscriber box or registration process. We are able to validate the email address all the way down to the user’s mailbox level. You then can benefit by keeping fake emails, spammers, or incorrectly entered emails off your application lists.",
+      "image": "https://scontent-a.xx.fbcdn.net/hphotos-xfa1/t1.0-9/1969117_805862802774468_923819385_n.png",
+      "humanURL": "http://emailyoyo.com/api/",
+      "machineURL": "http://api.emailyoyo.com/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://emailyoyo.com/contact/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/emailyoyoapi"
+        }
+      ],
+      "tags": "email, verification, fraud"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Email YoYo",
+      "url": "http://emailyoyo.com",
+      "organizationName": "Email YoYo",
+      "image": "https://scontent-a.xx.fbcdn.net/hphotos-xfa1/t1.0-9/1969117_805862802774468_923819385_n.png",
+      "twitter": "https://twitter.com/emailyoyoapi",
+      "github": "https://github.com/emailyoyo"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.264Z",
+  "created": "2014-06-05T00:41:57.264Z",
+  "tags": "email, verification, fraud"
+}

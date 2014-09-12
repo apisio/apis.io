@@ -1,0 +1,50 @@
+{
+  "name": "APIs.io",
+  "description": "This is the API to access APIs.io API searcg engine data.",
+  "image": "http://apis.io/logo_square.png",
+  "tags": [
+    "API",
+    "search engine",
+    "directory"
+  ],
+  "created": "2014-08-19",
+  "modified": "2014-08-19",
+  "url": "http://apis.io/apis.json",
+  "specificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "APIs.io API",
+      "description": "Access data about the apis and maintainers listed on apis.io.",
+      "image": "http://apis.io/logo_square.png",
+      "humanURL": "http://apis.io/api",
+      "baseURL": "http://apis.io/api/",
+      "tags": [
+        "API",
+        "search engine",
+        "directory"
+      ],
+      "properties": [
+        {
+          "type": "X-documentation",
+          "url": "http://apis.io/api"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "APIs.io",
+          "email": "apisio@3scale.net",
+          "X-twitter": "apisio"
+        }
+      ]
+    }
+  ],
+  "include": [],
+  "maintainers": [
+    {
+      "FN": "Nicolas Grenié",
+      "X-twitter": "picsoung",
+      "email": "nicolas@3scale.net",
+      "X-github":"picsoung"
+    }
+  ]
+}

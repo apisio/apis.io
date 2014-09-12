@@ -1,0 +1,43 @@
+{
+  "name": "MusicGraph",
+  "description": "MusicGraph is the world’s first knowledge engine for music. It contains over a billion facts that have been organized into a rich music ontology, which includes acoustical and lyrical features, detailed artist, album and song information, as well hundreds of other data points related user preferences.",
+  "url": "http://apis.io/apisdef/musicgraph.json",
+  "image": "http://musicgraph.com/images/web-home-page-icon/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "MusicGraph API",
+      "description": "MusicGraph is the world’s first knowledge engine for music. It contains over a billion facts that have been organized into a rich music ontology, which includes acoustical and lyrical features, detailed artist, album and song information, as well hundreds of other data points related user preferences.",
+      "image": "http://musicgraph.com/images/web-home-page-icon/logo.png",
+      "APIVersion": "2",
+      "humanURL": "https://developer.musicgraph.com/",
+      "machineURL": "http://api.musicgraph.com/api/v2/",
+      "tags": "music",
+      "urls": [
+        {
+          "type": "demos",
+          "url": "http://demos.musicgraph.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/themusicgraph"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://musicgraph.com",
+      "name": "MusicGraph",
+      "twitter": "https://twitter.com/themusicgraph",
+      "github": "https://github.com/Senzari",
+      "organizationName": "MusicGraph",
+      "image": "http://musicgraph.com/images/web-home-page-icon/logo.png"
+    }
+  ],
+  "tags": "music",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

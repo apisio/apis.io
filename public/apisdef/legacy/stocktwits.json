@@ -1,0 +1,50 @@
+{
+  "name": "StockTwits",
+  "description": "StockTwits provides a social communications platform and social graph for anyone interested in markets and investing. By adding StockTwits to your blog, website or application you can provide your users with access to the most relevant content within your experience and leverage their connections the leading dedicated real-time financial community.",
+  "url": "http://apis.io/apisdef/stocktwits.json",
+  "image": "http://stocktwits.com/images/badges/stIcon_64x64.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "StockTwits API",
+      "description": "StockTwits provides a social communications platform and social graph for anyone interested in markets and investing. By adding StockTwits to your blog, website or application you can provide your users with access to the most relevant content within your experience and leverage their connections the leading dedicated real-time financial community.",
+      "image": "http://stocktwits.com/images/badges/stIcon_64x64.png",
+      "humanURL": "http://stocktwits.com/developers/docs",
+      "machineURL": "https://api.stocktwits.com/api/2/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://stocktwits.com/developers/docs/api"
+        },
+        {
+          "type": "forum",
+          "url": "http://stackoverflow.com/questions/tagged/stocktwits"
+        },
+        {
+          "type": "terms",
+          "url": "http://stocktwits.com/developers/api-terms"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/stocktwits"
+        }
+      ],
+      "tags": "twitter, stocks"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "StockTwits",
+      "url": "http://stocktwits.com",
+      "organizationName": "StockTwits",
+      "image": "http://stocktwits.com/images/badges/stIcon_64x64.png",
+      "twitter": "https://twitter.com/stocktwits",
+      "github": "https://github.com/stocktwits"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.255Z",
+  "created": "2014-06-05T00:41:57.255Z",
+  "tags": "twitter, stocks"
+}

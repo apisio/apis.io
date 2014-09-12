@@ -1,0 +1,118 @@
+<template name="home">
+  <div class="col-xs-12 col-md-12">
+    <div class="row">
+      <div class="col-xs-12 col-md-12" style="margin-top:80px; left: 5%;">
+        <h1 style="color:DarkGray;font-size: 5em;"><span style="color:Gold;">{API}</span>Search</h1>
+        <p>{{nbAPIs}} APIs in database by {{nbMaintainers}} maintainers.</p>
+        <ul class="hidden-xs menu_home">
+          {{> navBarLinks}}
+        </ul>
+      </div>
+   </div> 
+  </div>
+  <div class="col-md-12">
+    {{> searchForm}}
+  </div>
+  <div class="col-md-12">
+   {{> apisList}}
+  </div>
+  {{> homePageContent}}
+</template>
+
+<template name="searchForm">
+    <div class="search-bar">
+        <ul class="item-stream unstyled search-input-stream" style="box-shadow: 0px 3px 20px -8px #888"> <li class="stream-item stream-header search-input-item"> <form class=""><input class="xlarge" id="search_input" name="search" placeholder="Search APIs on sms, photo, user etc..." dir="ltr" spellcheck="false" autofocus="" value="{{displayKeywords}}" type="text"> <button class="btn btn-large btn-warning" id="search_submit" type="submit" value="search"> <span class="glyphicon glyphicon-search"></span> </button></form>
+
+        <div style="margin-top:5px; font-size:0.8em;" >
+        Ex: <a class="suggested" data-keyword="*" href="#">all</a>, <a class="suggested" data-keyword="evangelist" href="#">evangelist</a>,<a class="suggested" data-keyword="tag:photos" href="#">photo</a>
+
+        <a style="right:20px; position:absolute;" href="{{pathFor 'addAPI'}}"><span class="glyphicon glyphicon-plus-sign"></span>Add API</a>
+
+        </div>
+</li> 
+        </ul>
+    </div>
+</template>
+
+<template name="pagedAPIs">
+  {{> pagesNav}}
+  {{> pages}}
+</template>
+
+<template name="apisList">
+  <div class="row">
+    {{#each apis}}  
+        {{> apiLineBlock}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="apiLineBlock">
+  <div class="col-xs-12 col-md-12 apiResultBlock">
+    <div class="row" style="margin-left:0;">
+      <div class="col-xs-2 col-md-1 logoDiv">
+        <img src="{{image}}" alt="{{name}} logo" class="group list-group-image api_logo">
+      </div>
+      <div class="col-xs-4 col-md-5">
+        {{> apiLineContent}}
+      </div>
+      <div class="col-xs-5 col-md-5" style="padding-top:10px;">
+        {{> apiLineLinks}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="apiLineContent">
+  <h4>
+    <a class="title" href="{{humanURL}}">{{name}} <small>{{getRootUrl}}</small></a>
+    {{#if authoritative}}
+      <span class="glyphicon glyphicon-ok-circle"></span>
+    {{/if}}
+  </h4>
+  <span class="glyphicon glyphicon-user"></span>by
+  {{#with getAPIFile apiFileUrl}}
+    {{#if maintainer}}
+      <a href="{{maintainerLink maintainer}}">
+      {{displayMaintainerName maintainer}}</a>|
+    {{else}}
+      <a href="{{maintainerLink maintainers}}">
+      {{displayMaintainerName maintainers}}</a>|
+    {{/if}}
+    <span class="glyphicon glyphicon-calendar"></span>
+    {{displayModifiedDate modified}}
+  {{/with}}
+  <br />
+</template>
+
+<template name="apiLineLinks">
+  <div class="row">
+    <div class="col-md-3">
+      <span class="glyphicon glyphicon-tags"></span>Tags :
+    </div>
+    <div class="col-md-9">
+      {{#each APItags}}
+          <a class="api_tag" href="#">
+            <span class="label label-info">{{name}}</span>
+          </a>
+      {{/each}}
+    </div>
+  </div>
+    <div class="urls">    
+      <ul>
+        {{#if urls}}
+          {{#each urls}}
+            <li>
+              <span class="glyphicon glyphicon-link"></span><a href="{{url}}">{{type}}</a>
+            </li>
+          {{/each}}
+        {{else}}
+          {{#each properties}} <!-- since v0.14-->
+            <li>
+              <span class="glyphicon glyphicon-link"></span><a href="{{url}}">{{displayType type}}</a>
+            </li>
+          {{/each}}
+        {{/if}}
+      </ul>
+    </div>
+</template>

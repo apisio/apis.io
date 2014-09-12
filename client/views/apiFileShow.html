@@ -1,0 +1,25 @@
+<template name="apiFileShow">
+	{{#with apis}}
+		<div class="col-md-9">
+			<h1>{{name}}</h1>
+			<h2>APIs</h2>
+			{{> selfAPIsList}}
+		</div>
+		<div class="col-md-3">
+			{{> maintainerRightColumn}}
+		</div>
+	{{/with}}
+</template>
+
+<template name="maintainerRightColumn">
+	<h2>Maintainer</h2>
+	<ul>
+		<li>
+			{{#if maintainer}}
+		      <a href="{{maintainerLink maintainer}}">{{displayMaintainerName maintainer}}</a>
+		    {{else}}
+		      <a href="{{maintainerLink maintainers}}">{{displayMaintainerName maintainers}}</a>
+		    {{/if}}
+		</li>
+	</ul>
+</template>

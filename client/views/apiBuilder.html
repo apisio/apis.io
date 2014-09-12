@@ -1,0 +1,23 @@
+<template name="APIbuilder">
+	<h1>API.json builder</h1>
+	<h4>this tool helps you generate your own api.json file</h4>
+	<!-- {{#autoForm collection="APIFiles" id="insertAPIFileForm" type="insert"}}
+    <fieldset>
+        {{> afQuickField name='name'}}
+        {{> afQuickField name='description'}}
+        {{> afQuickField name='url'}}
+        {{> afQuickField name='image'}}
+         {{> afQuickField name='apis'}}
+        {{> afQuickField name='apis' omitFields="slug"}}
+        {{> afQuickField name='include'}}
+        {{> afQuickField name='maintainers'}}
+        {{> afQuickField name='tags'}}
+        {{> afQuickField name='modified'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}  -->
+
+	{{> quickForm collection="APIFiles" id="insertAPIFileForm" omitFields="slug,_id,md5sum,apis.$.slug,createdAt,updatedAt,apis.$.apiFileUrl, apis.$.createdAt,apis.$.updatedAt,apis.$.authoritative,maintainers.$._id, maintainers.$.slug"}}
+
+	<!-- omitFields="slug,_id,md5sum,createdAt,apiFileUrl, apis.$.slug, apis.$.apiFileUrl,apis.$.createdAt, maintainer.$._id, maintainer.$.slug" -->
+</template>

@@ -1,0 +1,42 @@
+{
+  "name": "Groupon",
+  "description": "Local deals API",
+  "url": "http://apis.io/apisdef/legacy/groupon.json",
+  "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Groupon_logo.png/320px-Groupon_logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Groupon API",
+      "description": "Local deals API",
+      "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Groupon_logo.png/320px-Groupon_logo.png",
+      "humanURL": "http://www.groupon.com/pages/api",
+      "machineURL": "https://api.groupon.com/v2/",
+      "urls": [
+        {
+          "type": "documentation",
+          "url": "https://sites.google.com/site/grouponapiv2/home"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/groupon"
+        }
+      ],
+      "tags": "local, deals, rebate"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Groupon",
+      "url": "http://www.groupon.com",
+      "organizationName": "Groupon",
+      "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Groupon_logo.png/320px-Groupon_logo.png",
+      "twitter": "http://twitter.com/groupon",
+      "github": "https://github.com/groupon"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.574Z",
+  "created": "2014-06-05T00:41:56.574Z",
+  "tags": "local, deals, rebate"
+}

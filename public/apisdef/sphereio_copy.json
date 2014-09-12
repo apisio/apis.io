@@ -1,0 +1,65 @@
+{
+  "name": "SPHERE.IO ",
+  "description": "Ecommerce PaaS for an independent implementation of commerce applications.",
+  "image": "http://dev.sphere.io/assets/img/ct_logo_farbe.gif",
+  "tags": [
+    "eCommerce",
+    "mCommerce",
+    "shopping"
+  ],
+  "created": "2014-08-11",
+  "modified": "2014-08-11",
+  "url": "http://apisearch.dev:3000/apisdef/sphereio_copy.json",
+  "SpecificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "Analysis",
+      "description": "Provides access to blog posts and analysis across the API Evangelist network.",
+      "image": "http://dev.sphere.io/assets/img/ct_logo_farbe.gif",
+      "humanURL": "http://dev.sphere.io",
+      "baseURL": "http://api.sphere.io",
+      "tags": [
+        "eCommerce",
+        "mCommerce",
+        "shopping"
+      ],
+      "properties": [
+        {
+          "type": "X-signup",
+          "url": "https://admin.sphere.io/signup"
+        },
+        {
+          "type": "Pricing",
+          "url": "http://www.commercetools.com/pricing"
+        },
+        {
+          "type": "TermsOfService",
+          "url": "http://www.commercetools.com/terms"
+        },
+        {
+          "type": "Forums",
+          "url": "http://support.sphere.io/forums/199144-general-feedback"
+        },
+        {
+          "type": "StatusPage",
+          "url": "http://status.sphere.io"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "SPHERE.IO",
+          "email": "support@sphere.io",
+          "X-twitter": "sphereio"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "Martin",
+      "N": "Möllmann",
+      "X-twitter": "mmoelli",
+      "email": "mm@commercetools.de"
+    }
+  ]
+}

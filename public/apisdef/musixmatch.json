@@ -1,0 +1,42 @@
+{
+  "name": "Musixmatch",
+  "description": "Include millions of licensed lyrics on your website or in your application - legally",
+  "type": "community",
+  "url": "https://developer.musixmatch.com/",
+  "image": "http://mxm-static-hacks.s3.amazonaws.com/applanding/mxm_logo.png",
+  "apis": [
+    {
+      "name": "Musixmatch API",
+      "description": "Include millions of licensed lyrics on your website or in your application - legally",
+      "image": "http://mxm-static-hacks.s3.amazonaws.com/applanding/mxm_logo.png",
+      "humanURL": "https://developer.musixmatch.com/",
+      "tags": "music, lyrics",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.musixmatch.com/mmplans"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "dev@musixmatch.com"
+        },
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/musixmatch_api"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Musixmatch",
+      "twitter": "https://twitter.com/musixmatch_api",
+      "github": "https://github.com/musixmatch",
+      "email": "dev@musixmatch.com"
+    }
+  ],
+  "tags": "music, lyrics",
+  "modified": "05/20/2014"
+}

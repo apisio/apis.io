@@ -1,0 +1,42 @@
+{
+  "name": "Datumbox",
+  "description": "Datumbox offers a Machine Learning API with a large number of off-the-shelf Classifiers and Natural Language Processing services which can be used in a broad spectrum of applications including: Sentiment Analysis, Topic Classification, Language Detection, Subjectivity Analysis, Spam Detection, Reading Assessment, Keyword and Text Extraction and more. All services are accessible via our powerful REST API which allows you to develop your own smart Applications in no time.",
+  "url": "http://apis.io/apisdef/datumbox.json",
+  "image": "http://www.datumbox.com/img/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Datumbox Machine Learning API",
+      "description": "Datumbox offers a Machine Learning API with a large number of off-the-shelf Classifiers and Natural Language Processing services which can be used in a broad spectrum of applications including: Sentiment Analysis, Topic Classification, Language Detection, Subjectivity Analysis, Spam Detection, Reading Assessment, Keyword and Text Extraction and more. All services are accessible via our powerful REST API which allows you to develop your own smart Applications in no time.",
+      "image": "http://www.datumbox.com/img/logo.png",
+      "humanURL": "http://www.datumbox.com/machine-learning-api/",
+      "machineURL": "http://www.datumbox.com/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.datumbox.com/users/register/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/datumbox/"
+        }
+      ],
+      "tags": "machine learning"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Datumbox",
+      "url": "http://www.datumbox.com",
+      "organizationName": "Datumbox",
+      "image": "http://www.datumbox.com/img/logo.png",
+      "twitter": "https://twitter.com/datumbox/",
+      "github": "https://github.com/datumbox/"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.667Z",
+  "created": "2014-06-05T00:41:56.667Z",
+  "tags": "machine learning"
+}

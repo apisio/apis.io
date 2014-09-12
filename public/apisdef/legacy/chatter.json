@@ -1,0 +1,42 @@
+{
+  "name": "Chatter",
+  "description": "Salesforce Chatter provides a rich suite of collaboration features to any application built on Force.com",
+  "url": "http://apis.io/apisdef/legacy/chatter.json",
+  "image": "https://secure2.sfdcstatic.com/common/assets/img/logo-company.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Chatter API",
+      "description": "Salesforce Chatter provides a rich suite of collaboration features to any application built on Force.com",
+      "image": "https://secure2.sfdcstatic.com/common/assets/img/logo-company.png",
+      "humanURL": "http://developer.force.com/chatter",
+      "machineURL": "https://na1.salesforce.com/services/data/v22.0",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.salesforce.com/chatter/overview"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/salesforce"
+        }
+      ],
+      "tags": "salesforce, collaboration"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Chatter",
+      "url": "http://developer.force.com",
+      "organizationName": "Salesforce",
+      "image": "https://secure2.sfdcstatic.com/common/assets/img/logo-company.png",
+      "twitter": "http://twitter.com/salesforce",
+      "github": "http://github.com/salesforce"
+    }
+  ],
+  "modified": "2014-06-05T00:41:55.986Z",
+  "created": "2014-06-05T00:41:55.986Z",
+  "tags": "salesforce, collaboration"
+}

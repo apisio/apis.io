@@ -1,0 +1,41 @@
+{
+	"apiVersion":"1.0",
+	"swaggerVersion":"1.2",
+	"basePath":"apis.io/api/v1",
+	"hostname":"apis.io",
+	"apis":
+	[
+		{
+			"path":"\/apis\/ping",
+			"description":"Automatically generated API spec",
+			"operations":
+			[{
+				"summary":"Update an existing apis.json file",
+				"method":"POST",
+				"notes":"Use this method to push newest version of your apis.json. You should have add the file to the search engine first.",
+				"nickname":"create_ping",
+				"parameters":
+				[{
+					"paramType":"body",
+					"type":"string",
+					"required":false,
+					"name":"url",
+					"description":"Possible values are: '{\"url\":\"http:\/\/apievangelist.com\/api.json\"}'"
+				}],
+				"httpMethod":"POST"
+			}]
+		},{
+			"path":"\/maintainers",
+			"description":"Automatically generated API spec",
+			"operations":
+			[{
+				"summary":"List maintainers",
+				"method":"GET",
+				"notes":"Get all the maintainers of APIs.",
+				"nickname":"list_maintainers",
+				"parameters":{},
+				"httpMethod":"GET"
+			}]
+		}
+	]
+}

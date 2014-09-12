@@ -1,0 +1,40 @@
+{
+  "name": "Eventful",
+  "description": "Eventful is the world's largest collection of events, taking place in local markets throughout the world, from concerts and sports to singles events and political rallies.",
+  "url": "http://api.eventful.com/",
+  "image": "http://api.eventful.com/images/logo.gif",
+  "apis": [
+    {
+      "name": "Eventful API",
+      "description": "Eventful is the world's largest collection of events, taking place in local markets throughout the world, from concerts and sports to singles events and political rallies.",
+      "image": "http://api.eventful.com/images/logo.gif",
+      "humanURL": "http://api.eventful.com/",
+      "tags": "events, concerts, tickets",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://api.eventful.com/signup"
+        },
+        {
+          "type": "documentation",
+          "url": "http://api.eventful.com/docs"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "develop@eventful.com"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Eventful",
+      "github": "https://github.com/organizations/eventful",
+      "email": "develop@eventful.com"
+    }
+  ],
+  "tags": "events, concerts, tickets",
+  "modified": "05/15/2014"
+}

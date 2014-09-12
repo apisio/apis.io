@@ -1,0 +1,37 @@
+{
+  "name": "Lob",
+  "description": "A simple API to integrate print & mail solutions into your applications.",
+  "type": "community",
+  "image": "https://www.lob.com/assets/images/logo.png",
+  "apis": [
+    {
+      "name": "Lob",
+      "description": "A simple API to integrate print & mail solutions into your applications.",
+      "image": "https://www.lob.com/assets/images/logo.png",
+      "humanURL": "https://www.lob.com/",
+      "tags": "printing",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.lob.com/auth/login"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/lob"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Lob",
+      "twitter": "https://twitter.com/lob",
+      "github": "https://github.com/lob",
+      "organizationName": "Lob",
+      "image": "https://www.lob.com/assets/images/logo.png"
+    }
+  ],
+  "tags": "printing"
+}

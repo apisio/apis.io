@@ -1,0 +1,35 @@
+{
+  "name": "Instagram",
+  "description": "The first version of the Instagram API is an exciting step forward towards making it easier for users to have open access to their data.",
+  "type": "community",
+  "url": "http://instagram.com/developer",
+  "image": "https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/t39.2365-6/851582_417171855069447_55288290_n.png",
+  "apis": [
+    {
+      "name": "Instragram API",
+      "description": "The first version of the Instagram API is an exciting step forward towards making it easier for users to have open access to their data like photos or videos.",
+      "image": "https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/t39.2365-6/851582_417171855069447_55288290_n.png",
+      "humanURL": "http://instagram.com/developer",
+      "tags": "social network, video, photo, content",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://instagram.com/developer/clients/register/"
+        },
+        {
+          "type": "console",
+          "url": "http://instagram.com/developer/api-console/"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Instagram",
+      "twitter": "http://twitter.com/instagram",
+      "github": "https://github.com/instagram"
+    }
+  ],
+  "tags": "social network, video, photo, content",
+  "modified": "05/16/2014"
+}

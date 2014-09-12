@@ -1,0 +1,41 @@
+{
+  "name": "ticcats",
+  "description": "ticcats is being backed by one of the biggest directories for events and tickets in Europe.\r\n\r\nticcats maintains a comprehensive directory of events and venues in Europe. We do have a focus on the German Event Market (www.ticcats.de), the British and the French Markets but our Database is growing everyday in nearly every Region of Europe. In the end we currently aggregate about 550.000 Eventdates per year for the whole European Market.\r\n\r\nWe created the ticcats Platform to enable others to build on top of that data. The ticats API makes it easy to construct applications that help users find and discover events by exposing the wealth of data in an easy-to-consume format: our API provides Data in REST or JSON formats.\r\n\r\nThere are basically two different ways the interface can be applied, depending on how intensively the API is to be used.",
+  "url": "http://apis.io/apisdef/ticcats.json",
+  "image": "http://www.ticcats.de/images/xticcats_header.png.pagespeed.ic.V4Gbv_A-hv.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "ticcats API",
+      "description": "ticcats is being backed by one of the biggest directories for events and tickets in Europe.\r\n\r\nticcats maintains a comprehensive directory of events and venues in Europe. We do have a focus on the German Event Market (www.ticcats.de), the British and the French Markets but our Database is growing everyday in nearly every Region of Europe. In the end we currently aggregate about 550.000 Eventdates per year for the whole European Market.\r\n\r\nWe created the ticcats Platform to enable others to build on top of that data. The ticats API makes it easy to construct applications that help users find and discover events by exposing the wealth of data in an easy-to-consume format: our API provides Data in REST or JSON formats.\r\n\r\nThere are basically two different ways the interface can be applied, depending on how intensively the API is to be used.",
+      "image": "http://www.ticcats.de/images/xticcats_header.png.pagespeed.ic.V4Gbv_A-hv.png",
+      "humanURL": "http://www.ticcats.de/blog/entry/ticcats-faq-eure-api-wie-funktioniert-die",
+      "machineURL": "http://www.ticcats.de/schnittstelle-api",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.ticcats.de/blog/entry/ticcats-faq-eure-api-wie-funktioniert-die"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/ticcats"
+        }
+      ],
+      "tags": "events, ticketing"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "ticcats",
+      "url": "http://www.ticcats.de",
+      "organizationName": "ticcats",
+      "image": "http://www.ticcats.de/images/xticcats_header.png.pagespeed.ic.V4Gbv_A-hv.png",
+      "twitter": "https://twitter.com/ticcats"
+    }
+  ],
+  "modified": "2014-06-05T00:37:55.979Z",
+  "created": "2014-06-05T00:37:55.979Z",
+  "tags": "events, ticketing"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Kairos",
+  "description": "Kairos is a web platform that develops a facial recognition service to identify someone in real-time. - See more at: http://www.crunchbase.com/organization/kairos-ar#sthash.RL5gw4H4.dpuf",
+  "url": "http://apis.io/apisdef/kairos.json",
+  "image": "https://cdn.brandisty.com/img?id=52534b9d88e188003e000046&format=png&w=600&h=130",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Kairos API",
+      "description": "Kairos is a web platform that develops a facial recognition service to identify someone in real-time. - See more at: http://www.crunchbase.com/organization/kairos-ar#sthash.RL5gw4H4.dpuf",
+      "image": "https://cdn.brandisty.com/img?id=52534b9d88e188003e000046&format=png&w=600&h=130",
+      "APIVersion": "1",
+      "humanURL": "https://developer.kairos.io/",
+      "machineURL": "https://developer.kairos.io",
+      "tags": "facial recognition",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.kairos.io"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/LoveKairos"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://kairos.com",
+      "name": "Kairos",
+      "twitter": "https://twitter.com/LoveKairos",
+      "github": "https://github.com/kairosinc",
+      "organizationName": "Kairos",
+      "image": "https://cdn.brandisty.com/img?id=52534b9d88e188003e000046&format=png&w=600&h=130"
+    }
+  ],
+  "tags": "facial recognition",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

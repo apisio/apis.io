@@ -1,0 +1,36 @@
+{
+  "name": "Tropo",
+  "description": "Tropo makes it simple to build phone and SMS applications. You use the web technologies you already know and Tropo’s powerful cloud API to bring real-time communications to your apps.",
+  "type": "community",
+  "url": "https://www.tropo.com/",
+  "image": "https://www.tropo.com/wp-content/themes/tropo-bootstrap/images/logo.png",
+  "apis": [
+    {
+      "name": "Tropo API",
+      "description": "Tropo makes it simple to build phone and SMS applications. You use the web technologies you already know and Tropo’s powerful cloud API to bring real-time communications to your apps.",
+      "image": "https://www.tropo.com/wp-content/themes/tropo-bootstrap/images/logo.png",
+      "humanURL": "https://www.tropo.com/",
+      "tags": "sms, voice, communication",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.tropo.com/register"
+        },
+        {
+          "type": "blog",
+          "url": "https://www.tropo.com/category/blog/"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Tropo",
+      "twitter": "https://twitter.com/Tropo",
+      "github": "https://github.com/tropo",
+      "email": "support@tropo.com"
+    }
+  ],
+  "tags": "sms, voice, communication",
+  "modified": "05/20/2014"
+}

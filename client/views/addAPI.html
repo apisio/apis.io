@@ -1,0 +1,36 @@
+<template name="addAPI">
+	  <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<!-- 	{{#autoForm collection="APIFiles" validation="none" id="insertAPIForm" type="insert"}}
+    <fieldset>
+        <legend>Add an apis.json file</legend>
+        <p>APIs.json format version(s) accepted: {{{displaySpecVersions}}}</p>
+        {{> afQuickField name='url'}}
+        {{> afFieldInput name="name" type="hidden"}}
+        {{> afFieldInput name="created" type="hidden"}}
+        {{> afFieldInput name="modified" type="hidden"}}
+        {{> selectSpecVersions}}
+    </fieldset>
+    <div id="recaptchaDioooov"></div>
+    <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+ -->
+    {{> addNewAPI}}
+</template>
+
+<template name="addNewAPI">
+  <form id="addNewAPIForm" action="">
+    <fieldset>
+        <legend>Add an apis.json file</legend>
+        <p>APIs.json format version(s) accepted: {{{displaySpecVersions}}}</p>
+        <div class="form-group">
+            <label class="control-label" for="url">url (Web URL indicating the location of the latest version of this file)</label>
+            <input type="url" name="url" id="fileURL" required="" data-schema-key="url" class="form-control">
+            <span class="help-block"></span>
+        </div>
+        <label>Select the APIs.json spec. version</label>
+        {{> selectSpecVersions}}
+    </fieldset>
+    <div id="recaptchaDiv"></div>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  </form>
+</template>

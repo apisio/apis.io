@@ -1,0 +1,41 @@
+{
+  "name": "T Dispatch",
+  "description": "T Dispatch create cloud-based solutions for fleet management. The latest web technologies are used to offer dispatch system for taxi, private hire and passenger transport fleets worldwide.",
+  "url": "http://apis.io/apisdef/legacy/tdispatch.json",
+  "image": "https://tdispatch.com/wp-content/themes/tdispatch/images/tdispatch_logo_32.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "T Dispatch  API",
+      "description": "T Dispatch create cloud-based solutions for fleet management. The latest web technologies are used to offer dispatch system for taxi, private hire and passenger transport fleets worldwide.",
+      "image": "https://tdispatch.com/wp-content/themes/tdispatch/images/tdispatch_logo_32.png",
+      "humanURL": "https://github.com/TDispatch/Passenger-API/wiki/Oauth2.0-authentication",
+      "machineURL": "https://tdispatch.com/developers/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://tdispatch.com/plans/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/T_Dispatch"
+        }
+      ],
+      "tags": "fleet management, taxi"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "T Dispatch",
+      "url": "http://github.com",
+      "organizationName": "T Dispatch",
+      "image": "https://tdispatch.com/wp-content/themes/tdispatch/images/tdispatch_logo_32.png",
+      "twitter": "https://twitter.com/T_Dispatch"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.860Z",
+  "created": "2014-06-05T00:41:56.860Z",
+  "tags": "fleet management, taxi"
+}

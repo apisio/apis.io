@@ -1,0 +1,43 @@
+{
+  "name": "Beamly",
+  "description": "Beamly (formerly zeebox) is a companion app and website for watching TV. Beamly analyses the context of live television and uses that to aggregate stuff from the web that is relevant to what consumers are watching on TV. - See more at: http://www.crunchbase.com/organization/beamly#sthash.TRc0Gpa8.dpuf",
+  "url": "http://apis.io/apisdef/beamly.json",
+  "image": "http://about.beamly.com/wp-content/uploads/2014/04/Beamly_Masterbrand_Hero2.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Beamly API",
+      "description": "Beamly (formerly zeebox) is a companion app and website for watching TV. Beamly analyses the context of live television and uses that to aggregate stuff from the web that is relevant to what consumers are watching on TV. - See more at: http://www.crunchbase.com/organization/beamly#sthash.TRc0Gpa8.dpuf",
+      "image": "http://about.beamly.com/wp-content/uploads/2014/04/Beamly_Masterbrand_Hero2.png",
+      "APIVersion": "1",
+      "humanURL": "https://develop.beamly.com/",
+      "machineURL": "https://api.zeebox.com",
+      "tags": "TV",
+      "urls": [
+        {
+          "type": "console",
+          "url": "https://develop.beamly.com/apis/console"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/BeamlyUS"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://beamly.com",
+      "name": "Beamly",
+      "twitter": "https://twitter.com/BeamlyUS",
+      "github": "https://github.com/beamly",
+      "organizationName": "Beamly",
+      "image": "http://about.beamly.com/wp-content/uploads/2014/04/Beamly_Masterbrand_Hero2.png"
+    }
+  ],
+  "tags": "TV",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

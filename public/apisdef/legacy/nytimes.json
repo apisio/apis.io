@@ -1,0 +1,46 @@
+{
+  "name": "NYTimes",
+  "description": "New York Times news API",
+  "url": "http://apis.io/apisdef/legacy/nytimes.json",
+  "image": "http://developer.nytimes.com/files/NYTDevLogo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "NYTimes API",
+      "description": "New York Times news API",
+      "image": "http://developer.nytimes.com/files/NYTDevLogo.png",
+      "humanURL": "http://developer.nytimes.com/",
+      "machineURL": "http://api.nytimes.com/svc",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://developer.nytimes.com/"
+        },
+        {
+          "type": "console",
+          "url": "http://developer.nytimes.com/io-docs"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/nytimes"
+        }
+      ],
+      "tags": "news, article"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "NYTimes",
+      "url": "http://developer.nytimes.com",
+      "organizationName": "NYTimes",
+      "image": "http://developer.nytimes.com/files/NYTDevLogo.png",
+      "twitter": "http://twitter.com/nytimes",
+      "github": "https://github.com/nytimes/"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.310Z",
+  "created": "2014-06-05T00:41:56.310Z",
+  "tags": "news, article"
+}

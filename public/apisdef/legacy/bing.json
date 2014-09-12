@@ -1,0 +1,42 @@
+{
+    "name": "Bing",
+    "description": "Microsoft Bing Search Engine API",
+    "url": "http://apis.io/apisdef/legacy/bing.json",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Bing_logo_%282013%29.svg",
+    "specificationVersion": "0.13",
+    "apis": [
+        {
+            "name": "Bing API",
+            "description": "Microsoft Bing Search Engine API",
+            "image": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Bing_logo_%282013%29.svg",
+            "humanURL": "http://www.bing.com/toolbox/bingdeveloper/",
+            "machineURL": "http://api.search.live.net",
+            "urls": [
+                {
+                    "type": "signup",
+                    "url": "http://www.bing.com/toolbox/bingdeveloper/"
+                }
+            ],
+            "contact": [
+                {
+                    "type": "twitter",
+                    "url": "http://twitter.com/"
+                }
+            ],
+            "tags": "search, map, translation"
+        }
+    ],
+    "maintainers": [
+        {
+            "name": "Bing",
+            "url": "http://www.bing.com",
+            "organizationName": "Microsoft",
+            "image": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Bing_logo_%282013%29.svg",
+            "twitter": "http://twitter.com/bing",
+            "github": "http://github.com/microsoft"
+        }
+    ],
+    "modified": "2014-06-05T00:00:04.248Z",
+    "created": "2014-06-05T00:00:04.248Z",
+    "tags": "search, map, translation"
+}

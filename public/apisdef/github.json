@@ -1,0 +1,42 @@
+{
+  "name": "Github",
+  "description": "Powerful collaboration, code review, and code management for open source and private projects. ",
+  "type": "community",
+  "url": "https://developer.github.com/",
+  "image": "https://assets-cdn.github.com/images/modules/logos_page/Octocat.png",
+  "apis": [
+    {
+      "name": "Github API",
+      "description": "Powerful collaboration, code review, and code management for open source and private projects. ",
+      "image": "https://assets-cdn.github.com/images/modules/logos_page/Octocat.png",
+      "humanURL": "https://developer.github.com/",
+      "tags": "git, repositories, collaboration",
+      "urls": [
+        {
+          "type": "reference",
+          "url": "https://developer.github.com/v3/"
+        },
+        {
+          "type": "Librairies",
+          "url": "https://developer.github.com/libraries/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "support@github.com"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Github",
+      "twitter": "https://twitter.com/GitHubAPI",
+      "github": "https://github.com/github",
+      "email": "support@github.com"
+    }
+  ],
+  "tags": "git, repositories, collaboration",
+  "modified": "05/16/2014"
+}

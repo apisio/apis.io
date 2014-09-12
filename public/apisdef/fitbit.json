@@ -1,0 +1,34 @@
+{
+  "name": "Fitbit",
+  "description": "Fitbit is dedicated to helping people lead healthier, more active lives.",
+  "url": "http://dev.fitbit.com/",
+  "image": "http://static3.fitbit.com/simple.b-dis-png.h76d53d8e6a0653b38326a825b2b9cf57.pack?items=%2Fimages%2Fcommon%2Fbg_branding_b.png",
+  "apis": [
+    {
+      "name": "Fitbit API",
+      "description": "The Fitbit API allows developers to interact with Fitbit data in their own applications, products and services.",
+      "image": "http://static3.fitbit.com/simple.b-dis-png.h76d53d8e6a0653b38326a825b2b9cf57.pack?items=%2Fimages%2Fcommon%2Fbg_branding_b.png",
+      "humanURL": "http://dev.fitbit.com/",
+      "tags": "wearable, iot, internet of things, health, tracker",
+      "urls": [
+        {
+          "type": "API explorer",
+          "url": "https://wiki.fitbit.com/display/API/API+Explorer"
+        },
+        {
+          "type": "signup",
+          "url": "https://dev.fitbit.com/apps/new"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Fitbit",
+      "twitter": "http://twitter.com/fitbit",
+      "github": "http://github.com/fitbit"
+    }
+  ],
+  "tags": "wearable, iot, internet of things, health, tracker",
+  "modified": "05/15/2014"
+}

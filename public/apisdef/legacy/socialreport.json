@@ -1,0 +1,42 @@
+{
+  "name": "socialreport",
+  "description": "Social Report is a social network analytics solution that allows you to track your social network accounts just the same way you would track the performance of your websites. The best comparison would be to Google Website Analytics. Just like you can track visitors, time on site, keywords, geography and many other aspects of web performance there with Social Report you can track membership, demographics, interests, geography, education, employment and many other aspects of your social space.",
+  "url": "http://apis.io/apisdef/socialreport.json",
+  "image": "http://www.socialreport.com/images/api.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "socialreport API",
+      "description": "Social Report is a social network analytics solution that allows you to track your social network accounts just the same way you would track the performance of your websites. The best comparison would be to Google Website Analytics. Just like you can track visitors, time on site, keywords, geography and many other aspects of web performance there with Social Report you can track membership, demographics, interests, geography, education, employment and many other aspects of your social space.",
+      "image": "http://www.socialreport.com/images/api.png",
+      "humanURL": "http://www.socialreport.com/social-report-api.html",
+      "machineURL": "https://api.socialreport.com/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.socialreport.com/social-report-api.html"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/thesocialreport"
+        }
+      ],
+      "tags": "social network, analytics"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "SocialReport",
+      "url": "http://www.socialreport.com",
+      "organizationName": "SocialReport",
+      "image": "http://www.socialreport.com/images/api.png",
+      "twitter": "https://twitter.com/thesocialreport",
+      "github": "https://github.com/socialreport"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.461Z",
+  "created": "2014-06-05T00:41:56.461Z",
+  "tags": "social network, analytics"
+}

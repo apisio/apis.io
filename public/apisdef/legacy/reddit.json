@@ -1,0 +1,50 @@
+{
+  "name": "Reddit",
+  "description": "reddit is a source for what's new and popular online. vote on links that you like or dislike and help decide what's popular, or submit your own!",
+  "url": "http://apis.io/apisdef/reddit.json",
+  "image": "http://www.redditstatic.com/about/assets/reddit-logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Reddit API",
+      "description": "reddit is a source for what's new and popular online. vote on links that you like or dislike and help decide what's popular, or submit your own!",
+      "image": "http://www.redditstatic.com/about/assets/reddit-logo.png",
+      "humanURL": "http://www.reddit.com/dev/api",
+      "machineURL": "http://www.reddit.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://github.com/reddit/reddit/wiki/API"
+        },
+        {
+          "type": "console",
+          "url": "https://apigee.com/console/reddit"
+        },
+        {
+          "type": "wiki",
+          "url": "https://github.com/reddit/reddit/wiki/API"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/reddit"
+        }
+      ],
+      "tags": "news, social network, community"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Reddit",
+      "url": "http://reddit.com",
+      "organizationName": "Reddit",
+      "image": "http://www.redditstatic.com/about/assets/reddit-logo.png",
+      "twitter": "http://twitter.com/reddit",
+      "github": "http://github.com/reddit"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.408Z",
+  "created": "2014-06-05T00:41:56.408Z",
+  "tags": "news, social network, community"
+}

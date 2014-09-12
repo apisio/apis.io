@@ -1,0 +1,49 @@
+{
+  "name": "Nutritionix",
+  "description": "Nutritionix is a B2B platform that allows brands to organize and publish complex food data. Nutritionix currently maintains the largest database of verified nutrition information on the web, with over 300,000 unique food items from thousands of grocery stores and restaurant chains.",
+  "type": "community",
+  "url": "https://developer.nutritionix.com/",
+  "image": "http://www.nutritionix.com/images/logo_sm.png",
+  "apis": [
+    {
+      "name": "Nutritionix",
+      "description": "Nutritionix is a B2B platform that allows brands to organize and publish complex food data. Nutritionix currently maintains the largest database of verified nutrition information on the web, with over 300,000 unique food items from thousands of grocery stores and restaurant chains.",
+      "image": "http://www.nutritionix.com/images/logo_sm.png",
+      "humanURL": "https://developer.nutritionix.com/",
+      "tags": "health, food, nutrition",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.nutritionix.com/signup"
+        },
+        {
+          "type": "documentation",
+          "url": "https://developer.nutritionix.com/docs/v1_1"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/nutritionix_api"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/nutritionix"
+        },
+        {
+          "type": "forums",
+          "url": "https://developer.nutritionix.com/forum"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Nutritionix",
+      "twitter": "https://twitter.com/nutritionix",
+      "github": "https://github.com/nutritionix"
+    }
+  ],
+  "tags": "health, food, nutrition",
+  "modified": "05/20/2014"
+}

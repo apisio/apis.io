@@ -1,0 +1,64 @@
+{
+  "name": "Picsoungs's APIs",
+  "description_okoko": "All APIs made by picsoung",
+  "url": "http://nico3scale.net",
+  "apis": [
+    {
+      "name": "OKmail",
+      "description": "OKmail API help you find if email address are legit or not.",
+      "human-url": "http://nico3scale.net",
+      "machine-url": "https://nico3scale.3scale.net/api_docs/services/7642.json",
+      "tags": "email, spam, fraud, risk",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://nico3scale.3scale.net/"
+        },
+        {
+          "type": "swagger",
+          "url": "https://nico3scale.3scale.net/api_docs/services/7642.json"
+        },
+        {
+          "type": "blog",
+          "url": "http://blog.nicolasgrenie.com"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "me@nicolasgrenie.com"
+        },
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/picsoung"
+        }
+      ],
+      "meta": [
+        {
+          "key": "interface-license",
+          "value": "CC BY 3.0"
+        },
+        {
+          "key": "pricing",
+          "value": "Free"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "type": "Name",
+      "url": "Nicolas Grenié"
+    },
+    {
+      "type": "email",
+      "url": "me@nicolasgrenie.com"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/picsoung/"
+    }
+  ],
+  "tags": "picsoung, nicolas grenie",
+  "modified": "05/08/2014"
+}

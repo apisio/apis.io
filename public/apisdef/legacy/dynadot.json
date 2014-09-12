@@ -1,0 +1,41 @@
+{
+  "name": "Dynadot",
+  "description": "The Dynadot API allows you to search for, register, and delete domain names programatically, using your own software and server. With version 2, you can also set name servers and renew domains in your account. This API v2 is still under development, and will probably change over the next few months. The API is available to all accounts.",
+  "url": "http://apis.io/apisdef/legacy/dynadot.json",
+  "image": "http://upload.wikimedia.org/wikipedia/en/8/89/Dynadot_logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Dynadot API",
+      "description": "The Dynadot API allows you to search for, register, and delete domain names programatically, using your own software and server. With version 2, you can also set name servers and renew domains in your account. This API v2 is still under development, and will probably change over the next few months. The API is available to all accounts.",
+      "image": "http://upload.wikimedia.org/wikipedia/en/8/89/Dynadot_logo.png",
+      "humanURL": "http://www.dynadot.com/domain/api.html",
+      "machineURL": "https://api.dynadot.com/api2.html",
+      "urls": [
+        {
+          "type": "get started",
+          "url": "http://www.dynadot.com/domain/api.html"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://www.twitter.com/dynadot"
+        }
+      ],
+      "tags": "domain, registrar"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Dynadot",
+      "url": "http://www.dynadot.com",
+      "organizationName": "Dynadot",
+      "image": "http://upload.wikimedia.org/wikipedia/en/8/89/Dynadot_logo.png",
+      "twitter": "http://www.twitter.com/dynadot"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.509Z",
+  "created": "2014-06-05T00:41:56.509Z",
+  "tags": "domain, registrar"
+}

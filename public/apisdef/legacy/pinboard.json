@@ -1,0 +1,42 @@
+{
+  "name": "Pinboard.in",
+  "description": "Fast, no-nonsense bookmarking site",
+  "url": "http://apis.io/apisdef/pinboard.json",
+  "image": "http://userlogos.org/files/logos/jumpordie/pinboard_in_blue.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Pinboard.in API",
+      "description": "Fast, no-nonsense bookmarking site",
+      "image": "http://userlogos.org/files/logos/jumpordie/pinboard_in_blue.png",
+      "humanURL": "http://pinboard.in/api/",
+      "machineURL": "https://api.pinboard.in/v1/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://pinboard.in/api/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/pinboard"
+        }
+      ],
+      "tags": "bookmarking"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Pinboard.in",
+      "url": "http://pinboard.in",
+      "organizationName": "Pinboard.in",
+      "image": "http://userlogos.org/files/logos/jumpordie/pinboard_in_blue.png",
+      "twitter": "https://twitter.com/pinboard",
+      "github": "https://github.com/pinboard"
+    }
+  ],
+  "modified": "2014-06-05T00:41:55.687Z",
+  "created": "2014-06-05T00:41:55.687Z",
+  "tags": "bookmarking"
+}

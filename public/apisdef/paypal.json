@@ -1,0 +1,29 @@
+{
+  "name": "PayPal API",
+  "specificationVersion":"0.13",
+  "description": "Complete suite of api's for  identity , payments and invoicing",
+  "url": "https://developer.paypal.com/webapps/developer/docs/api/",
+  "image": "https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.png",
+  "apis": [
+    {
+      "name": "Payments API",
+      "description": "The Payments API allows developers to accept all kinds of payments",
+      "APIVersion": "v1",
+      "humanURL": "https://developer.paypal.com/webapps/developer/docs/api/#payments",
+      "machineURL": "https://api.paypal.com/v1/payments/payment",
+      "tags": "payments, sale, authorization, capture, refunds",
+      "image": "https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.png"
+    }
+  ],
+  "maintainers": [
+    {
+      "github": "https://github.com/paypal",
+      "organizationName": "PayPal",
+      "address": "2211 North First Street, San Jose, California 95131",
+      "image": "https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.png"
+    }
+  ],
+  "tags": "payments, wallet, mobile, money",
+  "created": "06/26/2014",
+  "modified": "07/10/2014"
+}

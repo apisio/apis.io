@@ -1,0 +1,42 @@
+{
+  "name": "Scoop.it",
+  "description": "Scoop.it takes your social media publishing to the next level: find relevant content faster, edit it easily, publish & share it everywhere in 1-click in a visual format. Engage your followers more and be discovered through search and interest-based social discovery.",
+  "url": "http://apis.io/apisdef/scoopit.json",
+  "image": "http://www.scoop.it/resources/img/api/poweredbyscoopit_80x80_black.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Scoop.it API",
+      "description": "Scoop.it takes your social media publishing to the next level: find relevant content faster, edit it easily, publish & share it everywhere in 1-click in a visual format. Engage your followers more and be discovered through search and interest-based social discovery.",
+      "image": "http://www.scoop.it/resources/img/api/poweredbyscoopit_80x80_black.png",
+      "humanURL": "http://www.scoop.it/dev",
+      "machineURL": "http://www.scoop.it/api/1/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.scoop.it/dev"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://www.twitter.com/scoopit"
+        }
+      ],
+      "tags": "news, curation"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Scoop.it",
+      "url": "http://www.scoop.it",
+      "organizationName": "Scoop.it",
+      "image": "http://www.scoop.it/resources/img/api/poweredbyscoopit_80x80_black.png",
+      "twitter": "http://www.twitter.com/scoopit",
+      "github": "https://github.com/Scoopit"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.770Z",
+  "created": "2014-06-05T00:41:56.770Z",
+  "tags": "news, curation"
+}

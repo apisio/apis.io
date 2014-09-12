@@ -1,0 +1,42 @@
+{
+  "name": "google",
+  "description": "Google's APIs",
+  "url": "http://apis.io/apisdef/google.json",
+  "image": "http://deployment.googleapps.com/_/rsrc/1326052805286/Home/user-resources/google-icons-and-logos/google_logo_3D_online_medium.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "GooglePrediction API",
+      "description": "Google's cloud-based machine learning tools can help analyze your data",
+      "image": "https://www.google.com/images/icons/feature/predictionapi-48.png",
+      "humanURL": "https://developers.google.com/prediction/",
+      "machineURL": "https://www.googleapis.com/prediction/v1.6",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developers.google.com/prediction/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/googledevs"
+        }
+      ],
+      "tags": "machine learning, prediction"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Google",
+      "url": "http://developers.google.com",
+      "organizationName": "Google",
+      "image": "http://deployment.googleapps.com/_/rsrc/1326052805286/Home/user-resources/google-icons-and-logos/google_logo_3D_online_medium.png",
+      "twitter": "https://twitter.com/googledevs",
+      "github": "github.com/google"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.322Z",
+  "created": "2014-06-05T00:41:56.322Z",
+  "tags": "machine learning, prediction"
+}

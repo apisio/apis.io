@@ -1,0 +1,41 @@
+{
+  "name": "FraudLabs Pro",
+  "description": "FraudLabs Pro provides a comprehensive library for developers who wish to leverage our fraud prevention solution into their projects. The library comes in form of REST API that developer can easily integrated it into any programming languages of their like. Various examples have been provided on http://www.fraudlabspro.com/developer for reference. This API requires an API key, and you may sign up for a free Micro Plan at http://www.fraudlabspro.com/sign-up\r\n\r\n",
+  "url": "http://apis.io/apisdef/fraudlabs.json",
+  "image": "http://www.fraudlabspro.com/images/fb_logo.jpg",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Online Fraud Detection and Prevention API",
+      "description": "FraudLabs Pro provides a comprehensive library for developers who wish to leverage our fraud prevention solution into their projects. The library comes in form of REST API that developer can easily integrated it into any programming languages of their like. Various examples have been provided on http://www.fraudlabspro.com/developer for reference. This API requires an API key, and you may sign up for a free Micro Plan at http://www.fraudlabspro.com/sign-up\r\n\r\n",
+      "image": "http://www.fraudlabspro.com/images/fb_logo.jpg",
+      "humanURL": "http://www.fraudlabspro.com/developer",
+      "machineURL": "https://api.fraudlabspro.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.fraudlabspro.com/developer"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/fraudlabspro"
+        }
+      ],
+      "tags": "fraud, billing, ecommerce"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "FraudLabs Pro",
+      "url": "http://www.fraudlabspro.com",
+      "organizationName": "FraudLabs Pro",
+      "image": "http://www.fraudlabspro.com/images/fb_logo.jpg",
+      "twitter": "http://twitter.com/fraudlabspro"
+    }
+  ],
+  "modified": "2014-06-05T00:41:11.358Z",
+  "created": "2014-06-05T00:41:11.358Z",
+  "tags": "fraud, billing, ecommerce"
+}

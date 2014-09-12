@@ -1,0 +1,43 @@
+{
+  "name": "Algolia",
+  "description": "Algolia provides a developer-friendly SaaS API for database search. Most web services and mobile apps, such as Spotify, Salesforce or Amazon need to provide a fast and meaningful access to database objects via a simple search box. People want to find songs, invoices, products in just a few keystrokes.",
+  "url": "http://apis.io/apisdef/algolia.json",
+  "image": "https://d3ibatyzauff7b.cloudfront.net/assets/algolia256x80-ad5c5a658d41ac1dc362d401b73945fb.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Algolia REST API",
+      "description": "Algolia provides a developer-friendly SaaS API for database search. Most web services and mobile apps, such as Spotify, Salesforce or Amazon need to provide a fast and meaningful access to database objects via a simple search box. People want to find songs, invoices, products in just a few keystrokes.",
+      "image": "https://d3ibatyzauff7b.cloudfront.net/assets/algolia256x80-ad5c5a658d41ac1dc362d401b73945fb.png",
+      "APIVersion": "1",
+      "humanURL": "https://www.algolia.com",
+      "machineURL": "https://application-id.algolia.io/1/",
+      "tags": "search, big data",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.algolia.com"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/algolia"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://algolia.com",
+      "name": "Algolia",
+      "twitter": "https://twitter.com/algolia",
+      "github": "https://github.com/algolia",
+      "organizationName": "Doctoralia",
+      "image": "https://d3ibatyzauff7b.cloudfront.net/assets/algolia256x80-ad5c5a658d41ac1dc362d401b73945fb.png"
+    }
+  ],
+  "tags": "search, big data",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

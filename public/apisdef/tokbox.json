@@ -1,0 +1,43 @@
+{
+  "name": "Tokbox",
+  "description": "TokBox, a Telefónica Digital company, develops and operates the OpenTok Video Platform, making it fast and easy to add live video communications into online and mobile websites, apps and services. The scalable, customizable platform gives users the creative freedom to develop any video interaction, from one-to-one chats to large-scale broadcasts. The first platform to incorporate support for WebRTC, OpenTok caters to enterprises, entrepreneurs and developers with powerful APIs, a global cloud infrastructure, and pre-configured solutions. OpenTok has been used to add video communications to more than 80,000 services by companies including Major League Baseball, Diet Coke, Ford, Doritos, Bridgestone and Double Robotics. - See more at: http://www.crunchbase.com/organization/tokbox#sthash.gRS5nZzW.dpuf",
+  "url": "http://apis.io/apisdef/tokbox.json",
+  "image": "https://static.opentok.com/img/press/tokbox-inc_horizontal.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "OpenTok",
+      "description": "The OpenTok Platform allows developers to integrate live, face-to-face video directly into their website and mobile apps using WebRTC.",
+      "image": "https://static.opentok.com/img/press/logo_opentok_registered.png",
+      "APIVersion": "2.0",
+      "humanURL": "http://tokbox.com/opentok",
+      "machineURL": "https://api.opentok.com/hl/",
+      "tags": "video, webRTC",
+      "urls": [
+        {
+          "type": "examples",
+          "url": "http://tokbox.com/opentok/tutorials/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/tokbox"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://www.tokbox.com",
+      "name": "Tokbox",
+      "twitter": "http://twitter.com/tokbox",
+      "github": "https://github.com/opentok",
+      "organizationName": "Tokbox",
+      "image": "https://static.opentok.com/img/press/tokbox-inc_horizontal.png"
+    }
+  ],
+  "tags": "video, webRTC",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Context.io",
+  "description": "Context.IO is a REST email API that makes it easy and fast to integrate your users' email data in your application.",
+  "type": "default",
+  "url": "http://context.io/",
+  "image": "http://context.io/images/contextio-logo.png",
+  "apis": [
+    {
+      "name": "Context.io",
+      "description": "Context.IO is a REST email API that makes it easy and fast to integrate your users' email data in your application.",
+      "image": "http://context.io/images/contextio-logo.png",
+      "humanURL": "http://context.io/docs/2.0",
+      "tags": "email, IMAP, CRM",
+      "urls": [
+        {
+          "type": "console",
+          "url": "https://console.context.io/#explore/"
+        },
+        {
+          "type": "signup",
+          "url": "http://context.io/#signup"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/ContextIO"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Context.io",
+      "twitter": "https://twitter.com/ContextIO",
+      "github": "https://github.com/contextio"
+    }
+  ],
+  "tags": "email, IMAP, CRM",
+  "modified": "05/15/2014"
+}

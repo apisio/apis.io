@@ -1,0 +1,70 @@
+<head>
+  <title>APIs.io - the API search engine</title>
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="/favicon.png?v=2"  type="image/x-icon" />
+  <link rel="shortcut icon" sizes="32x32" href="/favicon.ico?v=2">
+
+  <!-- General Meta Tags -->
+  <meta name="description" content="Find all the APIs you need to build your successful projects. APIs.io is the first search engine for APIs." />
+  <meta name="keywords" content="api, apis.json, apisjson, apijson, apicommons, api commons, search engine, directory, crawler, programmableweb, api search" />
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="APIs.io - the API search engine" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://apis.io/" />
+  <meta property="og:image" content="/logo_square.png" />
+  <meta property="og:description" content="Find all the APIs you need to build your successful projects. APIs.io is the first search engine for APIs." />
+
+  <!-- Twitter Card data --> 
+  <meta name="twitter:card" content="APIs.io - the API search engine"> 
+  <meta name="twitter:site" content="@apisio"> 
+  <meta name="twitter:title" content="APIs.io - the API search engine"> 
+  <meta name="twitter:description" content="Find all the APIs you need to build your successful projects. APIs.io is the first search engine for APIs."> 
+  <meta name="twitter:creator" content="@apisio">
+  <meta name="twitter:image" content="/logo_square.png">
+</head>
+
+<template name="defaultLayout">
+  {{> yield region='navbar'}}
+	<div class="container">
+	  <div clas="row">
+      {{> flashMessages}}
+		  {{> yield}}
+	  </div>
+	</div>
+	{{> footer}}
+</template>
+
+<template name="navbar">
+	<div class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}" style="color:DarkGray;font-size:2em;"><span style="color:Gold;">{APIs}</span>.io</a>
+      </div>
+  <!-- {{> searchNavBar}} -->
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      {{>navBarLinks}}
+    </ul>
+      <li class="search-input-item" style="margin-top:5px">
+        <form action="">
+          <input class="xlarge" id="top_search" name="search" placeholder="Search APIs on sms, photo, user etc..." dir="ltr" spellcheck="false" autofocus="" type="text">
+          <button class="btn btn-large btn-warning" id="top_searchBtn" type="submit" value="search"> <span class="glyphicon glyphicon-search"></span> </button>
+        </form>
+      </li>
+  </div>
+  </div>
+</div>
+</template>
+
+<template name="navBarLinks">
+  <li class='{{TabActive "addAPI"}}'><a href="/apis/add">Add API</a></li>
+  <li class='{{TabActive "linter"}}'><a href="/lint">Validator</a></li>
+  <!-- <li class='{{TabActive "builder"}}'><a href="/builder">Builder</a></li> -->
+  <li class='{{TabActive "apiSearchAPIIndex"}}'><a href="/api">API</a></li>
+  <li class='{{TabActive "FAQ"}}'><a href="/faq">FAQ</a></li>
+  <li class='{{TabActive "about"}}'><a href="/about">About</a></li>
+</template>

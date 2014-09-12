@@ -1,0 +1,41 @@
+{
+  "name": "ecobee API",
+  "description": "The ecobee API provides an http-based interface for control and access to the ecobee thermostats. Integrators will be allowed to read, update and poll information about their thermostat(s). ecobee aims to be backward compatible with previous versions of the API and to protect implementations from breaking when new features or changes are implemented. The API also strives to be self-documenting, easy to understand and use.",
+  "url": "http://apis.io/apisdef/legacy/ecobee.json",
+  "image": "http://www.ecobee.com/wp-content/themes/ecobeev2/files/Green%20on%20White/ecobee_Logo.jpg",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "ecobee API",
+      "description": "The ecobee API provides an http-based interface for control and access to the ecobee thermostats. Integrators will be allowed to read, update and poll information about their thermostat(s). ecobee aims to be backward compatible with previous versions of the API and to protect implementations from breaking when new features or changes are implemented. The API also strives to be self-documenting, easy to understand and use.",
+      "image": "http://www.ecobee.com/wp-content/themes/ecobeev2/files/Green%20on%20White/ecobee_Logo.jpg",
+      "humanURL": "http://www.ecobee.com/solutions/api/",
+      "machineURL": "https://api.ecobee.com/1/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.ecobee.com/solutions/get-started/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/ecobee"
+        }
+      ],
+      "tags": "thermostat, IoT, home automation"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "ecobee",
+      "url": "http://www.ecobee.com",
+      "organizationName": "ecobee",
+      "image": "http://www.ecobee.com/wp-content/themes/ecobeev2/files/Green%20on%20White/ecobee_Logo.jpg",
+      "twitter": "http://twitter.com/ecobee"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.862Z",
+  "created": "2014-06-05T00:41:56.862Z",
+  "tags": "thermostat, IoT, home automation"
+}

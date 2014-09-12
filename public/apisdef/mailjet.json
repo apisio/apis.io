@@ -1,0 +1,64 @@
+{
+  "name": "Mailjet",
+  "version": "3",
+  "description": "Mailjet is a real-time Cloud Emailing platform: scalable, agile and flexible! Our unique algorithm boosts your deliverability and our platform provides in-depth insight so you can optimize more than ever. Because 20% of emails never reach the inbox Mailjet is a logical choice!",
+  "type": "community",
+  "image": "http://www.mailjet.com/images/theme/v1/logos/head_logo_tiny.png",
+  "apis": [
+    {
+      "name": "REST API",
+      "description": "Mailjet is a real-time Cloud Emailing platform: scalable, agile and flexible! Our unique algorithm boosts your deliverability and our platform provides in-depth insight so you can optimize more than ever. Because 20% of emails never reach the inbox Mailjet is a logical choice!",
+      "image": "http://www.mailjet.com/images/theme/v1/logos/head_logo_tiny.png",
+      "humanURL": "http://www.mailjet.com/",
+      "machineURL": "http://api.mailjet.com/0.1/",
+      "tags": "email, smtp, deliverability,newsletter",
+      "urls": [
+        {
+          "type": "docs",
+          "url": "http://www.mailjet.com/docs"
+        },
+        {
+          "type": "librairies",
+          "url": "http://www.mailjet.com/docs/code"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/mailjet"
+        }
+      ]
+    },
+    {
+      "name": "Events API",
+      "description": "Mailjet is a real-time Cloud Emailing platform: scalable, agile and flexible! Our unique algorithm boosts your deliverability and our platform provides in-depth insight so you can optimize more than ever. Because 20% of emails never reach the inbox Mailjet is a logical choice!",
+      "image": "http://www.mailjet.com/images/theme/v1/logos/head_logo_tiny.png",
+      "humanURL": "http://dev.mailjet.com/guides/event-api-guide/",
+      "tags": "webhook, email, smtp",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.mailjet.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/mailjet"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://mailjet.com",
+      "name": "Mailjet",
+      "twitter": "mailjet",
+      "github": "www.github.com/mailjet",
+      "email": "support@gmail.com",
+      "organizationName": "Mailjet",
+      "image": "http://www.mailjet.com/images/theme/v1/logos/head_logo_tiny.png"
+    }
+  ],
+  "tags": "email, smtp, deliverability,newsletter"
+}

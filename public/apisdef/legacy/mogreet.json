@@ -1,0 +1,42 @@
+{
+  "name": "Outspoken",
+  "description": "Mogreet's APIs enable developers to send and receive SMS or MMS messages (for only $0.01 per send) and add SMS, Video, rich media messaging to apps. Some example API methods include sending blasts to lists, managing content, and add and delete users from their mobile lists.",
+  "url": "http://apis.io/apisdef/mogreet.json",
+  "image": "https://developer.mogreet.com/assets/logo-v2.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Mogreet API",
+      "description": "Mogreet's APIs enable developers to send and receive SMS or MMS messages (for only $0.01 per send) and add SMS, Video, rich media messaging to apps. Some example API methods include sending blasts to lists, managing content, and add and delete users from their mobile lists.",
+      "image": "https://developer.mogreet.com/assets/logo-v2.png",
+      "humanURL": "https://developer.mogreet.com/docs",
+      "machineURL": "https://developer.mogreet.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.mogreet.com/users/sign_up"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/OutspokenAPI"
+        }
+      ],
+      "tags": "sms,mms,text"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Mogreet",
+      "url": "http://mogreet.com",
+      "organizationName": "Mogreet",
+      "image": "https://developer.mogreet.com/assets/logo-v2.png",
+      "twitter": "https://twitter.com/OutspokenAPI",
+      "github": "https://github.com/mogreet"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.538Z",
+  "created": "2014-06-05T00:41:56.538Z",
+  "tags": "sms,mms,text"
+}

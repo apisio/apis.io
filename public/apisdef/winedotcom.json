@@ -1,0 +1,42 @@
+{
+  "name": "Wine.com",
+  "description": "Wine.com is the #1 online wine retailer in the United States for wine enthusiasts. It is an online resource offering not only expert advice, but a selection of wines, gift baskets, gift certificates and monthly wine clubs. ",
+  "url": "http://apis.io/apisdef/winedotcom.json",
+  "image": "http://cache.wine.com/images/logos/80x80_winecom_logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Wine.com API",
+      "description": "Wine.com is the #1 online wine retailer in the United States for wine enthusiasts. It is an online resource offering not only expert advice, but a selection of wines, gift baskets, gift certificates and monthly wine clubs. ",
+      "image": "http://cache.wine.com/images/logos/80x80_winecom_logo.png",
+      "APIVersion": "b2",
+      "humanURL": "https://api.wine.com/wiki",
+      "machineURL": "http://services.wine.com/api/beta2/",
+      "tags": "food, wine, ecommerce",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://api.wine.com/signup"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/Wine_com"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://wine.com",
+      "name": "Wine.com",
+      "twitter": "http://twitter.com/Wine_com",
+      "organizationName": "Wine.com",
+      "image": "http://cache.wine.com/images/logos/80x80_winecom_logo.png"
+    }
+  ],
+  "tags": "food, ecommerce",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

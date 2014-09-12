@@ -1,0 +1,41 @@
+{
+  "name": "SimpleTexting",
+  "description": "Through our SMS API you can access many different features of the SimpleTexting platform. Browse them below and check out the list of available SMS API functions and their parameters. To use our SMS API, you must first open an SimpleTexting and request token access. No additional SMS API activation steps needed.",
+  "url": "http://apis.io/apisdef/simpletexting.json",
+  "image": "http://simpletexting.com/wp-content/themes/simpletexting-2.1/images/logo2x.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "SimpleTexting API",
+      "description": "Through our SMS API you can access many different features of the SimpleTexting platform. Browse them below and check out the list of available SMS API functions and their parameters. To use our SMS API, you must first open an SimpleTexting and request token access. No additional SMS API activation steps needed.",
+      "image": "http://simpletexting.com/wp-content/themes/simpletexting-2.1/images/logo2x.png",
+      "humanURL": "http://simpletexting.com/api/",
+      "machineURL": "https://app.simpletexting.com/v1/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://simpletexting.com/api/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/SimpleTexting"
+        }
+      ],
+      "tags": "sms,text"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "SimpleTexting",
+      "url": "http://simpletexting.com",
+      "organizationName": "SimpleTexting",
+      "image": "http://simpletexting.com/wp-content/themes/simpletexting-2.1/images/logo2x.png",
+      "twitter": "https://twitter.com/SimpleTexting"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.251Z",
+  "created": "2014-06-05T00:41:57.251Z",
+  "tags": "sms,text"
+}

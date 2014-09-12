@@ -1,0 +1,45 @@
+{
+  "name": "Spamwipe",
+  "description": "Comment SPAM Wiper or Spamwipe API is a distributed solution for fighting comment SPAM that automatically filters the SPAM posts / comments. It can be integrated as a 3rd party comment spam plugin or comment spam module for your site. CSW protects your site from SPAM comments, posts, track-backs, ping-backs, etc.",
+  "url": "http://apis.io/apisdef/legacy/spamwipe.json",
+  "image": "http://www.spamwipe.com/img/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Spamwipe API",
+      "description": "Comment SPAM Wiper or Spamwipe API is a distributed solution for fighting comment SPAM that automatically filters the SPAM posts / comments. It can be integrated as a 3rd party comment spam plugin or comment spam module for your site. CSW protects your site from SPAM comments, posts, track-backs, ping-backs, etc.",
+      "image": "http://www.spamwipe.com/img/logo.png",
+      "humanURL": "http://www.spamwipe.com/api.html",
+      "machineURL": "http://api.spamwipe.com/1.0/comments/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.spamwipe.com/api.html"
+        },
+        {
+          "type": "console",
+          "url": "http://www.spamwipe.com/console.html"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://www.twitter.com/CommentSPAMWipe"
+        }
+      ],
+      "tags": "spam, comment"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Spamwipe",
+      "url": "http://www.spamwipe.com",
+      "organizationName": "Spamwipe",
+      "image": "http://www.spamwipe.com/img/logo.png",
+      "twitter": "http://www.twitter.com/CommentSPAMWipe"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.758Z",
+  "created": "2014-06-05T00:41:56.758Z",
+  "tags": "spam, comment"
+}

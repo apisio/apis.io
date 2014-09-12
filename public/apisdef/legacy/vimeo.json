@@ -1,0 +1,42 @@
+{
+  "name": "Vimeo",
+  "description": "Vimeo is a popular video hosting site. This is the Vimeo Simple API.",
+  "url": "http://apis.io/apisdef/vimeo.json",
+  "image": "https://f.vimeocdn.com/logo.svg",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Vimeo API",
+      "description": "Vimeo is a popular video hosting site. This is the Vimeo Simple API.",
+      "image": "https://f.vimeocdn.com/logo.svg",
+      "humanURL": "https://developer.vimeo.com/",
+      "machineURL": "http://vimeo.com/api/v2",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.vimeo.com/apps"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/vimeoapi"
+        }
+      ],
+      "tags": "video"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Vimeo",
+      "url": "http://vimeo.com",
+      "organizationName": "Vimeo",
+      "image": "https://f.vimeocdn.com/logo.svg",
+      "twitter": "http://twitter.com/vimeoapi",
+      "github": "https://github.com/vimeo"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.875Z",
+  "created": "2014-06-05T00:41:56.875Z",
+  "tags": "video"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "AngelList",
+  "description": "AngelList is a platform for startups to meet investors, talent and incubators.",
+  "image": "https://d2h3sltx127pvt.cloudfront.net/assets/shared/al_logo-59619bb9aaec50a8584d2bf325b8ddf0.png",
+  "apis": [
+    {
+      "name": "AngelList",
+      "description": "AngelList is a platform for startups to meet investors, talent and incubators.",
+      "image": "https://d2h3sltx127pvt.cloudfront.net/assets/shared/al_logo-59619bb9aaec50a8584d2bf325b8ddf0.png",
+      "humanURL": "https://angel.co/api",
+      "tags": "social network, startups,",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://angel.co/api/oauth/clients/new"
+        },
+        {
+          "type": "terms",
+          "url": "https://angel.co/api/terms"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/angellistapi"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://www.angel.co",
+      "name": "AngelList",
+      "twitter": "https://twitter.com/angellistapi",
+      "organizationName": "AngelList",
+      "image": "https://d2h3sltx127pvt.cloudfront.net/assets/shared/al_logo-59619bb9aaec50a8584d2bf325b8ddf0.png"
+    }
+  ],
+  "tags": "social network, investment, startups"
+}

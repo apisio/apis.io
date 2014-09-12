@@ -1,0 +1,78 @@
+
+
+<template name="dashboard">
+	<script type="text/javascript">
+var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+Keen.configure({
+    projectId: "5373b4e405cd666b67000000",
+    readKey: "3792d53a668ec92587df988467f52e3dd3ef6145902ae74e4d076f22828fa47c690d3c6d829c49317130c986ff6cf10cf7cf1d5e3676d5ace855af2cdf0e8de2256631d972203b87468c515f3c31018462de203b93b954560c50ef7edb4638fbb0c00a55b1e3a64e2d6006ee60f01c1b",
+    writeKey: "c105c57884ff19844dff19c187591fadf71ccb322ec02f6396af72fd2482c3e77df016bced1b80d229fd9efeebda97189789023232ad2f9c58de016c4b306edebcdf125ff655962d022ef798107897239e07b16122f0a292bd77dd07066ac247f3d8046ead7fb9a0d8a72a78893c059a"
+});
+//Today on Index
+Keen.onChartsReady(function() {
+  var metric = new Keen.Metric("pathCollection", {
+    analysisType: "count_unique",
+    timeframe: "today",
+    targetProperty: "keen.id",
+    filters: [{"property_name":"path","operator":"eq","property_value":"/"}]
+  });
+  metric.draw(document.getElementById("todayOnIndex"));
+});
+
+//A week on index
+Keen.onChartsReady(function() {
+  var series = new Keen.Series("pathCollection", {
+    analysisType: "count_unique",
+    timeframe: "this_7_days",
+    interval: "daily",
+    targetProperty: "keen.id",
+    filters: [{"property_name":"path","operator":"eq","property_value":"/"}]
+  });
+  series.draw(document.getElementById("aWeekOnIndex"), { lineWidth: 2 });
+});
+
+
+Keen.onChartsReady(function() {
+  var metric = new Keen.Metric("searchCollection", {
+    analysisType: "count_unique",
+    targetProperty: "keywords",
+    groupBy: "keywords"
+  });
+  var myFunnelChart = new Keen.PieChart(metric, {
+	    minimumSlicePercentage: 1,
+	    backgroundColor: "transparent",
+	    title: "Searchs Keywords",
+	});
+
+  myFunnelChart.draw(document.getElementById("searchKeywords"));
+});
+
+//Traffic per hour
+Keen.onChartsReady(function() {
+  var series = new Keen.Series("pathCollection", {
+    analysisType: "count",
+    timeframe: "today",
+    interval: "hourly",
+    targetProperty: "path"
+  });
+  series.draw(document.getElementById("trafficPerHour"), { lineWidth: 2 });
+});
+
+//Traffic per path
+Keen.onChartsReady(function() {
+  var metric = new Keen.Metric("pathCollection", {
+    analysisType: "count",
+    targetProperty: "path",
+    groupBy: "path"
+  });
+  metric.draw(document.getElementById("trafficPerPathTotal"));
+});
+</script>
+	<h1>Dashboard</h1>
+	<div id="todayOnIndex"></div>
+	<div id="aWeekOnIndex"></div>
+	<div id="searchKeywords"></div>
+	<div id="trafficPerHour"></div>
+	<div id="trafficPerPathTotal"></div>
+</template>

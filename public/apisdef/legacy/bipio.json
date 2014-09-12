@@ -1,0 +1,46 @@
+{
+  "name": "BipIO",
+  "description": "Bipio is a graph pipelining API talking RESTful JSON, where each node in your graph is responsible for performing a discrete unit of work, such as integrating \"cloud\" API's or other web based RPC's.\r\n\r\nIt has some similar basic characteristics to premium closed systems such as ifttt.com, zapier.com, elastic.io, temboo, but is geared more towards complex workflows.\r\n\r\nThe graph structures (bips) allow you to transform content between adjacent nodes. They can be reconfigured dynamically without requiring changes to the connecting client, ideal for rapid prototyping, A/B testing, message escalation or any kind of interprotocol communication.\r\n\r\nBipIO is Billion Instructions Per I/O - For People and Robots.",
+  "url": "http://apis.io/apisdef/legacy/bipio.json",
+  "image": "https://bip.io/static/img/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "BipIO API",
+      "description": "Bipio is a graph pipelining API talking RESTful JSON, where each node in your graph is responsible for performing a discrete unit of work, such as integrating \"cloud\" API's or other web based RPC's.\r\n\r\nIt has some similar basic characteristics to premium closed systems such as ifttt.com, zapier.com, elastic.io, temboo, but is geared more towards complex workflows.\r\n\r\nThe graph structures (bips) allow you to transform content between adjacent nodes. They can be reconfigured dynamically without requiring changes to the connecting client, ideal for rapid prototyping, A/B testing, message escalation or any kind of interprotocol communication.\r\n\r\nBipIO is Billion Instructions Per I/O - For People and Robots.",
+      "image": "https://bip.io/static/img/logo.png",
+      "humanURL": "https://bip.io/docs",
+      "machineURL": "https://api.bip.io",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://bip.io/docs"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/"
+        },
+        {
+          "type":"email",
+          "url":"support@cloudspark.com.au"
+        }
+      ],
+      "tags": "pipeline, APIs"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "BipIO",
+      "url": "http://bip.io",
+      "organizationName": "Cloudspark",
+      "image": "https://bip.io/static/img/logo.png",
+      "twitter": "https://twitter.com/bipioapp",
+      "github": "https://github.com/bipio-server"
+    }
+  ],
+  "modified": "2014-06-05T00:37:55.662Z",
+  "created": "2014-06-05T00:37:55.662Z",
+  "tags": "pipeline, APIs"
+}

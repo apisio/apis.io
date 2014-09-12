@@ -1,0 +1,42 @@
+{
+  "name": "Videobl",
+  "description": "Videobl is a free tool that enables anyone to request others to record themselves responding to questions, providing feedback, participating in surveys, etc. Simple to use - create a request, share it with others, sit back and collect responses!\r\n\r\nVideobl API is really simple to use and given its REST nature is compatible with all programming languages.",
+  "url": "http://apis.io/apisdef/videobl.json",
+  "image": "http://videobl.com/system/record_pressed_large.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Videobl API",
+      "description": "Videobl is a free tool that enables anyone to request others to record themselves responding to questions, providing feedback, participating in surveys, etc. Simple to use - create a request, share it with others, sit back and collect responses!\r\n\r\nVideobl API is really simple to use and given its REST nature is compatible with all programming languages.",
+      "image": "http://videobl.com/system/record_pressed_large.png",
+      "humanURL": "http://videobl.com/api",
+      "machineURL": "http://videobl.com/requests",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://videobl.com/api"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/videoble"
+        }
+      ],
+      "tags": "video"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Videobl",
+      "url": "http://videobl.com",
+      "organizationName": "Videobl",
+      "image": "http://videobl.com/system/record_pressed_large.png",
+      "twitter": "https://twitter.com/videoble",
+      "github": "https://github.com/videobl"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.473Z",
+  "created": "2014-06-05T00:41:56.473Z",
+  "tags": "video"
+}

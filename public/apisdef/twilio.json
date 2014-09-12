@@ -1,0 +1,92 @@
+{
+  "name": "Twilio",
+  "type": "community",
+  "url": "https://www.twilio.com/docs/api",
+  "image": "https://www.twilio.com/packages/company/img/logos_downloadable_round.png",
+  "apis": [
+    {
+      "name": "Twilio REST API",
+      "description": "Write and test applications using any HTTP client in any programming language to query meta-data about your account, phone numbers, calls, text messages, and recordings.",
+      "image": "https://www.twilio.com/packages/company/img/logos_downloadable_round.png",
+      "humanURL": "https://www.twilio.com/docs/api/rest",
+      "machineURL": "https://api.twilio.com/2010-04-01",
+      "tags": "sms, text, REST, ",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.twilio.com/try-twilio"
+        },
+        {
+          "type": "libraries",
+          "url": "https://www.twilio.com/docs/libraries"
+        },
+        {
+          "type": "console",
+          "url": "https://apigee.com/console/twilio"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twilio",
+          "url": "http://twitter.com/twilio"
+        }
+      ]
+    },
+    {
+      "name": "Twilio Call API",
+      "description": "Twilio Client lets any browser, phone or tablet talk using only a data connection. And best of all, your existing applications will already work with Twilio Client.",
+      "image": "https://www.twilio.com/packages/company/img/logos_downloadable_round.png",
+      "humanURL": "https://www.twilio.com/docs/client",
+      "tags": "sms, text, ios, android, ",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.twilio.com/try-twilio"
+        },
+        {
+          "type": "iOS SDK",
+          "url": "https://www.twilio.com/docs/client/ios"
+        },
+        {
+          "type": "android SDK",
+          "url": "https://www.twilio.com/docs/client/android"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twilio",
+          "url": "http://twitter.com/twilio"
+        }
+      ]
+    },
+    {
+      "name": "Twiml",
+      "description": "TwiML is a set of XML instructions you can use to tell Twilio what to do when you receive an incoming call or SMS. Use TwiML to create all kinds of interactive voice and SMS applications.",
+      "image": "https://www.twilio.com/packages/company/img/logos_downloadable_round.png",
+      "humanURL": "https://www.twilio.com/docs/api/twiml",
+      "tags": "sms,text,markup,application",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.twilio.com/try-twilio"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/twilio"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Twilio",
+      "twitter": "https://twitter.com/twilio",
+      "github": "https://github.com/twilio",
+      "organizationName": "Twilio",
+      "image": "https://www.twilio.com/packages/company/img/logos_downloadable_round.png"
+    }
+  ],
+  "tags": "sms,tex, calls"
+}

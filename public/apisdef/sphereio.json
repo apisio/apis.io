@@ -1,0 +1,41 @@
+{
+  "name": "Commercetools",
+  "description": "commercetools SPHERE.IO is the eCommerce platform-as-a-service (PaaS) that allows merchants to build and connect world-class shopping experience on web, smartphone, tablet and point of sale. Made by developers for developers we offer the most versatile cloud-based commerce platform. You can call it software-as-a-service or platform-as-a-service. ",
+  "type": "community",
+  "url": "http://dev.sphere.io/",
+  "image": "http://www.commercetools.com/assets/img/ct_logo_farbe.gif",
+  "apis": [
+    {
+      "name": "Sphere.io",
+      "description": "commercetools SPHERE.IO is the eCommerce platform-as-a-service (PaaS) that allows merchants to build and connect world-class shopping experience on web, smartphone, tablet and point of sale. Made by developers for developers we offer the most versatile cloud-based commerce platform. You can call it software-as-a-service or platform-as-a-service. ",
+      "image": "http://www.commercetools.com/assets/img/ct_logo_farbe.gif",
+      "humanURL": "http://dev.sphere.io/",
+      "tags": "ecommerce, paas, shopping",
+      "urls": [
+        {
+          "type": "github",
+          "url": "https://github.com/sphereio/sphere-hello-api"
+        },
+        {
+          "type": "signup",
+          "url": "https://admin.sphere.io/signup"
+        }
+      ],
+      "contact": [
+        {
+          "type": "telephone",
+          "url": "49.89.99 82 996-0"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Commercetools",
+      "twitter": "https://twitter.com/commercetools",
+      "github": "https://github.com/sphereio"
+    }
+  ],
+  "tags": "ecommerce, paas, shopping",
+  "modified": "05/20/2014"
+}

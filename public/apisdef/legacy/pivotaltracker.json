@@ -1,0 +1,42 @@
+{
+  "name": "PivotalTracker",
+  "description": "Agile developer tool",
+  "url": "http://apis.io/apisdef/pivotaltracker.json",
+  "image": "https://www.pivotaltracker.com/wp-content/themes/trackery/images/logo_main.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "PivotalTracker API",
+      "description": "Agile developer tool",
+      "image": "https://www.pivotaltracker.com/wp-content/themes/trackery/images/logo_main.png",
+      "humanURL": "https://www.pivotaltracker.com/help/api",
+      "machineURL": "https://www.pivotaltracker.com/services/v5",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://www.pivotaltracker.com/help/api"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/pivotaltracker"
+        }
+      ],
+      "tags": "agile, product management"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "PivotalTracker",
+      "url": "http://www.pivotaltracker.com",
+      "organizationName": "PivotalTracker",
+      "image": "https://www.pivotaltracker.com/wp-content/themes/trackery/images/logo_main.png",
+      "twitter": "https://twitter.com/pivotaltracker",
+      "github": "https://github.com/pivotaltracker"
+    }
+  ],
+  "modified": "2014-06-05T00:41:55.571Z",
+  "created": "2014-06-05T00:41:55.571Z",
+  "tags": "agile, product management"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Bitcasa",
+  "description": "Bitcasa offers infinite storage across all devices. Content is no longer tied to a specific device. Users can save and access all their pictures, movies, and documents from anywhere and never have to worry about space again. Because there are no storage limits, users can securely and privately send entire photo albums or video collections to anyone. Everything is encrypted and backed up so user data is always safe and secure. All this for only $10 a month.",
+  "url": "http://apis.io/apisdef/bitcasa.json",
+  "image": "https://static.bitcasa.com/www/mediakit/Bitcasa-Logo-Green.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Storage API",
+      "description": "Bitcasa offers infinite storage across all devices. Content is no longer tied to a specific device. Users can save and access all their pictures, movies, and documents from anywhere and never have to worry about space again. Because there are no storage limits, users can securely and privately send entire photo albums or video collections to anyone. Everything is encrypted and backed up so user data is always safe and secure. All this for only $10 a month.",
+      "image": "https://static.bitcasa.com/www/mediakit/Bitcasa-Logo-Green.png",
+      "APIVersion": "1",
+      "humanURL": "https://developer.bitcasa.com/",
+      "machineURL": "https://developer.api.bitcasa.com/v1/",
+      "tags": "storage",
+      "urls": [
+        {
+          "type": "SDKs",
+          "url": "https://developer.bitcasa.com/docs#sdk"
+        },
+        {
+          "type": "forum",
+          "url": "http://forums.bitcasa.com/index.php?/forum/11-developer-api/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/Bitcasa"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://bitcasa.com",
+      "name": "Bitcasa",
+      "twitter": "https://twitter.com/Bitcasa",
+      "github": "https://github.com/bitcasa",
+      "organizationName": "Bitcasa",
+      "image": "https://static.bitcasa.com/www/mediakit/Bitcasa-Logo-Green.png"
+    }
+  ],
+  "tags": "storage",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Rev API",
+  "description": "Rev's proprietary technology platform is built to create a great work environment for translators and transcriptionists, so we can deliver clients ever increasing speed and quality.",
+  "url": "http://apis.io/apisdef/rev.json",
+  "image": "http://www.rev.com/content/img/rev/rev_logo_colored_top.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Rev API API",
+      "description": "Rev's proprietary technology platform is built to create a great work environment for translators and transcriptionists, so we can deliver clients ever increasing speed and quality.",
+      "image": "http://www.rev.com/content/img/rev/rev_logo_colored_top.png",
+      "humanURL": "http://www.rev.com/api/docs",
+      "machineURL": "https://www.rev.com/api/v1/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://www.rev.com/api/docs"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/rev"
+        }
+      ],
+      "tags": "freelance, translation"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Rev.com",
+      "url": "http://www.rev.com",
+      "organizationName": "Rev.com",
+      "image": "http://www.rev.com/content/img/rev/rev_logo_colored_top.png",
+      "twitter": "https://twitter.com/rev"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.485Z",
+  "created": "2014-06-05T00:41:56.485Z",
+  "tags": "freelance, translation"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Etsy",
+  "description": "The world’s handmade marketplace.",
+  "url": "https://www.etsy.com/developers",
+  "image": "https://www.etsy.com/assets/dist/images/listing-page-makeover/etsylogo.20140130192956.png",
+  "apis": [
+    {
+      "name": "Etsy API",
+      "description": "The world’s handmade marketplace.",
+      "image": "https://www.etsy.com/assets/dist/images/listing-page-makeover/etsylogo.20140130192956.png",
+      "humanURL": "https://www.etsy.com/developers",
+      "tags": "marketplace",
+      "urls": [
+        {
+          "type": "register",
+          "url": "https://www.etsy.com/developers/register"
+        },
+        {
+          "type": "documentation",
+          "url": "https://www.etsy.com/developers/documentation"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/etsyapi"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/etsyapi"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Etsy",
+      "twitter": "https://twitter.com/etsyapi",
+      "github": "github.com/etsy"
+    }
+  ],
+  "tags": "marketplace,",
+  "modified": "05/15/2014"
+}

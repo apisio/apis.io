@@ -1,0 +1,179 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "iron-router": {
+        "version": "0.8.2"
+      },
+      "collection2": {},
+      "bootswatch-yeti": {},
+      "flash-messages": {},
+      "crypto-base": {},
+      "crypto-md5": {},
+      "handlebar-helpers": {},
+      "urlify2": {},
+      "verbalExpressions": {},
+      "typeahead": {},
+      "headers": {},
+      "houston": {},
+      "autoform": {},
+      "filesaver": {},
+      "async": {},
+      "uri-js": {
+        "git": "https://github.com/picsoung/meteor-uri-js",
+        "branch": "master"
+      },
+      "pages": {},
+      "npm": {},
+      "kadira": {},
+      "GAnalytics": {}
+    },
+    "packages": {
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.8.2",
+        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
+      },
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.4.6",
+        "commit": "80554182486be0d8e74f7ed02194a5649d712e27"
+      },
+      "bootswatch-yeti": {
+        "git": "https://github.com/mikeschaekermann/meteor-bootswatch-yeti.git",
+        "tag": "v0.3.8",
+        "commit": "cdc0c7ea0c4abb4e58f97d21063f44fe4b6a2890"
+      },
+      "flash-messages": {
+        "git": "https://github.com/camilosw/flash-messages.git",
+        "tag": "v0.2.4",
+        "commit": "8e7d09e7b7bd61ab10aaad01371dcecef2e9f797"
+      },
+      "crypto-base": {
+        "git": "https://github.com/oortcloud/meteor-crypto-base.git",
+        "tag": "v3.1.2.1",
+        "commit": "5df8d82a0595553415bbfae2930c6ecbeece5794"
+      },
+      "crypto-md5": {
+        "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
+        "tag": "v3.1.2.2",
+        "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
+      },
+      "handlebar-helpers": {
+        "git": "https://github.com/raix/Meteor-handlebar-helpers.git",
+        "tag": "v0.1.1",
+        "commit": "0b407ab65e7c1ebd53d71aef0de2e2c1d21a597c"
+      },
+      "urlify2": {
+        "git": "https://github.com/peerlibrary/meteor-urlify2.git",
+        "tag": "v0.2.2",
+        "commit": "5d33ec1eaa1f815a56a0b70c0c9eddc4aed4c33e"
+      },
+      "verbalExpressions": {
+        "git": "https://github.com/roine/meteor-verbalExpressions.git",
+        "tag": "v0.2.1",
+        "commit": "16415c519abd17c4d9f5e0e56de65ef9dd4296f6"
+      },
+      "typeahead": {
+        "git": "https://github.com/sergeyt/meteor-typeahead.git",
+        "tag": "v0.0.12",
+        "commit": "1f5674a073489d09755022dd83b9fcc01fd8fcec"
+      },
+      "headers": {
+        "git": "https://github.com/gadicohen/meteor-headers.git",
+        "tag": "v0.0.24",
+        "commit": "3c09e682895e13c71ca0114baf3c09ee9c507709"
+      },
+      "houston": {
+        "git": "https://github.com/gterrono/houston.git",
+        "tag": "v1.0.7",
+        "commit": "a27e9e42d03764f09a6681a98945787fe1f6303d"
+      },
+      "autoform": {
+        "git": "https://github.com/aldeed/meteor-autoform.git",
+        "tag": "v1.0.0",
+        "commit": "5a5977dd9b66d8109d766b41fb5dc1a0ac3e83be"
+      },
+      "filesaver": {
+        "git": "https://github.com/Meloncon/meteor-filesaver.git",
+        "tag": "v0.0.3",
+        "commit": "a8dffab43edc88722138e6416b024fbf6b8fa44a"
+      },
+      "async": {
+        "git": "https://github.com/peerlibrary/meteor-async.git",
+        "tag": "v0.9.0-1",
+        "commit": "419ddf9711474738cddc6fa3c086a0875be3a5d1"
+      },
+      "uri-js": {
+        "git": "https://github.com/picsoung/meteor-uri-js",
+        "branch": "master",
+        "commit": "ce9c922b49d8fb558499021e39f4bba137701a51"
+      },
+      "pages": {
+        "git": "https://github.com/alethes/meteor-pages.git",
+        "tag": "v1.0.21",
+        "commit": "be8473b7117ef5aa595463ab68d7e776ed58fd26"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "kadira": {
+        "git": "https://github.com/meteorhacks/kadira.git",
+        "tag": "v2.7.5",
+        "commit": "4116e0eb193853f8747f002ed0d9404101ba9800"
+      },
+      "GAnalytics": {
+        "git": "https://github.com/datariot/meteor-ganalytics.git",
+        "tag": "v0.2.0",
+        "commit": "2d5e48d5cc4c2f88edd40c0b2341d378bd4a702b"
+      },
+      "iron-layout": {
+        "git": "https://github.com/EventedMind/iron-layout.git",
+        "tag": "v0.2.0",
+        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v1.0.2",
+        "commit": "21a4ce06ae29bff2fb1203c44ea24e61f1c3edba"
+      },
+      "inject-initial": {
+        "git": "https://github.com/gadicc/meteor-inject-initial.git",
+        "tag": "v0.0.8",
+        "commit": "90f2fbcc5b4bc17fa4d4535f47813e31d86033b4"
+      },
+      "paginated-subscription": {
+        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
+        "tag": "v0.2.2",
+        "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v2.0.4",
+        "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.8.1",
+        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.5",
+        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
+      },
+      "iron-core": {
+        "git": "https://github.com/EventedMind/iron-core.git",
+        "tag": "v0.2.0",
+        "commit": "0e48b5dc50d03f01025b7b900fb5ce2f13d52cad"
+      },
+      "iron-dynamic-template": {
+        "git": "https://github.com/EventedMind/iron-dynamic-template.git",
+        "tag": "v0.2.1",
+        "commit": "4dd1185c4d9d616c9abdb3f33e4a7d5a88db7e18"
+      }
+    }
+  }
+}

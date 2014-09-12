@@ -1,0 +1,42 @@
+{
+  "name": "Doctoralia",
+  "description": "Doctoralia is the global leading platform for searching and contacting Doctors and Medical centres, available in 17 countries. Doctoralia’s API is used by its partners to provide access to Doctors in their websites.",
+  "url": "http://apis.io/apisdef/doctoralia.json",
+  "image": "http://www.doctoralia.com/images/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Doctoralia API",
+      "description": "Doctoralia is the global leading platform for searching and contacting Doctors and Medical centres, available in 17 countries. Doctoralia’s API is used by its partners to provide access to Doctors in their websites.",
+      "image": "http://www.doctoralia.com/images/logo.png",
+      "APIVersion": "1",
+      "humanURL": "https://developer.doctoralia.com/",
+      "machineURL": "https://api.doctoralia.com/v1/",
+      "tags": "health",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.doctoralia.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/doctoralia"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://doctoralia.com",
+      "name": "Doctoralia",
+      "twitter": "https://twitter.com/doctoralia",
+      "organizationName": "Doctoralia",
+      "image": "http://www.doctoralia.com/images/logo.png"
+    }
+  ],
+  "tags": "health",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

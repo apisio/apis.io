@@ -1,0 +1,42 @@
+{
+  "name": "stampr",
+  "description": "Simple REST API to send postal mail online.  Create and send batches or single mailings.  Built-in templating via mustache and variable data (mail merge). Each mailing can be up to five pages and is printed in full color.",
+  "url": "http://apis.io/apisdef/stampr.json",
+  "image": "https://stam.pr/assets/img/logo-lg-centered.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "stampr API",
+      "description": "Simple REST API to send postal mail online.  Create and send batches or single mailings.  Built-in templating via mustache and variable data (mail merge). Each mailing can be up to five pages and is printed in full color.",
+      "image": "https://stam.pr/assets/img/logo-lg-centered.png",
+      "humanURL": "https://github.com/stampr/stampr-api",
+      "machineURL": "https://stam.pr/api",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://github.com/stampr/stampr-api"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/stampr"
+        }
+      ],
+      "tags": "mail, postal"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "stampr",
+      "url": "http://github.com",
+      "organizationName": "stampr",
+      "image": "https://stam.pr/assets/img/logo-lg-centered.png",
+      "twitter": "https://twitter.com/stampr",
+      "github": "https://github.com/stampr"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.877Z",
+  "created": "2014-06-05T00:41:56.877Z",
+  "tags": "mail, postal"
+}

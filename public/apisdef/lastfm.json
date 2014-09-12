@@ -1,0 +1,35 @@
+{
+  "name": "Last.fm",
+  "description": "Last.fm is a music discovery service that gives you personalised recommendations based on the music you listen to.",
+  "type": "community",
+  "url": "http://www.last.fm/api",
+  "image": "http://cdn.last.fm/flatness/badges/lastfm_red_small.gif",
+  "apis": [
+    {
+      "name": "Last.fm API",
+      "description": "Last.fm is a music discovery service that gives you personalised recommendations based on the music you listen to.",
+      "image": "http://cdn.last.fm/flatness/badges/lastfm_red_small.gif",
+      "humanURL": "http://www.last.fm/api",
+      "machineURL": "http://ws.audioscrobbler.com/2.0/",
+      "tags": "music, discovery, concerts",
+      "urls": [
+        {
+          "type": "introduction",
+          "url": "http://www.last.fm/api/intro"
+        },
+        {
+          "type": "signup",
+          "url": "http://www.last.fm/api/account/create"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Last.fm",
+      "twitter": "https://twitter.com/lastfm",
+      "github": "https://github.com/lastfm"
+    }
+  ],
+  "tags": "music, discovery, concerts"
+}

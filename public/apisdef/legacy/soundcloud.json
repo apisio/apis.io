@@ -1,0 +1,46 @@
+{
+  "name": "SoundCloud",
+  "description": "Capture a voice, moment or music in seconds or upload audio you’ve already created.\nEveryone has sounds to share.\nNow you can share yours.",
+  "url": "http://apis.io/apisdef/soundcloud.json",
+  "image": "https://developers.soundcloud.com/assets/logo_big_black-75c05c178d54c50c8ff0afbb282d2c21.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "SoundCloud API",
+      "description": "Capture a voice, moment or music in seconds or upload audio you’ve already created.\nEveryone has sounds to share.\nNow you can share yours.",
+      "image": "https://developers.soundcloud.com/assets/logo_big_black-75c05c178d54c50c8ff0afbb282d2c21.png",
+      "humanURL": "http://developers.soundcloud.com/",
+      "machineURL": "https://api.soundcloud.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://soundcloud.com/you/apps/new"
+        },
+        {
+          "type": "widget APIs",
+          "url": "http://developers.soundcloud.com/docs/api/html5-widget"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/soundcloud"
+        }
+      ],
+      "tags": "music, social network"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "SoundCloud",
+      "url": "http://developers.soundcloud.com",
+      "organizationName": "SoundCloud",
+      "image": "https://developers.soundcloud.com/assets/logo_big_black-75c05c178d54c50c8ff0afbb282d2c21.png",
+      "twitter": "http://twitter.com/soundcloud",
+      "github": "http://github.com/soundcloud"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.390Z",
+  "created": "2014-06-05T00:41:56.390Z",
+  "tags": "music, social network"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Linkedin",
+  "description": "LinkedIn operates the world’s largest professional network on the Internet with more than 300 million members in over 200 countries and territories.",
+  "type": "community",
+  "url": "https://developer.linkedin.com",
+  "image": "http://press.linkedin.com/display-media/205/4",
+  "apis": [
+    {
+      "name": "Linkedin API",
+      "description": "LinkedIn operates the world’s largest professional network on the Internet with more than 300 million members in over 200 countries and territories.",
+      "image": "http://press.linkedin.com/display-media/205/4",
+      "humanURL": "https://developer.linkedin.com",
+      "machineURL": "http://api.linkedin.com/v1/",
+      "tags": "social network, professional, networking, jobs",
+      "urls": [
+        {
+          "type": "blog",
+          "url": "https://developer.linkedin.com/blog"
+        },
+        {
+          "type": "getting started",
+          "url": "https://developer.linkedin.com/documents/authentication"
+        },
+        {
+          "type": "console",
+          "url": "https://developer.linkedin.com/rest-console"
+        }
+      ],
+      "contact": [
+        {
+          "type": "github",
+          "url": "https://github.com/linkedin"
+        },
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/LinkedInDev"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Linkedin",
+      "twitter": "https://twitter.com/LinkedInDev",
+      "github": "https://github.com/linkedin"
+    }
+  ],
+  "tags": "social network, professional, networking, jobs",
+  "modified": "05/16/2014"
+}

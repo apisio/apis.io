@@ -1,0 +1,36 @@
+{
+  "name": "Stripe",
+  "description": "Web and mobile payments, built for developers.",
+  "type": "community",
+  "url": "https://stripe.com/",
+  "image": "https://stripe.com/img/about/logos/logos/black.png",
+  "apis": [
+    {
+      "name": "Stripe API",
+      "description": "Web and mobile payments, built for developers.",
+      "image": "https://stripe.com/img/about/logos/logos/black.png",
+      "humanURL": "https://stripe.com/",
+      "tags": "payments, mobile, money",
+      "urls": [
+        {
+          "type": "blog",
+          "url": "https://stripe.com/blog"
+        },
+        {
+          "type": "signup",
+          "url": "https://manage.stripe.com/register"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Stripe",
+      "twitter": "http://twitter.com/stripe",
+      "github": "http://github.com/stripe",
+      "email": "support@stripe.com"
+    }
+  ],
+  "tags": "payments, mobile, money",
+  "modified": "05/20/2014"
+}

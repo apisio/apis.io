@@ -1,0 +1,46 @@
+{
+  "name": "Pipl",
+  "description": "The API allows you to query with the information you have about a person (such as name, address, age, email, phone or username) and get complete, structured profile based on everything we found on the web.\r\n",
+  "url": "http://apis.io/apisdef/pipl.json",
+  "image": "https://pipl.com/staticapi/images/subpage_logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Pipl Search API",
+      "description": "The API allows you to query with the information you have about a person (such as name, address, age, email, phone or username) and get complete, structured profile based on everything we found on the web.\r\n",
+      "image": "https://pipl.com/staticapi/images/subpage_logo.png",
+      "humanURL": "http://dev.pipl.com/docs/read/Home",
+      "machineURL": "http://dev.pipl.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://dev.pipl.com/member/register"
+        },
+        {
+          "type": "documentation",
+          "url": "http://dev.pipl.com/docs"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/pipl_com"
+        }
+      ],
+      "tags": "people, personal data"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Pipl",
+      "url": "http://dev.pipl.com",
+      "organizationName": "Pipl",
+      "image": "https://pipl.com/staticapi/images/subpage_logo.png",
+      "twitter": "http://twitter.com/pipl_com",
+      "github": "https://github.com/piplcom"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.712Z",
+  "created": "2014-06-05T00:41:56.712Z",
+  "tags": "people, personal data"
+}

@@ -1,0 +1,83 @@
+<template name="apiShow">
+	{{#with apis}}
+		<div class="col-md-9">
+			<h1>{{name}}</h1>
+			{{>apiBlock}}
+			<!-- <h2>APIs</h2> -->
+			<!-- {{> selfAPIsList}} -->
+		</div>
+		<div class="col-md-3">
+			{{> maintainerColumn}}
+		</div>
+	{{/with}}
+</template>
+
+<template name="maintainerColumn">
+	<h2>Maintainer</h2>
+	{{#with getAPIFile apiFileUrl}}
+	<ul>
+		<li><a href="{{maintainerLink maintainer}}">{{displayMaintainerName maintainer}}</a></li>
+	</ul>
+	{{/with}}
+</template>
+
+<template name="selfAPIsList">
+	{{#each apis}}
+		{{> apiBlock}}
+	{{/each}}
+</template>
+
+<template name="apiBlock">
+	<style type="text/css">
+		.links ul{
+			margin:0;
+			padding:0;
+			font-size:15px;
+		}
+		li {
+		display: inline;
+		list-style-type: none;
+		padding-right: 5px;
+		}
+	</style>
+	<div class="item col-xs-5 col-lg-5">
+          <div class="thumbnail">
+            <img src="{{displayAPIImage}}" width="250" alt="{{name}} logo" class="group list-group-image">
+            <div class="caption">
+            <h4 class="group inner list-group-item-heading"><a class="title" href="{{humanURL}}">{{name}}</a></h4>
+            <p class="group inner list-group-item-text">{{description}}</p>
+            <div class="row" style ="line-height: 2em;">
+                    <div class="col-xs-12 col-md-12">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        Tags:
+                            {{#each APItags}}
+                                <a class="api_tag" href="#"><span class="label label-info">{{name}}</span></a>
+                            {{/each}}
+                        <div class="links">    
+	                        <ul>
+								{{#each urls}}
+									<li><span class="glyphicon glyphicon-link"></span><a href="{{url}}">{{type}}</a></li>
+								{{/each}}
+							</ul>
+						</div>
+						{{#with getAPIFile apiFileUrl}}
+							Defined in <a href="{{pathFor 'showAPIFile'}}">{{name}}</a>  {{displayModifiedDate modified}}
+						{{/with}}
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+	
+</template>
+
+<template name="oldBlock">
+	<h3>{{name}}</h3>
+	<p>{{description}}</p>
+	<img src="{{image}}" width="150">
+	<ul>
+		{{#each urls}}
+			<li><a href="{{url}}">{{type}}</a></li>
+		{{/each}}
+	</ul>
+</template>

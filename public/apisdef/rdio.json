@@ -1,0 +1,46 @@
+{
+  "name": "Rdio",
+  "description": "Rdio API, an easy and legal way to add music to your applications. We encourage you to build great new ways for people to discover, collect, share and play music.",
+  "type": "community",
+  "url": "http://www.rdio.com/developers/",
+  "image": "http://rdio0img-a.akamaihd.net/user/press/rdio-logo.png",
+  "apis": [
+    {
+      "name": "Rdio API",
+      "description": "Rdio API, an easy and legal way to add music to your applications. We encourage you to build great new ways for people to discover, collect, share and play music.",
+      "image": "http://rdio0img-a.akamaihd.net/user/press/rdio-logo.png",
+      "humanURL": "http://www.rdio.com/developers/",
+      "tags": "music, streaming",
+      "urls": [
+        {
+          "type": "blog",
+          "url": "http://blog.rdio.com/developers/"
+        },
+        {
+          "type": "gallery",
+          "url": "http://www.rdio.com/developers/gallery/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "email",
+          "url": "developersupport@rdio.com"
+        },
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/rdioapi"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Rdio ",
+      "twitter": "http://twitter.com/rdioapi",
+      "github": "https://github.com/rdio",
+      "email": "developersupport@rdio.com"
+    }
+  ],
+  "tags": "music, streaming",
+  "modified": "05/20/2014"
+}

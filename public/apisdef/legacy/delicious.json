@@ -1,0 +1,41 @@
+{
+  "name": "Delicious",
+  "description": "Delicious Tagging API",
+  "url": "http://apis.io/apisdef/legacy/delicious.json",
+  "image": "https://delicious.com/img/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Delicious API",
+      "description": "Delicious Tagging API",
+      "image": "https://delicious.com/img/logo.png",
+      "humanURL": "http://delicious.com/developers",
+      "machineURL": "https://api.del.icio.us/v1/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://delicious.com/developers"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/delicious"
+        }
+      ],
+      "tags": "discovery"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Delicious",
+      "url": "http://delicious.com",
+      "organizationName": "Delicious",
+      "image": "https://delicious.com/img/logo.png",
+      "twitter": "http://twitter.com/delicious"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.912Z",
+  "created": "2014-06-05T00:41:56.912Z",
+  "tags": "discovery"
+}

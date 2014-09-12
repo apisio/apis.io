@@ -1,0 +1,42 @@
+{
+  "name": "Walgreens",
+  "description": "The Walgreens Pharmacy Prescription API allows users of third-party mobile applications to quickly order refills of prescriptions originally filled at one of the 8,000+ Walgreens pharmacies. Mobile app users can order refills in seconds, as well as select the option to opt-in to receive a text alert when their prescription order is ready for pick up.  \r\n\r\nDevelopers who have scanning functionality within their apps can easily integrate the Prescription API to enable their users to order a prescription refill by scanning the barcode on a Walgreens prescription bottle, similar to the Refill by Scan flow in the Walgreens App.\r\n\r\nThe health care focused Pharmacy Prescription API is designed to increase prescription compliance and aid in personal health management through automated refill alerts and a streamlining of the refill process. By offering easy prescription refills through this health management API, Walgreens hopes to further increase health care adherence by reaching a wider audience through third party health care apps.",
+  "url": "http://apis.io/apisdef/walgreens.json",
+  "image": "https://developer.walgreens.com/sites/all/themes/aloha/images/theme-developer_connect/logo.gif",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Pharmacy Prescription API",
+      "description": "The Walgreens Pharmacy Prescription API allows users of third-party mobile applications to quickly order refills of prescriptions originally filled at one of the 8,000+ Walgreens pharmacies. Mobile app users can order refills in seconds, as well as select the option to opt-in to receive a text alert when their prescription order is ready for pick up.  \r\n\r\nDevelopers who have scanning functionality within their apps can easily integrate the Prescription API to enable their users to order a prescription refill by scanning the barcode on a Walgreens prescription bottle, similar to the Refill by Scan flow in the Walgreens App.\r\n\r\nThe health care focused Pharmacy Prescription API is designed to increase prescription compliance and aid in personal health management through automated refill alerts and a streamlining of the refill process. By offering easy prescription refills through this health management API, Walgreens hopes to further increase health care adherence by reaching a wider audience through third party health care apps.",
+      "image": "https://developer.walgreens.com/sites/all/themes/aloha/images/theme-developer_connect/logo.gif",
+      "humanURL": "https://developer.walgreens.com/api/Pharmacy%2520Prescription%2520API/Pharmacy%2520Prescription%2520API-86",
+      "machineURL": "https://developer.walgreens.com/",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "https://developer.walgreens.com/user/register"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/WalgreensAPI"
+        }
+      ],
+      "tags": "health, pharmacy"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Walgreens",
+      "url": "http://developer.walgreens.com",
+      "organizationName": "Walgreens",
+      "image": "https://developer.walgreens.com/sites/all/themes/aloha/images/theme-developer_connect/logo.gif",
+      "twitter": "https://twitter.com/WalgreensAPI",
+      "github": "https://github.com/walgreensapi"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.830Z",
+  "created": "2014-06-05T00:41:56.830Z",
+  "tags": "health, pharmacy"
+}

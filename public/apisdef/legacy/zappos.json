@@ -1,0 +1,41 @@
+{
+  "name": "Zappos",
+  "description": "Zappos REST API",
+  "url": "http://apis.io/apisdef/zappos.json",
+  "image": "http://developer.zappos.com/sites/default/files/logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Zappos API",
+      "description": "Zappos REST API",
+      "image": "http://developer.zappos.com/sites/default/files/logo.png",
+      "humanURL": "http://developer.zappos.com/",
+      "machineURL": "http://api.zappos.com",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://developer.zappos.com/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/zappos_api"
+        }
+      ],
+      "tags": "ecommerce"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Zappos",
+      "url": "http://developer.zappos.com",
+      "organizationName": "Zappos",
+      "image": "http://developer.zappos.com/sites/default/files/logo.png",
+      "twitter": "http://twitter.com/zappos_api"
+    }
+  ],
+  "modified": "2014-06-05T00:41:56.234Z",
+  "created": "2014-06-05T00:41:56.234Z",
+  "tags": "ecommerce"
+}

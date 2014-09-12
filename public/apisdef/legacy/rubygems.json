@@ -1,0 +1,42 @@
+{
+  "name": "RubyGems.org",
+  "description": "Interacting with RubyGems.org over HTTP",
+  "url": "http://apis.io/apisdef/rubygems.json",
+  "image": "http://fourfourmedia.com/wp-content/uploads/2011/01/rubygems.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "RubyGems API",
+      "description": "Interacting with RubyGems.org over HTTP",
+      "image": "http://fourfourmedia.com/wp-content/uploads/2011/01/rubygems.png",
+      "humanURL": "http://guides.rubygems.org/rubygems-org-api/",
+      "machineURL": "https://rubygems.org/api/v1",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://guides.rubygems.org/rubygems-org-api/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "twitter.com/rubygems"
+        }
+      ],
+      "tags": "rubygems"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "RubyGems",
+      "url": "http://guides.rubygems.org",
+      "organizationName": "RubyGems",
+      "image": "http://fourfourmedia.com/wp-content/uploads/2011/01/rubygems.png",
+      "twitter": "twitter.com/rubygems",
+      "github": "https://github.com/rubygems"
+    }
+  ],
+  "modified": "2014-06-05T00:41:55.438Z",
+  "created": "2014-06-05T00:41:55.438Z",
+  "tags": "rubygems"
+}

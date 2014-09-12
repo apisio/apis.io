@@ -1,0 +1,47 @@
+{
+  "name": "Yummly",
+  "description": "Yummly is the world’s largest and most powerful recipe search site and understands the recipe – ingredients, diets, allergies, nutrition, taste, techniques & more – so Yummly can connect you with the best recipes.",
+  "url": "http://apis.io/apisdef/yummly.json",
+  "image": "http://www.yummly.com/wp-content/uploads/2013/04/Yummly-med.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Yummly API",
+      "description": "Yummly is the world’s largest and most powerful recipe search site and understands the recipe – ingredients, diets, allergies, nutrition, taste, techniques & more – so Yummly can connect you with the best recipes.",
+      "image": "http://www.yummly.com/wp-content/uploads/2013/04/Yummly-med.png",
+      "APIVersion": "1",
+      "humanURL": "http://developer.yummly.com",
+      "machineURL": "https://api.yummly.com/v1",
+      "tags": "food, recipe",
+      "urls": [
+        {
+          "type": "Use cases",
+          "url": "https://developer.yummly.com/#uses"
+        },
+        {
+          "type": "signup",
+          "url": "https://developer.yummly.com/#plans"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/yummly"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://www.yummly.com",
+      "name": "Yummly",
+      "twitter": "http://twitter.com/yummly",
+      "github": "http://github.com/yummly",
+      "organizationName": "Yummly",
+      "image": "http://www.yummly.com/wp-content/uploads/2013/04/Yummly-med.png"
+    }
+  ],
+  "tags": "food, recipe",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

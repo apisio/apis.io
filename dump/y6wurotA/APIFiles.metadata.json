@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "y6wurotA.APIFiles", "name" : "_id_" }, { "v" : 1, "key" : { "url" : 1 }, "unique" : true, "ns" : "y6wurotA.APIFiles", "name" : "c2_url", "background" : true, "sparse" : false } ] }

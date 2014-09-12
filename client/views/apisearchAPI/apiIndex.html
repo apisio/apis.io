@@ -1,0 +1,41 @@
+<template name="apiSearchAPIIndex">
+	<h1>APIs.io API</h1>
+	<p>You can use our v1 API to get and add data to APIs.io</p>
+	<p>Root domain for the API is http://apis.io/api/v1/</p>
+	<h2>APIs</h2>
+	<div>
+		<h4>GET /apis</h4>
+		<p>List all the APIs available</p>
+		<code>
+			curl -X GET http://apis.io/api/v1/apis
+		</code>
+		<script src="https://gist.github.com/picsoung/b3559de1c514c5bcda0d.js"></script>
+	</div>
+
+	<div>
+		<h4>POST /apis</h4>
+		<p>Add a new apis.json file to the search engine</p>
+		<p>Request format <code>{"url":"http://mydomain.com/apis.json"}</code></p>
+		<code>
+			curl -X POST http://apis.io/api/v1/apis -d {"url":"http://mydomain.com/apis.json"}
+		</code>
+
+	</div>
+	<div>
+		<h4>POST /ping</h4>
+		<p>Update the newest version of a file that's already in the search engine</p>
+		<p>Request format <code>{"url":"http://mydomain.com/apis.json"}</code></p>
+		<code>
+			curl -X POST http://apis.io/api/v1/apis/ping -d {"url":"http://mydomain.com/apis.json"}
+		</code>
+	</div>
+
+	<h2>Maintainers</h2>
+	<div>
+		<h4>GET /maintainers</h4>
+		<p>List all the maintainers of APIs</p>
+		<code>
+			curl -X GET http://apis.io/api/v1/maintainers
+		</code>
+	</div>
+</template>

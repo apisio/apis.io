@@ -1,0 +1,48 @@
+<template name="FAQ">
+	<h1>FAQ</h1>
+	If you have questions on the search engine not answered here, please contact <a href="mailto:apisio@3scale.net">apisio@3scale.net</a>. If you have questions on the apis.json format please address them to the appropriate channel on <a href="http://apisjson.org/" target="_blank">APIsjson.org</a>.
+
+	<h3 class="text-primary">Q: What is APIs.io?</h3>
+	<p class="text-muted">
+	A: APIs.io is a simple search engine that discovers APIs on the web that are described by the <a href="http://apisjson.org/" target="_blank">APIsjson.org format</a>. It regularly crawls known APIS.json files, top domains on Alexa and follows include links. The APIs it discovered are available via web search and it’s search API.
+	</p>
+
+	<h3 class="text-primary">Q: What is APIs.json?</h3>
+	<p class="text-muted">
+	A:  APIs.json is a simple discovery data format which is under development and aims to make it easy for API Owners to highlight where the APIs they operate reside. The format is defined and under discussion at APIsjson.org.
+</p>
+
+	<h3 class="text-primary">Q: How do I get my API listed in the search engine?</h3>
+	<p class="text-muted">
+	A: This is easy - generate an APIs.json file using the <a href="{{pathFor 'builder'}}">generator</a> and publish it (ideally in the root domain of your server but it could be anywhere). Once published, let us know about the file <a href="{{pathFor 'addAPI'}}">here</a>.</p>
+
+	<h3 class="text-primary">Q: How do I know my APIs.json file is correct?</h3>
+	<p class="text-muted">
+	A: You can use the <a href="{{pathFor 'lint'}}">validator</a> to do this.
+	</p>
+
+	<h3 class="text-primary">Q: Why do we need search when we have directories of APIs?</h3>
+	<p class="text-muted"> 
+	A: Directories like <a href="http://programmableweb.com" target="_blank">ProgrammableWeb</a> do a great job of curating APIs but this is a hard challenge to maintain as the number of APIS grows rapidly. We hope that by encouraging people to update and maintain information on their API on their own domain it will be possible to scale API discovery much more easily.
+	</p>
+
+	<h3 class="text-primary">Q: Who drives APIs.json?</h3>
+	<p class="text-muted">
+	A it’s an open effort, initially proposed by <a href="http://apievangelist.com" target="_blank">APIEvangelist</a> and <a href="http://3scale.net" target="_blank">3scale</a> but taking input from as many people as possible (you can input at <a href="http://apisjson.org/" target="_blank">APIsjson.org</a>). If it becomes useful and more widely adopted, some kind of formal standard submission might make sense. 
+	</p>
+
+	<h3 class="text-primary">Q: How do you rank the APIs returned in a search?</h3>
+	<p class="text-muted">
+		A: All relevant matches are returned and ranking is simply on the amount or quality of information.
+	</p>
+
+	<h3 class="text-primary">Q: How do get an API unlisted from the search </h3>
+	<p class="text-muted">
+		A: Email us <a href="mailto:apisio@3scale.net">apisio@3scale.net</a>.
+	</p>
+
+	<h3 class="text-primary">Q: What happened to the old APIs.io</h3>
+	<p class="text-muted">
+	A: It’s still available <a href="http://legacy.apis.io" target="_blank">here</a> and the source code is here on <a href="https://github.com/apisio/legacy.apis.io" target="_blank">Github</a>.
+	</p>
+</template>

@@ -1,0 +1,40 @@
+{
+  "name": "Spotify",
+  "description": "With Spotify, it’s easy to find the right music for every moment – on your phone, your computer, your tablet and more.  There are millions of tracks on Spotify. So whether you’re working out, partying or relaxing, the right music is always at your fingertips. Choose what you want to listen to, or let Spotify surprise you.",
+  "type": "community",
+  "image": "http://spotifypresscom.files.wordpress.com/2013/01/spotify-logo-primary-vertical-light-background-rgb.jpg?w=122&h=150",
+  "apis": [
+    {
+      "name": "Spotify API",
+      "description": "With Spotify, it’s easy to find the right music for every moment – on your phone, your computer, your tablet and more.  There are millions of tracks on Spotify. So whether you’re working out, partying or relaxing, the right music is always at your fingertips. Choose what you want to listen to, or let Spotify surprise you.",
+      "image": "http://spotifypresscom.files.wordpress.com/2013/01/spotify-logo-primary-vertical-light-background-rgb.jpg?w=122&h=150",
+      "humanURL": "https://developer.spotify.com/",
+      "tags": "music, streaming",
+      "urls": [
+        {
+          "type": "news",
+          "url": "https://developer.spotify.com/news-stories/"
+        },
+        {
+          "type": "signup",
+          "url": "https://devaccount.spotify.com/my-account/"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/SpotifyPlatform"
+        }
+      ]
+    }
+  ],
+  "maintainer": [
+    {
+      "name": "Spotify",
+      "twitter": "https://twitter.com/SpotifyPlatform",
+      "github": "https://github.com/spotify"
+    }
+  ],
+  "tags": "music, streaming",
+  "modified": "05/20/2014"
+}

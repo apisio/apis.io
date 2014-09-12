@@ -1,0 +1,41 @@
+{
+  "name": "Bitext Sentiment Analysis",
+  "description": "The purpose of this service is to extract opinions from text. An opinion represents the subject an author is writing about and a sentiment score that classifies how positively or negatively the author feels towards that subject. Deep Linguistic Analysis is used to identify the subject the author is discussing. This can be: an entity (brand/ person/product/place… a concept (like “global warming”, “public policies” or “financial crisis”). The sentiment analysis service will also break the opinion down to detect exactly which features or attributes or elements of the subject are being discussed. For a product this could be the main components or accessories as for example, the “screen“ in “the screen of the Galaxy Tab” or the “case“ in “my new iPad case“. For a person this could be the activities or attitudes associated with them. For a place it could be the specific buildings or institutions located there.",
+  "url": "http://apis.io/apisdef/legacy/bitext.json",
+  "image": "http://www.bitext.com/wp-content/themes/btxt3/img/bitext_logo.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Bitext Sentiment Analysis API",
+      "description": "The purpose of this service is to extract opinions from text. An opinion represents the subject an author is writing about and a sentiment score that classifies how positively or negatively the author feels towards that subject. Deep Linguistic Analysis is used to identify the subject the author is discussing. This can be: an entity (brand/ person/product/place… a concept (like “global warming”, “public policies” or “financial crisis”). The sentiment analysis service will also break the opinion down to detect exactly which features or attributes or elements of the subject are being discussed. For a product this could be the main components or accessories as for example, the “screen“ in “the screen of the Galaxy Tab” or the “case“ in “my new iPad case“. For a person this could be the activities or attitudes associated with them. For a place it could be the specific buildings or institutions located there.",
+      "image": "http://www.bitext.com/wp-content/themes/btxt3/img/bitext_logo.png",
+      "humanURL": "http://www.bitext.com/bitext-api-2.html",
+      "machineURL": "http://svc8.bitext.com/WS_NOps_Val/Service.aspx",
+      "urls": [
+        {
+          "type": "demo",
+          "url": "http://www.bitext.com/api-demo.html"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "https://twitter.com/Bitext"
+        }
+      ],
+      "tags": "text analysis"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Bitext",
+      "url": "http://www.bitext.com",
+      "organizationName": "Bitext",
+      "image": "http://www.bitext.com/wp-content/themes/btxt3/img/bitext_logo.png",
+      "twitter": "https://twitter.com/Bitext"
+    }
+  ],
+  "modified": "2014-06-05T00:41:57.338Z",
+  "created": "2014-06-05T00:41:57.338Z",
+  "tags": "text analysis"
+}

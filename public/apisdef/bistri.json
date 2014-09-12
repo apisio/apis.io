@@ -1,0 +1,43 @@
+{
+  "name": "Bistri",
+  "description": "Bistri provides a multi-platform SDK to quickly add WebRTC features into your web or native applications. Video Call or Data-Channels have never been so easy to integrate !",
+  "url": "http://apis.io/apisdef/bistri.json",
+  "image": "http://developers.bistri.com/wp-content/uploads/2014/04/Logo_Bistri-Developers-561x1202.png",
+  "specificationVersion": "0.13",
+  "apis": [
+    {
+      "name": "Bistri API",
+      "description": "Bistri provides a multi-platform SDK to quickly add WebRTC features into your web or native applications. Video Call or Data-Channels have never been so easy to integrate !",
+      "image": "http://developers.bistri.com/wp-content/uploads/2014/04/Logo_Bistri-Developers-561x1202.png",
+      "APIVersion": "3",
+      "humanURL": "http://developers.bistri.com/",
+      "machineURL": "http://developers.bistri.com/",
+      "tags": "video, webRTC",
+      "urls": [
+        {
+          "type": "signup",
+          "url": "http://developers.bistri.com/webrtc-sdk/#sdk-pricing"
+        }
+      ],
+      "contact": [
+        {
+          "type": "twitter",
+          "url": "http://twitter.com/bistri"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "url": "http://bistri.com",
+      "name": "Bistri",
+      "twitter": "http://twitter.com/bistri",
+      "github": "http://github.com/bistri",
+      "organizationName": "Bistri",
+      "image": "http://developers.bistri.com/wp-content/uploads/2014/04/Logo_Bistri-Developers-561x1202.png"
+    }
+  ],
+  "tags": "video, webRTC",
+  "modified": "06/16/2014",
+  "created": "06/16/2014"
+}

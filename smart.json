@@ -1,0 +1,28 @@
+{
+  "packages": {
+    "iron-router":{
+        "version": "0.8.2"
+    },
+    "collection2": "",
+    "bootswatch-yeti": {},
+    "flash-messages": {},
+    "crypto-base": {},
+    "crypto-md5": {},
+    "handlebar-helpers": {},
+    "urlify2": {},
+    "verbalExpressions": {},
+    "typeahead": {},
+    "headers": {},
+    "houston": {},
+    "autoform": {},
+    "filesaver": {},
+    "async": {},
+    "uri-js": {
+      "git": "https://github.com/picsoung/meteor-uri-js"
+    },
+    "pages": {},
+    "npm": {},
+    "kadira": {},
+    "GAnalytics": {}
+  }
+}
