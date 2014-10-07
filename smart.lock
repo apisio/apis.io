@@ -12,7 +12,6 @@
       "crypto-md5": {},
       "handlebar-helpers": {},
       "urlify2": {},
-      "verbalExpressions": {},
       "typeahead": {},
       "headers": {},
       "houston": {},
@@ -25,8 +24,7 @@
       },
       "pages": {},
       "npm": {},
-      "kadira": {},
-      "GAnalytics": {}
+      "kadira": {}
     },
     "packages": {
       "iron-router": {
@@ -68,11 +66,6 @@
         "git": "https://github.com/peerlibrary/meteor-urlify2.git",
         "tag": "v0.2.2",
         "commit": "5d33ec1eaa1f815a56a0b70c0c9eddc4aed4c33e"
-      },
-      "verbalExpressions": {
-        "git": "https://github.com/roine/meteor-verbalExpressions.git",
-        "tag": "v0.2.1",
-        "commit": "16415c519abd17c4d9f5e0e56de65ef9dd4296f6"
       },
       "typeahead": {
         "git": "https://github.com/sergeyt/meteor-typeahead.git",
@@ -121,13 +114,8 @@
       },
       "kadira": {
         "git": "https://github.com/meteorhacks/kadira.git",
-        "tag": "v2.7.5",
-        "commit": "4116e0eb193853f8747f002ed0d9404101ba9800"
-      },
-      "GAnalytics": {
-        "git": "https://github.com/datariot/meteor-ganalytics.git",
-        "tag": "v0.2.0",
-        "commit": "2d5e48d5cc4c2f88edd40c0b2341d378bd4a702b"
+        "tag": "v2.11.2",
+        "commit": "9a008e061e32fa191c2e8b8915d54a72e19ec1b2"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

@@ -1,7 +1,7 @@
 {
   "packages": {
-    "iron-router":{
-        "version": "0.8.2"
+    "iron-router": {
+      "version": "0.8.2"
     },
     "collection2": "",
     "bootswatch-yeti": {},
@@ -10,7 +10,6 @@
     "crypto-md5": {},
     "handlebar-helpers": {},
     "urlify2": {},
-    "verbalExpressions": {},
     "typeahead": {},
     "headers": {},
     "houston": {},
@@ -22,7 +21,6 @@
     },
     "pages": {},
     "npm": {},
-    "kadira": {},
-    "GAnalytics": {}
+    "kadira": {}
   }
 }
