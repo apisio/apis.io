@@ -25,7 +25,7 @@ Meteor.methods({
 	  	var self = this;
 	    var h, r, visit, ip, geo, id;
 	    // Get the headers from the method request
-	    h = headers.get(self);
+	    h = self.connection.httpHeaders;
 
 	    // Parse the user agent from the headers
 	    r = parser.parse(h['user-agent']);
