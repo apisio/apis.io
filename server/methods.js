@@ -1,6 +1,7 @@
 var generateSlug = function(name,collection,id){ //FIXME when updating existing object no need to renegerate slug
     var new_slug = URLify2(name);
     var exist_api = collection.findOne({slug:new_slug});
+    console.log(name,new_slug,exist_api)
     var i = 2;
     while(typeof exist_api !== "undefined"  && exist_api._id != id){
         new_slug = URLify2(name)+'-'+i;
@@ -279,6 +280,7 @@ Meteor.methods({
   	    }
     },
     validateAndInsert: function(challenge, resp, doc){
+      console.log("CC",challenge,resp);
       var captchaCheck = Meteor.call("validateCaptcha",challenge,resp);
       console.log("captcha",captchaCheck);
       if(captchaCheck ==="success"){
@@ -373,14 +375,17 @@ Meteor.methods({
 
     },
     validateCaptcha: function(challenge, resp){
+      console.log(challenge,resp)
       var self = this;
       var ip = self.connection.clientAddress;
       var result = HTTP.post('http://www.google.com/recaptcha/api/verify', {params: {
-        privatekey:Meteor.settings.private.recaptcha.privatekey,
+        privatekey:Meteor.settings.private.recaptcha.privateKey,
         remoteip:ip,
         challenge:challenge,
         response:resp,
       }});
+
+      console.log(result);
 
       if(result.statusCode === 200){
         if(result.content==="true\nsuccess")

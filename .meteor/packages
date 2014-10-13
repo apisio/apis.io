@@ -1,0 +1,21 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+aldeed:simple-schema
+meteorhacks:npm
+
+
+npm-container
+iron:router
+meteorhacks:kadira
+datariot:ganalytics
+aldeed:autoform
+mrt:flash-messages
+http
+jparker:crypto-md5
+peerlibrary:urlify2
+mrt:bootswatch-yeti
+
