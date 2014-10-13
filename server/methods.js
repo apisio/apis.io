@@ -31,6 +31,12 @@ Meteor.methods({
     addAPIFile: function(url){
       // this.unblock();
       var response = HTTP.get(url);
+      var URI = Meteor.npmRequire('URIjs');
+      var uri = new URI(url)
+      var file_name = uri.filename();
+      if(file_name != "apis.json"){
+        throw new Meteor.Error(400,"Error on filename. Your file should be named <i>apis.json</i>")
+      }
       console.log(response);
       if(response.statusCode===200 && (response.data != null  || response.content !=null)){
         var api = response.data || JSON.parse(response.content)

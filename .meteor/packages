@@ -5,10 +5,8 @@
 
 standard-app-packages
 aldeed:simple-schema
-meteorhacks:npm
 
 
-npm-container
 iron:router
 meteorhacks:kadira
 datariot:ganalytics
@@ -18,4 +16,7 @@ http
 jparker:crypto-md5
 peerlibrary:urlify2
 mrt:bootswatch-yeti
+meteorhacks:npm
 
+
+npm-container
