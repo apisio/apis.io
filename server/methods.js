@@ -1,7 +1,7 @@
 var generateSlug = function(name,collection,id){ //FIXME when updating existing object no need to renegerate slug
     var new_slug = URLify2(name);
     var exist_api = collection.findOne({slug:new_slug});
-    console.log(name,new_slug,exist_api)
+    // console.log(name,new_slug,exist_api)
     var i = 2;
     while(typeof exist_api !== "undefined"  && exist_api._id != id){
         new_slug = URLify2(name)+'-'+i;
@@ -34,40 +34,41 @@ Meteor.methods({
       var URI = Meteor.npmRequire('URIjs');
       var uri = new URI(url)
       var file_name = uri.filename();
+
       if(file_name != "apis.json"){
         throw new Meteor.Error(400,"Error on filename. Your file should be named <i>apis.json</i>")
       }
-      console.log(response);
+
       if(response.statusCode===200 && (response.data != null  || response.content !=null)){
         var api = response.data || JSON.parse(response.content)
         var bookfile = APIFiles.findOne({url: url});
-          if(bookfile){
-            var bookfileID = bookfile._id;
-            console.log("EXISTING",bookfileID)
-          }else{
-            var bookfileID = APIFiles.insert({url: url});
-          } // insert new Object in DB
+        if(bookfile){
+          var bookfileID = bookfile._id;
+          console.log("EXISTING",bookfileID)
+        }else{
+          var bookfileID = APIFiles.insert({url: url}); // insert new Object in DB
+        } 
 
-          // iterate on keys of json file
-          for (var key in api) {
-            if (api.hasOwnProperty(key)) {
-              var elem = {}
-              elem[key]=api[key]
-              // add key to object in DB
-              try{
-                APIFiles.update({_id:bookfileID}, {$set:elem})
-              }catch(e){
-                console.log("TRY ERROR",e);
-                console.log("CODDDEEE",e.code);
-                var message;
-                if(e.code==11001)
-                  message = "There is already a file with this url";
+        // iterate on keys of json file
+        for (var key in api) {
+          if (api.hasOwnProperty(key)) {
+            var elem = {}
+            elem[key]=api[key]
+            // add key to object in DB
+            try{
+              APIFiles.update({_id:bookfileID}, {$set:elem})
+            }catch(e){
+              console.log("TRY ERROR",e);
+              console.log("CODDDEEE",e.code);
+              var message;
+              if(e.code==11001)
+                message = "There is already a file with this url";
 
-                message += "\n"+"Details: \n"+e.name + e.err
-                throw new Meteor.Error(e.code,message);
-              }
+              message += "\n"+"Details: \n"+e.name + e.err
+              throw new Meteor.Error(e.code,message);
             }
           }
+        }
           APIFiles.update({_id:bookfileID}, {$set:{md5sum:CryptoJS.MD5(JSON.stringify(api)).toString()}});
 
           // add APIS to DB
@@ -93,7 +94,6 @@ Meteor.methods({
 
     },
     createAPI: function(api,apiFileUrl){
-      console.log("create API called");
 
       // is the file Authoritative
       if(!_.isUndefined(api.humanURL) && !_.isUndefined(apiFileUrl)){
@@ -122,7 +122,11 @@ Meteor.methods({
         apiFileUrl:apiFileUrl,
         slug:generateSlug(api.name,APIs,currentID)
       }});
-      Meteor.call('sendYo',api.name);
+
+      if(process.env.ENV!="DEV"){
+        Meteor.call('sendYo',api.name); //send a YO
+      }
+      
     },
     createAuthor: function(author){
       console.log("create author called",author);
@@ -215,10 +219,11 @@ Meteor.methods({
       if(!_.isUndefined(api.humanURL) && !_.isUndefined(apiFileUrl)){
         var auth = Meteor.call('isAuth',api.humanURL,apiFileUrl);
       }
-      var current = APIs.findOne({name: api.name, apiFileUrl:apiFileUrl,machineURL:api.machineURL});
+      var current = APIs.findOne({name: api.name, apiFileUrl:apiFileUrl,baseURL:api.baseURL});
+      console.log("CURRENT",current)
 
-      //Uniqueness defined by file definition and machineURL
-      if(current && !_.isUndefined(api.machineURL)){
+      //Uniqueness defined by file definition and baseURL
+      if(current && !_.isUndefined(api.baseURL)){
         var updateApi = APIs.update(current._id, {$set:{
             description: api.description,
             image: api.image || '/img/default.svg',
@@ -235,7 +240,9 @@ Meteor.methods({
           });
 
         console.log("Update API",updateApi._id);
-        Meteor.call('sendYo'); //send a YO
+        if(process.env.ENV!="DEV"){
+          Meteor.call('sendYo'); //send a YO
+        }
         return APIs.findOne(updateApi);
       }else{
         var newApi = APIs.insert({
@@ -256,7 +263,9 @@ Meteor.methods({
           console.log('res',res);
         });
         console.log("NEW API",newApi);
-        Meteor.call('sendYo'); //send a YO
+        if(process.env.ENV!="DEV"){
+          Meteor.call('sendYo'); //send a YO
+        }
         return APIs.findOne(newApi);
       }
     },
@@ -303,14 +312,19 @@ Meteor.methods({
     },
     insertFromUrl: function(url){
       //Valid format first calling validateFormatFromURL
-      try{
-        var new_api = APIFiles.insert({url: url});
-        if(new_api){
-          var api = APIFiles.findOne(new_api);
-          Meteor.call('loadDataFromJSON',api._id,api.url);
+      var api = APIFiles.findOne({url:url})
+      if(api){
+        Meteor.call('loadDataFromJSON',api._id,api.url);
+      }else{
+        try{
+          var new_api = APIFiles.insert({url: url});
+          if(new_api){
+            var api = APIFiles.findOne(new_api);
+            Meteor.call('loadDataFromJSON',api._id,api.url);
+          }
+        }catch(e){
+          throw new Meteor.Error(400, "Error when insert",e.invalidKeys);
         }
-      }catch(e){
-        throw new Meteor.Error(400, "Error when insert",e.invalidKeys);
       }
     },
     validateFormatFromURL:function(url){

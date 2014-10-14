@@ -2,20 +2,22 @@
   Defines APIs.io's API routes
 */
 
+var API_PATH = Meteor.settings.public.API_PATH
+
 Router.map(function () {
   this.route('apiPath', {
-  	path: "/api/v1/",
+  	path: API_PATH,
   	where: "server",
   	action: function(){
   	  this.response.statusCode = 200;
   	  initHeaders(this);
-      var response = '{"status": "success","data": {"links":{"listAPI [GET]":"/api/v1/apis","addAPI [POST]":"/api/v1/apis/add","listMaintainers [GET]":"/api/v1/maintainers"}}}';
+      var response = '{"status": "success","data": {"links":{"listAPI [GET]": API_PATH +"/apis","addAPI [POST]": API_PATH +"/apis/add","listMaintainers [GET]": API_PATH +"/maintainers"}}}';
 	    this.response.end(response);
   	}
   }),
 
   this.route('apiDoc',{
-    path:"/api/v1/api-doc",
+    path: API_PATH +"/api-doc",
     where:"server",
     action: function(){
       initHeaders(this);
@@ -26,7 +28,7 @@ Router.map(function () {
   }),
 
   this.route('apiDocTest',{
-    path:"/api/v1/api-doc2",
+    path: API_PATH +"/api-doc2",
     where:"server",
     action: function(){
       initHeaders(this);
@@ -42,7 +44,7 @@ Router.map(function () {
   // refactor
 
   this.route('apiListAPIs', {
-  	path: "/api/v1/apis/ping",
+  	path:  API_PATH +"/apis/ping",
   	where: "server",
   	action:function(){
  		  initHeaders(this);
@@ -94,92 +96,8 @@ Router.map(function () {
     }
   });
 
-  this.route('apiListAPIs', {
-  	path: "/api/v1/apis",
-  	where: "server",
-  	action: function(){
-  	  initHeaders(this);
-
-	  if (this.request.method == 'GET') {
-      // LIST existing APIs
-      var data = APIs.find({},{fields:{
-        		slug:0,
-        		_id:0,}
-        	}).fetch();
-
-      var response = formatResponse({
-      	status: "success",
-      	data: JSON.stringify(data)
-      });
-      this.response.end(response);
-    }else if (this.request.method == 'POST') {
-    	// POST new API def
-    	if(_.isUndefined(this.request.body.url)){
-    		this.response.statusCode = 400;
-    		var response = formatResponse({
-        	status: "fail",
-        	message: "Malformed, expecting url parameter"
-        });
-  	    this.response.end(response);
-    	}else{
-    		try{
-    		  var result = Meteor.call('validateFormatFromURL',this.request.body.url);
-          if(result=="valid"){
-    		  	var insert = Meteor.call('loadDataFromJSON',"",this.request.body.url);
-    		  	console.log("insert",insert);
-    		  	//TODO SEND SUCCESS IF INSERT
-    		  	var response = formatResponse({
-  	        	status: "success",
-  	        	message: "Thank you for your submission."
-  	        });
-  			    this.response.end(response);
-    		  }
-    		}catch(e){
-          console.log("EEE",e);
-    			this.response.statusCode = 400;
-    			var response = formatResponse({
-	        	status: "fail",
-	        	message: _.isArray(e.reason) ? e.reason[0].message : e.reason,
-	        	details: _.isUndefined(e.details) ? "" : e.details[0].message
-	        });
-    			this.response.end(response);
-    		}
-    	}
-    }else if (this.request.method == 'OPTIONS') {
-        // OPTIONS
-        this.response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-        this.response.end("OPTIONS Response");
-      }
-  	}
-  });
-
-  this.route('apiListMaintainers', {
-  	path: "/api/v1/maintainers/",
-  	where: "server",
-  	action:function(){
-  	  initHeaders(this);
-  	  if (this.request.method == 'GET') {
-        // LIST existing APIs
-        var data = Maintainers.find({},{fields:{
-          		slug:0,
-          		_id:0,}
-          	}).fetch();
-
-        var response = formatResponse({
-	        	status: "success",
-	        	data: JSON.stringify(data)
-	        });
-	      this.response.end(response);
-	    }else if (this.request.method == 'OPTIONS') {
-        // OPTIONS
-        this.response.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
-        this.response.end("OPTIONS Response");
-      } 
-	}
-  });
-
   this.route('yoSubscription', {
-    path: "/api/v1/yo",
+    path:  API_PATH +"/yo",
     where: "server",
     action:function(){
       initHeaders(this);
@@ -202,7 +120,9 @@ Router.map(function () {
 
 }); //end global router
 
-// Embed API response
+
+
+// Embed API response`
 // {"status": "success","data": ...,"message":"Blah"}
 formatResponse = function(options){
 	var response = '{"status": "'+options.status+'"';

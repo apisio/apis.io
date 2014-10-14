@@ -51,12 +51,14 @@ Meteor.methods({
 			var dataPath = errors.dataPath=='' ? '/' : errors.dataPath
 			console.log("Error on Format ", errors);
 			console.log("SUB",errors.subErrors);
-			var message = errors.message+" at "+dataPath;
+			errors.message.replace('[A-Za-z0-9\\-]','anything') //bug when rendered in JSON
+
+			var message = errors.message.replace(/"/g, '\'')+" at "+dataPath;
 			if(errors.subErrors){
 				_.each(errors.subErrors,function(err){
 					var path = err.dataPath=='' ? '/' : err.dataPath
 					message += "<br/>"
-					message += err.message +" at "+ path;
+					message += err.message.replace(/"/g, '\'').replace('[A-Za-z0-9\\-]','anything') +" at "+ path;
 				});
 			}
 				
@@ -66,6 +68,9 @@ Meteor.methods({
 
 	validateSchemaFromURL : function(url,schemaVersion){
 		console.log("Validate From URL called",url, schemaVersion);
+		if(_.isUndefined(schemaVersion))
+			throw new Meteor.Error(400,"schemaVersion is needed when calling validateSchemaFromURL")
+
 		try{
 			var response = HTTP.get(url);
 		}catch(e){
