@@ -1,8 +1,8 @@
 <template name="home">
-  <div class="col-xs-12 col-md-12">
+  <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="row">
-      <div class="col-xs-12 col-md-12" style="margin-top:80px; left: 5%;">
-        <h1 style="color:DarkGray;font-size: 5em;"><span style="color:Gold;">{API}</span>Search</h1>
+      <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:80px; left: 5%;">
+        <h1 id="apisearch_title" style="color:DarkGray;"><span style="color:Gold;">{API}</span>Search</h1>
         <p>{{nbAPIs}} APIs in database by {{nbMaintainers}} maintainers.</p>
         <ul class="hidden-xs menu_home">
           {{> navBarLinks}}
@@ -48,15 +48,15 @@
 </template>
 
 <template name="apiLineBlock">
-  <div class="col-xs-12 col-md-12 apiResultBlock">
+  <div class="col-xs-12 col-sm-12 col-md-12 apiResultBlock">
     <div class="row" style="margin-left:0;">
-      <div class="col-xs-2 col-md-1 logoDiv">
+      <div class="col-sm-2 col-md-1 logoDiv">
         <img src="{{image}}" alt="{{name}} logo" class="group list-group-image api_logo">
       </div>
-      <div class="col-xs-4 col-md-5">
+      <div class="col-sm-4 col-md-5">
         {{> apiLineContent}}
       </div>
-      <div class="col-xs-5 col-md-5" style="padding-top:10px;">
+      <div class="col-sm-5 col-md-5" style="padding-top:10px;">
         {{> apiLineLinks}}
       </div>
     </div>
