@@ -1,3 +1,8 @@
+/*
+* List APIs and submit a new apis.json file endpoint
+*/
+
+
 var API_PATH = Meteor.settings.public.API_PATH
 
 Router.map(function () {
