@@ -23,11 +23,20 @@ Router.map(function () {
 			        console.log(self.request.query.q)
 				}else{
 					var keywords = new RegExp(self.request.query.q, "i");
+
+					var filterFields = {}
+					filterFields["_id"]  =0; //never return _id
+
+					if(self.request.query.fields){ // add &fields= param to filter fields
+						_.each(self.request.query.fields.split(','),function(f){
+							filterFields[f]=1
+						});
+					}
+					
 					var data = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},
-						{fields:{
-					    		_id:0
-					    	}},
+						{fields:filterFields},
 				         {sort: {updatedAt: 1}}).fetch();
+
 					var response = formatResponse({
 						status: "success",
 						data: JSON.stringify(data)
