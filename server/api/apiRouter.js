@@ -135,6 +135,15 @@ formatResponse = function(options){
 	if(!_.isUndefined(options.data))
 		response += ', "data":'+options.data;
 
+  // response +=","
+  _.each(_.omit(options,['status','details','message','data']),function(el, index){
+    response+= ", "
+    if(typeof el == "number")
+      response+= '" '+ index + '":' + el+''
+    else
+      response+= '" '+ index + '":"' + el+'"'
+  })
+
 	response+= "}";
 	return response;
 }

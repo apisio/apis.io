@@ -105,6 +105,9 @@ Meteor.methods({
         var currentID = current._id;
       }else{
         var currentID = APIs.insert({});// insert new Object in DB
+         APIs.update({_id:currentID},{$set:{
+          createdAt: new Date()
+         }})
       } 
 
       // iterate on keys of json file
@@ -120,7 +123,8 @@ Meteor.methods({
       APIs.update({_id:currentID},{$set:{
         authoritative:auth,
         apiFileUrl:apiFileUrl,
-        slug:generateSlug(api.name,APIs,currentID)
+        slug:generateSlug(api.name,APIs,currentID),
+        updatedAt: new Date()
       }});
 
       if(process.env.ENV!="DEV"){
