@@ -7,12 +7,21 @@ Template.home.rendered = function () {
   // bug when going from validator page
   if($(".linedwrap"))
     $(".linedwrap").remove()
+
+  //init paging values
+  Session.set('paging_skip', 0);
+  Session.set('paging_limit', 5);
 };
 
 Template.home.events({
     'keyup [name="search"]':function(e,context){
-     var search_val = $("#search_input").val();
-      if(search_val==""){
+      var search_val = $("#search_input").val();
+      if(e.keyCode != 13){ //when start typing and not 'return' key
+        Session.set("apisResult", []);
+        $("#homePageContent").slideDown();
+      }
+
+      if(search_val == ""){
         $("#homePageContent").slideDown();
         Session.set("search_keywords",""); // erase previous keywords search results
         Session.set("search_tags","");
@@ -47,6 +56,7 @@ Template.home.events({
         else
           Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
         
+        searchAPI()
         var keenEvent = {"keywords": Session.get("search_keywords")};
         Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         // console.log("ChhhL",c,keenEvent);
@@ -65,36 +75,72 @@ Template.home.events({
 });
 
 Template.searchForm.rendered = function () {
-  if(Session.get("search_param")){
-    // $("#search_input").val(Session.get("search_param"));
-    // $("#search_submit").click();
+  if(!_.isUndefined(Session.get("search_keywords"))) { //load results if search param in URL
+    searchAPI()
   }
 };
 
 Template.apisList.events({
   'click a': function (e) {
-    var self = this;
-    var keenEvent;
-    if(Object.keys(self).length==0){
-      keenEvent = {type: "tag",value: self.name};
-    }else if(_.contains(Object.keys(self),'description')){ // it's an API object
-      keenEvent = {type: "outbound",value: self.name, url: self.humanURL};
-    }else if(_.contains(Object.keys(self),'url') && _.contains(Object.keys(self),'type')){ //extra links
-      keenEvent = {type: "outbound",value: self.type, url: self.url};
+    if(e.currentTarget.id != "displayMore"){ //dont track on display more
+      var self = this;
+      var keenEvent;
+      if(Object.keys(self).length==0){
+        keenEvent = {type: "tag",value: self.name};
+      }else if(_.contains(Object.keys(self),'description')){ // it's an API object
+        keenEvent = {type: "outbound",value: self.name, url: self.humanURL};
+      }else if(_.contains(Object.keys(self),'url') && _.contains(Object.keys(self),'type')){ //extra links
+        keenEvent = {type: "outbound",value: self.type, url: self.url};
+      }
+      Meteor.call('trackOutbound',keenEvent);
     }
-    Meteor.call('trackOutbound',keenEvent);
+  },
+  'click #displayMore':function(e){
+    e.preventDefault();
+    //Change paging settings and reload results
+    var limit = parseInt(Session.get('paging_limit'),10) || 5;
+    var skip = parseInt(Session.get('paging_skip'),10) + limit
+
+    Session.set('paging_skip',skip)
+    searchAPI();
   }
 });
 
 Template.apisList.helpers({
   apis: function () {
-    console.log("KEYWORD",Session.get("search_keywords"));
-    if(Session.get("search_keywords")){
-      keywords = new RegExp(Session.get("search_keywords"), "i");
-      var result = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},{sort: {updatedAt: 1}});
-      var res = result.fetch();
+    var result = Session.get('apisResult')
+    return result
+  },
+});
 
+// find regExp in Array
+containsRegExp = function (collection, regex) {
+    return _.filter(collection, function(obj){ return obj.match(regex);});
+};
+
+// Function called to search in API database
+searchAPI = function () {
+  if(Session.get("search_keywords")){
+      keywords = new RegExp(Session.get("search_keywords"), "i");
+
+      var apisResult = []
+      if(!_.isEmpty(Session.get('apisResult')))
+        apisResult = Session.get('apisResult')
+
+      var result = APIs.find(
+        {$or:[{name:keywords},{description:keywords},{tags:keywords}]},
+        {
+          sort: {updatedAt: 1},
+          limit: Session.get('paging_limit') || 5,
+          skip: Session.get('paging_skip') || 0
+        });
+
+      var totalResult = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]}).count();
+
+      Session.set('paging_total', totalResult);
+      
       //Sort by number of fields matched in search
+      var res = result.fetch();
       _.each(res,function (r) {
         var relevance =0;
         if(!_.isUndefined(r.name))
@@ -135,8 +181,10 @@ Template.apisList.helpers({
         $("#homePageContent").slideDown();
         FlashMessages.sendError("No API was found :(");
       }
-      return result;
-    }else if(Session.get("search_tags")){
+      apisResult = apisResult.concat(result)
+      console.log("APIsresult",apisResult);
+      Session.set('apisResult',apisResult);
+    }else if(Session.get("search_tags")){ // if search are for tags
       keywords = new RegExp(Session.get("search_tags"), "i");
       result = APIs.find({tags:keywords}, {sort: {updatedAt: 1}});
       Session.set('nb_results',result.count())
@@ -148,19 +196,11 @@ Template.apisList.helpers({
         $("#homePageContent").slideDown();
         FlashMessages.sendError("No API was found :(");
       }
-      return result;
+      apisResult = apisResult.concat(result)
+      console.log("APIsresult",apisResult);
+      Session.set('apisResult',apisResult);
+      return apisResult;
     }
     if(Session.equals("search_keywords", "") || Session.equals("search_tags", "value"))
-      return null
-
-    console.log("NO RETURN");
-    return [];
-    // return null;
-    
-  },
-});
-
-// find regExp in Array
-containsRegExp = function (collection, regex) {
-    return _.filter(collection, function(obj){ return obj.match(regex);});
-};
+      Session.set('apisResult',null)
+}

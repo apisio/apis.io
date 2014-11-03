@@ -44,6 +44,11 @@
     {{#each apis}}  
         {{> apiLineBlock}}
     {{/each}}
+    {{#with apis}}
+      {{#if displayMore}}
+        <a id="displayMore">More results...</a>
+      {{/if}}
+    {{/with}}
   </div>
 </template>
 
@@ -71,7 +76,7 @@
     {{/if}}
   </h4>
   <span class="glyphicon glyphicon-user"></span>by
-  {{#with getAPIFile apiFileUrl}}
+  {{#with getMaintainerOfAPIfile apiFileUrl}}
     {{#if maintainer}}
       <a href="{{maintainerLink maintainer}}">
       {{displayMaintainerName maintainer}}</a>|
@@ -79,9 +84,9 @@
       <a href="{{maintainerLink maintainers}}">
       {{displayMaintainerName maintainers}}</a>|
     {{/if}}
-    <span class="glyphicon glyphicon-calendar"></span>
-    {{displayModifiedDate modified}}
   {{/with}}
+  <span class="glyphicon glyphicon-calendar"></span>
+    {{displayModifiedDate updatedAt}}
   <br />
 </template>
 

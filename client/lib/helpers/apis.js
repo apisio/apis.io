@@ -25,6 +25,13 @@ UI.registerHelper('getAPIFile',function (url){
 		return apiFile;
 });
 
+UI.registerHelper('getMaintainerOfAPIfile',function (url) {
+
+	var apiFile = APIFiles.findOne({url:url},{fields:{maintainers:1}});
+	if(apiFile)
+		return apiFile;
+})
+
 UI.registerHelper('displayAPIImage',function(){
 	if(this.image)
 		return this.image;

@@ -1,5 +1,5 @@
 Meteor.publish('apisFiles',function(){
-	return APIFiles.find({});
+	return APIFiles.find({},{fields:{url:1,maintainers:1}}); //reduce the load to the fields we are using
 });
 
 Meteor.publish('apisFile',function(slug){
@@ -12,7 +12,7 @@ Meteor.publish('apisFileFromAPISlug',function(slug){
 });
 
 Meteor.publish('apis',function(){
-	return APIs.find({});
+	return APIs.find({},{fields:{name:1,keywords:1,tags:1,humanURL:1,apiFileUrl:1,image:1,properties:1,updatedAt:1}});
 });
 
 Meteor.publish('api',function(slug){
