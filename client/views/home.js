@@ -29,20 +29,25 @@ Template.home.events({
     },
     'click #search_submit, form submit':function(e,context) {
       e.preventDefault();
+      Session.set('apisResult', []);
+
       var search_val = $("#search_input").val();
 
       //add search param to browser url
       var stateObj = { search: search_val };
       history.pushState(stateObj, "", "?search="+search_val);
 
-      var reg = new RegExp(/(tag)(:)( )*((?:[a-z][a-z0-9_]*))/i);
+      var reg = new RegExp(/(tag)(:)( )*((?:[a-z0-9]*))/i);
 
       // Specific Operands
       if(search_val.match(reg)) {
+        console.log("match!",search_val)
         var arr = search_val.split(":");
         switch(arr[0]){
           case 'tag':
             Session.set("search_tags", arr[1].trim());
+            Session.set('search_keywords', '');
+
             var keenEvent = {"keywords_tags": Session.get("search_tags")};
             Meteor.call('sendKeenEvent','searchCollection',keenEvent);
             searchAPI()
@@ -57,6 +62,7 @@ Template.home.events({
         else
           Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
         
+        Session.set("search_tags",'')
         searchAPI()
         var keenEvent = {"keywords": Session.get("search_keywords")};
         Meteor.call('sendKeenEvent','searchCollection',keenEvent);

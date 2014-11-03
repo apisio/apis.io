@@ -22,7 +22,7 @@ Router.map(function () {
       // If search parameter specified
       if(search_val){
         // Search is string or 'tag:keyword' or '*'
-        var reg = new RegExp(/(tag)(:)( )*((?:[a-z][a-z0-9_]*))/i);
+        var reg = new RegExp(/(tag)(:)( )*((?:[a-z0-9]*))/i);
         if(search_val.match(reg)) {
           var arr = search_val.split(":");
           switch(arr[0]){
