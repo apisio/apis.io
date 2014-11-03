@@ -51,7 +51,9 @@ Router.map(function () {
 
 					console.log(self.request.query);
 
-					var data = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},
+					// filter on Swagger
+					if(self.request.query.swagger == "true"){
+						var data = APIs.find({$and:[{"properties.type":{$in:["Swagger"]},$or:[{name:keywords},{description:keywords},{tags:keywords}]}]},
 							{
 								sort: sortBy,
 								fields:filterFields,
@@ -59,6 +61,19 @@ Router.map(function () {
 								skip: skip
 							}
 				        ).fetch();
+					}else{
+						var data = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},
+							{
+								sort: sortBy,
+								fields:filterFields,
+								limit: limit,
+								skip: skip
+							}
+				        ).fetch();
+					}
+
+
+					
 
 					//next request
 					var nextQuery = self.request.query
@@ -69,16 +84,28 @@ Router.map(function () {
 
 					delete nextQuery.skip
 					//FIXME asynchronous in generating URI with different skip value
-
+					//FIXME return paging:{} http://stackoverflow.com/questions/13872273/api-pagination-best-practices
+					
+					var pagingData = {
+						"next":generatePaginationURL(nextQuery,'search') + "skip=" + nextSkip,
+						"previous":generatePaginationURL(nextQuery,'search') + "skip=" + previousSkip
+					};
+					
+					console.log(JSON.stringify(pagingData))
+					console.log(pagingData)
 					var response = formatResponse({
 						status: "success",
 						limit: parseInt(limit,10),
 						skip: parseInt(skip,10),
-						next: generatePaginationURL(nextQuery,'search') + "skip=" + nextSkip,
-						previous: generatePaginationURL(nextQuery,'search') + "skip=" + previousSkip,
+						paging: pagingData,
 						data: JSON.stringify(data)
 					});
 				}
+
+				// "paging":{
+				// 			"next": generatePaginationURL(nextQuery,'search') + "skip=" + nextSkip,
+				// 			"previous": generatePaginationURL(nextQuery,'search') + "skip=" + previousSkip
+				// 		},
 				
 				self.response.end(response);
 			}else if (self.request.method == 'OPTIONS') {
@@ -91,7 +118,14 @@ Router.map(function () {
 })
 
 function generatePaginationURL(query,path){
-	var result = process.env.ROOT_URL + API_PATH.substring(1) + '/'+ path
+	var result ="";
+	result += process.env.ROOT_URL;	
+	if(process.env.ROOT_URL[process.env.ROOT_URL.length-1] =='/')
+		result += API_PATH.substring(1)
+	else
+		result += '/'+API_PATH.substring(1)
+
+	result += '/'+ path
 	result += objToURIquery(query)
 
 	return result;

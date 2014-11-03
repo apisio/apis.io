@@ -136,10 +136,20 @@ formatResponse = function(options){
 		response += ', "data":'+options.data;
 
   // response +=","
+  //FIXME render better object
+
   _.each(_.omit(options,['status','details','message','data']),function(el, index){
     response+= ", "
     if(typeof el == "number")
-      response+= '" '+ index + '":' + el+''
+      response+= '" '+ index + '":' + el
+    else if(typeof el == "object"){
+      response += '" '+ index + '":{'
+      _.each(_.keys(el),function(e,i){
+        response += '"'+e+'":"'+el[e]+'",'
+      })
+      response = response.substring(0, response.length - 1); //last comma
+      response+= "}"
+    }
     else
       response+= '" '+ index + '":"' + el+'"'
   })
