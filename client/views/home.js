@@ -45,6 +45,7 @@ Template.home.events({
             Session.set("search_tags", arr[1].trim());
             var keenEvent = {"keywords_tags": Session.get("search_tags")};
             Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+            searchAPI()
             break;
           default:
             FlashMessages.sendError("Search format is incorrect");
@@ -64,18 +65,20 @@ Template.home.events({
     },
     'click .api_tag':function(e,context){
       Session.set("search_keywords","");
+      Session.set('apisResult', []);
       $("#search_input").val("tag:"+this.name);
       $("#search_submit").click();
     },
     'click .suggested':function(e,context){
       Session.set("search_keywords","");
+      Session.set('apisResult', []);
       $("#search_input").val($(e.target).data("keyword"));
       $("#search_submit").click();
     }
 });
 
 Template.searchForm.rendered = function () {
-  if(!_.isUndefined(Session.get("search_keywords"))) { //load results if search param in URL
+  if(!_.isUndefined(Session.get("search_keywords")) || !_.isUndefined(Session.get("search_tags"))) { //load results if search param in URL
     searchAPI()
   }
 };
@@ -185,14 +188,23 @@ searchAPI = function () {
       console.log("APIsresult",apisResult);
       Session.set('apisResult',apisResult);
     }else if(Session.get("search_tags")){ // if search are for tags
-      keywords = new RegExp(Session.get("search_tags"), "i");
-      result = APIs.find({tags:keywords}, {sort: {updatedAt: 1}});
-      Session.set('nb_results',result.count())
+      console.log("TAG SEARCH", Session.get('search_tags'))
+      var apisResult = []
+      if(!_.isEmpty(Session.get('apisResult')))
+        apisResult = Session.get('apisResult')
 
-      if(result.count()>0)
+      keywords = new RegExp(Session.get("search_tags"), "i");
+      result = APIs.find({tags:keywords}, {
+          sort: {updatedAt: 1},
+          limit: Session.get('paging_limit') || 5,
+          skip: Session.get('paging_skip') || 0
+        }).fetch();
+      Session.set('nb_results',result.length)
+
+      if(result.length>0)
         $("#homePageContent").slideUp();
 
-      if(result.count()===0){
+      if(result.length===0){
         $("#homePageContent").slideDown();
         FlashMessages.sendError("No API was found :(");
       }
