@@ -1,0 +1,58 @@
+{
+  "name": "6px",
+  "description": "A simple, scalable platform for image processing.",
+  "image": "https://d1qb2nb5cznatu.cloudfront.net/startups/i/268906-5d5b08cb0cc5d6dfd40084c261adf872-medium_jpg.jpg?buster=1390501658",
+  "tags": [
+    "image",
+    "processing"
+  ],
+  "created": "2014-08-20",
+  "modified": "2014-08-20",
+  "url": "https://raw.githubusercontent.com/picsoung/apis.json/master/6px.json",
+  "specificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "6px API",
+      "description": "A simple, scalable platform for image processing.",
+      "image": "https://d1qb2nb5cznatu.cloudfront.net/startups/i/268906-5d5b08cb0cc5d6dfd40084c261adf872-medium_jpg.jpg?buster=1390501658",
+      "humanURL": "http://6px.io/",
+      "baseURL": "https://api.6px.io/v1/",
+      "tags": [
+        "image",
+        "processing"
+      ],
+      "properties": [
+        {
+          "type": "TermsOfService",
+          "url": "http://6px.io/policies/terms-of-service"
+        },
+        {
+          "type": "X-PrivacyPolicy",
+          "url": "http://6px.io/policies/privacy"
+        },
+        {
+          "type": "Pricing",
+          "url": "http://6px.io/pricing"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "6px",
+          "organizationName":"6px",
+          "email": "support@6px.io",
+          "X-twitter": "6px_io",
+          "X-github": "6px-io"
+        }
+      ]
+    }
+  ],
+  "include": [],
+  "maintainers": [
+    {
+      "FN": "Nicolas Grenié",
+      "X-twitter": "picsoung",
+      "email": "nicolas@3scale.net",
+      "X-github":"picsoung"
+    }
+  ]
+}
