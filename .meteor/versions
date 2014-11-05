@@ -1,5 +1,5 @@
-aldeed:autoform@3.2.0
-aldeed:simple-schema@1.0.3
+aldeed:autoform@1.0.0
+aldeed:simple-schema@1.0.2
 application-configuration@1.0.3
 autoupdate@1.1.2
 base64@1.0.1
@@ -11,6 +11,7 @@ callback-hook@1.0.1
 check@1.0.2
 ctl-helper@1.0.4
 ctl@1.0.2
+cunneen:json-editor@1.0.0
 datariot:ganalytics@0.2.0
 ddp@1.0.10
 deps@1.0.5
@@ -19,6 +20,7 @@ email@1.0.4
 fastclick@1.0.1
 follower-livedata@1.0.2
 geojson-utils@1.0.1
+handlebars@1.0.1
 html-tools@1.0.2
 htmljs@1.0.2
 http@1.0.7
@@ -38,7 +40,8 @@ meteor-platform@1.1.2
 meteor@1.1.2
 meteorhacks:async@1.0.0
 meteorhacks:kadira-binary-deps@1.2.0
-meteorhacks:kadira@2.11.9
+meteorhacks:kadira@2.12.1
+meteorhacks:meteorx@1.2.0
 meteorhacks:npm@1.2.0
 minifiers@1.1.1
 minimongo@1.0.4
@@ -52,6 +55,7 @@ npm-container@1.0.0
 observe-sequence@1.0.3
 ordered-dict@1.0.1
 peerlibrary:urlify2@0.2.3
+pfafman:filesaver@0.1.0
 random@1.0.1
 reactive-dict@1.0.4
 reactive-var@1.0.3

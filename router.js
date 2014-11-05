@@ -74,17 +74,17 @@ Router.map(function () {
     },
   });
 
-  // this.route('builder',{
-  //   path: '/builder',
-  //   template: 'APIbuilder',
-  //   yieldTemplates: {
-  //     'navbar': {to: 'navbar'},
-  //   },
-  //   onBeforeAction: function(){
-  //     Session.set('active', 'builder');
-  //     Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
-  //   },
-  // });
+  this.route('builder',{
+    path: '/builder',
+    template: 'APIbuilder',
+    yieldTemplates: {
+      'navbar': {to: 'navbar'},
+    },
+    onBeforeAction: function(){
+      Session.set('active', 'builder');
+      Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+    },
+  });
 
   this.route('about',{
     path: '/about',
