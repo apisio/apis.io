@@ -1,4 +1,4 @@
-Template.APIlint.rendered = function () {
+Template.schemaLinter.rendered = function () {
 	$("#apijsonContent").linedtextarea();
 };
 

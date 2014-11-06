@@ -14,12 +14,41 @@ Router.map(function () {
 	  	initHeaders(self);
 
 		if (self.request.method == 'GET') { // LIST existing APIs
-			var data = APIs.find({},{fields:{
-					_id:0,}
-				}).fetch();
+			var limit = parseInt(self.request.query.limit,10) || 10;
+			var skip = parseInt(self.request.query.skip,10) || 0;
+
+			var data = APIs.find({},
+				{
+					limit: limit,
+					skip: skip,
+					fields:{
+						_id:0
+					},
+					sort:{createdAt:-1}
+				}
+				).fetch();
+
+			//next request
+			var nextQuery = self.request.query
+			var nextSkip = skip+limit
+
+			var prevQuery = self.request.query
+			var previousSkip = (skip - limit)<0 ? 0 : (skip-limit)
+
+			delete nextQuery.skip
+			//FIXME asynchronous in generating URI with different skip value
+			//FIXME return paging:{} http://stackoverflow.com/questions/13872273/api-pagination-best-practices
+			
+			var pagingData = {
+				"next":generatePaginationURL(nextQuery,'apis') + "skip=" + nextSkip,
+				"previous":generatePaginationURL(nextQuery,'apis') + "skip=" + previousSkip
+			};
 
 			var response = formatResponse({
 				status: "success",
+				limit: parseInt(limit,10),
+				skip: parseInt(skip,10),
+				paging: pagingData,
 				data: JSON.stringify(data)
 			});
 			self.response.end(response);
@@ -36,7 +65,6 @@ Router.map(function () {
 	    			var result = Meteor.call('validateSchemaFromURL',self.request.body.url,"0.14")
 	    			if(result == "valid"){
 		    		    Meteor.call('addAPIFile',self.request.body.url,function(err,res){
-		    		    	console.log("REEEESULT",res)
 			    		  	if(res)
 			    		  		var response = formatResponse({
 					  	        	status: "success",
@@ -53,7 +81,7 @@ Router.map(function () {
 			    		});
 		    		}
 	    		}catch(e){
-		            console.log("EEE",e);
+		            console.log("Error, POST API",e);
 	    			self.response.statusCode = 400;
 	    			var response = formatResponse({
 			        	status: "fail",

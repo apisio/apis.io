@@ -11,7 +11,7 @@ Router.map(function () {
   	action: function(){
   	  this.response.statusCode = 200;
   	  initHeaders(this);
-      var response = '{"status": "success","data": {"links":{"listAPI [GET]": API_PATH +"/apis","addAPI [POST]": API_PATH +"/apis/add","listMaintainers [GET]": API_PATH +"/maintainers"}}}';
+      var response = '{"status": "success","data": {"links":{"listAPI [GET]": '+API_PATH +'"/apis","addAPI [POST]": '+API_PATH +' +"/apis/add","searchAPI [GET]": '+API_PATH +' +"/search","listMaintainers [GET]": '+API_PATH +' +"/maintainers"}}}';
 	    this.response.end(response);
   	}
   }),
@@ -40,7 +40,6 @@ Router.map(function () {
 
 
   //TODO /maintainers
-  // pagination
   // refactor
 
   this.route('apiListAPIs', {
@@ -88,10 +87,9 @@ Router.map(function () {
       console.log(this.path,this.response.statusCode);
       console.log(this.request.body);
       console.log(this.request.url);
-
+      
       //  Meteor.call("sendKeenEvent","APICallsCollection",{
       //   path: this.path,
-
       // });
     }
   });
@@ -162,4 +160,30 @@ initHeaders = function(endpoint){
 	endpoint.response.setHeader("Content-Type", "application/json");
   endpoint.response.setHeader("Access-Control-Allow-Origin", "*");
   endpoint.response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+}
+
+generatePaginationURL = function(query,path){
+  var result ="";
+  result += process.env.ROOT_URL; 
+  if(process.env.ROOT_URL[process.env.ROOT_URL.length-1] =='/')
+    result += API_PATH.substring(1)
+  else
+    result += '/'+API_PATH.substring(1)
+
+  result += '/'+ path
+  result += objToURIquery(query)
+
+  return result;
+}
+
+objToURIquery = function(obj){
+  var result = "?"
+  _.each(obj, function(el,index){
+    result += index + "=" + obj[index] + "&"
+    if(index=="skip"){
+      console.log("SKIP",obj[index]);
+    }
+  });
+  
+  return result;
 }

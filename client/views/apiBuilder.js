@@ -29,16 +29,6 @@ AutoForm.hooks({
   }
 });
 
-// Template.alpacaForm.rendered = function () {
-//   // ...
-//    $("#formBuilder").alpaca({
-//         "schemaSource": "./schema_0.14_alpaca.json",
-//         // "dataSource": "./apisdef/example/apis.json",
-//         "options":"./alpaca_options.json",
-//         "view": "VIEW_BOOTSTRAP_CREATE"
-//     });
-// };
-
 Template.editorForm.rendered = function () {
 
   //add created and modified value

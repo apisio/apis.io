@@ -9,6 +9,13 @@ Router.map(function () {
 	this.route('searchAPIs', {
 	  	path:  API_PATH +"/search",
 	  	where: "server",
+	    onAfterAction: function(){
+	      Meteor.call("sendSimpleKeenEvent","APICallsCollection",{
+	        path: this.path.url,
+	        query: this.request.query,
+	        status: this.response.statusCode
+	      });
+	    },
 	  	action: function(){
 	  		var self = this
 	  		initHeaders(self);
@@ -20,7 +27,6 @@ Router.map(function () {
 			        	status: "fail",
 			        	message: "Malformed, expecting 'q' parameter"
 			        });
-			        console.log(self.request.query.q)
 				}else{
 					var keywords = new RegExp(self.request.query.q, "i");
 
@@ -44,12 +50,9 @@ Router.map(function () {
 					}else{
 						sortBy["updatedAt"] = order
 					}
-					console.log("Sortby",sortBy)
 
 					var limit = parseInt(self.request.query.limit,10) || 10;
 					var skip = parseInt(self.request.query.skip,10) || 0;
-
-					console.log(self.request.query);
 
 					// filter on Swagger
 					if(self.request.query.swagger == "true"){
@@ -72,9 +75,6 @@ Router.map(function () {
 				        ).fetch();
 					}
 
-
-					
-
 					//next request
 					var nextQuery = self.request.query
 					var nextSkip = skip+limit
@@ -91,8 +91,6 @@ Router.map(function () {
 						"previous":generatePaginationURL(nextQuery,'search') + "skip=" + previousSkip
 					};
 					
-					console.log(JSON.stringify(pagingData))
-					console.log(pagingData)
 					var response = formatResponse({
 						status: "success",
 						limit: parseInt(limit,10),
@@ -101,12 +99,6 @@ Router.map(function () {
 						data: JSON.stringify(data)
 					});
 				}
-
-				// "paging":{
-				// 			"next": generatePaginationURL(nextQuery,'search') + "skip=" + nextSkip,
-				// 			"previous": generatePaginationURL(nextQuery,'search') + "skip=" + previousSkip
-				// 		},
-				
 				self.response.end(response);
 			}else if (self.request.method == 'OPTIONS') {
 	        // OPTIONS
@@ -116,29 +108,3 @@ Router.map(function () {
 	  	}
 	});
 })
-
-function generatePaginationURL(query,path){
-	var result ="";
-	result += process.env.ROOT_URL;	
-	if(process.env.ROOT_URL[process.env.ROOT_URL.length-1] =='/')
-		result += API_PATH.substring(1)
-	else
-		result += '/'+API_PATH.substring(1)
-
-	result += '/'+ path
-	result += objToURIquery(query)
-
-	return result;
-}
-
-function objToURIquery(obj){
-	var result = "?"
-	_.each(obj, function(el,index){
-		result += index + "=" + obj[index] + "&"
-		if(index=="skip"){
-			console.log("SKIP",obj[index]);
-		}
-	});
-	
-	return result;
-}

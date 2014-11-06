@@ -69,7 +69,6 @@ Router.map(function () {
     },
     onBeforeAction: function(){
       Session.set('active', 'linter');
-      console.log(this);
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
     },
   });

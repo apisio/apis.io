@@ -20,5 +20,6 @@ meteorhacks:npm
 
 
 npm-container
-cunneen:json-editor
 pfafman:filesaver
+cunneen:json-editor
+
