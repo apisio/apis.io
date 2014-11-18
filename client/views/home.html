@@ -8,7 +8,7 @@
           {{> navBarLinks}}
         </ul>
       </div>
-   </div> 
+   </div>
   </div>
   <div class="col-md-12">
     {{> searchForm}}
@@ -29,7 +29,7 @@
         <a style="right:20px; position:absolute;" href="{{pathFor 'addAPI'}}"><span class="glyphicon glyphicon-plus-sign"></span>Add API</a>
 
         </div>
-</li> 
+</li>
         </ul>
     </div>
 </template>
@@ -41,7 +41,7 @@
 
 <template name="apisList">
   <div class="row">
-    {{#each apis}}  
+    {{#each apis}}
         {{> apiLineBlock}}
     {{/each}}
     {{#with apis}}
@@ -103,7 +103,7 @@
       {{/each}}
     </div>
   </div>
-    <div class="urls">    
+    <div class="urls">
       <ul>
         {{#if urls}}
           {{#each urls}}

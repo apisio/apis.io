@@ -48,9 +48,13 @@ Template.home.events({
             Session.set("search_tags", arr[1].trim());
             Session.set('search_keywords', '');
 
-            var keenEvent = {"keywords_tags": Session.get("search_tags")};
-            Meteor.call('sendKeenEvent','searchCollection',keenEvent);
-            searchAPI()
+            Meteor.subscribe('apiByKeyword',Session.get("search_tags"),function(apis){
+              Meteor.subscribe('maintainersOfAPIs',apis)
+              searchAPI()
+              var keenEvent = {"keywords_tags": Session.get("search_tags")};
+              Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+            });
+
             break;
           default:
             FlashMessages.sendError("Search format is incorrect");
@@ -61,11 +65,18 @@ Template.home.events({
           Session.set("search_keywords"," ");
         else
           Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
-        
+
         Session.set("search_tags",'')
-        searchAPI()
-        var keenEvent = {"keywords": Session.get("search_keywords")};
-        Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+
+        // When subscription is ready, display searchResult
+        Meteor.subscribe('apiByKeyword',Session.get("search_keywords"),function(apis){
+          Meteor.subscribe('maintainersOfAPIs',apis)
+          console.log("AAAAAPI",apis)
+          searchAPI()
+          var keenEvent = {"keywords": Session.get("search_keywords")};
+          Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+        })
+
         // console.log("ChhhL",c,keenEvent);
       }
     },
@@ -147,7 +158,7 @@ searchAPI = function () {
       var totalResult = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]}).count();
 
       Session.set('paging_total', totalResult);
-      
+
       //Sort by number of fields matched in search
       var res = result.fetch();
       _.each(res,function (r) {
@@ -176,9 +187,9 @@ searchAPI = function () {
       }else{
         result = res;
       }
-      
+
       // @FIXME SORT BY RELEVANCE
-      
+
       console.log("NB results",result.length);
       Session.set('nb_results',result.length)
 

@@ -12,7 +12,9 @@ Router.map(function () {
     path: '/',
     template: 'home',
     waitOn: function(){
-      return [Meteor.subscribe('apisFiles'),Meteor.subscribe('apis'),Meteor.subscribe('maintainers')];
+      // if(this.params.search)
+        // return [Meteor.subscribe('apisFiles'),Meteor.subscribe('apis'),Meteor.subscribe('maintainers')];
+        return Meteor.subscribe('maintainers')
     },
     onBeforeAction: function(){
       Session.set('active', 'home');
@@ -68,7 +70,7 @@ Router.map(function () {
       'navbar': {to: 'navbar'},
     },
     onBeforeAction: function(){
-      Session.set('active', 'linter');
+      Session.set('active', 'lint');
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
     },
   });
@@ -99,7 +101,7 @@ Router.map(function () {
   });
 
   this.route('apiSearchAPIIndex',{
-    path: '/api',
+    path: '/apiDoc',
     template: 'apiSearchAPIIndex',
     yieldTemplates: {
       'navbar': {to: 'navbar'},

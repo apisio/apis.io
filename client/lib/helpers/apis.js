@@ -26,8 +26,8 @@ UI.registerHelper('getAPIFile',function (url){
 });
 
 UI.registerHelper('getMaintainerOfAPIfile',function (url) {
-
 	var apiFile = APIFiles.findOne({url:url},{fields:{maintainers:1}});
+	console.log("APIfile",apiFile)
 	if(apiFile)
 		return apiFile;
 })

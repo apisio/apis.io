@@ -11,7 +11,7 @@ Router.map(function () {
   	action: function(){
   	  this.response.statusCode = 200;
   	  initHeaders(this);
-      var response = '{"status": "success","data": {"links":{"listAPI [GET]": '+API_PATH +'"/apis","addAPI [POST]": '+API_PATH +' +"/apis/add","searchAPI [GET]": '+API_PATH +' +"/search","listMaintainers [GET]": '+API_PATH +' +"/maintainers"}}}';
+      var response = '{"status": "success","data": {"links":{"listAPI [GET]": "'+API_PATH +'/apis","addAPI [POST]": "'+API_PATH +'/apis/add","searchAPI [GET]": "'+API_PATH +'/search","listMaintainers [GET]": "'+API_PATH +'/maintainers"}}}';
 	    this.response.end(response);
   	}
   }),
@@ -87,7 +87,7 @@ Router.map(function () {
       console.log(this.path,this.response.statusCode);
       console.log(this.request.body);
       console.log(this.request.url);
-      
+
       //  Meteor.call("sendKeenEvent","APICallsCollection",{
       //   path: this.path,
       // });
@@ -164,7 +164,15 @@ initHeaders = function(endpoint){
 
 generatePaginationURL = function(query,path){
   var result ="";
-  result += process.env.ROOT_URL; 
+  var domain = process.env.ROOT_URL.split('-')[0].replace(/https*:\/\//,'')
+  if(domain == "staging"){
+    result += "http://staging.apis.io"
+  }else if (domain == "apisio"){
+    result += "http://apis.io"
+  }else{
+    result += process.env.ROOT_URL; 
+  }
+
   if(process.env.ROOT_URL[process.env.ROOT_URL.length-1] =='/')
     result += API_PATH.substring(1)
   else

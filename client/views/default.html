@@ -63,10 +63,10 @@
 </template>
 
 <template name="navBarLinks">
-  <li class='{{TabActive "addAPI"}}'><a href="/apis/add">Add API</a></li>
-  <li class='{{TabActive "linter"}}'><a href="/lint">Validator</a></li>
-  <li class='{{TabActive "builder"}}'><a href="/builder">Builder</a></li>
-  <li class='{{TabActive "apiSearchAPIIndex"}}'><a href="/api">API</a></li>
-  <li class='{{TabActive "FAQ"}}'><a href="/faq">FAQ</a></li>
-  <li class='{{TabActive "about"}}'><a href="/about">About</a></li>
+  <li class='{{TabActive "addAPI"}}'><a href="{{pathFor 'addAPI'}}">Add API</a></li>
+  <li class='{{TabActive "lint"}}'><a href="{{pathFor 'lint'}}">Validator</a></li>
+  <li class='{{TabActive "builder"}}'><a href="{{pathFor 'builder'}}">Builder</a></li>
+  <li class='{{TabActive "apiSearchAPIIndex"}}'><a href="{{pathFor 'apiSearchAPIIndex'}}">API</a></li>
+  <li class='{{TabActive "FAQ"}}'><a href="{{pathFor 'FAQ'}}">FAQ</a></li>
+  <li class='{{TabActive "about"}}'><a href="{{pathFor 'about'}}">About</a></li>
 </template>

@@ -1,4 +1,5 @@
 UI.registerHelper('displayMaintainerName', function (m) {
+	console.log(m);
 	if(!_.isUndefined(m[0].FN)) //since 0.14
 		return m[0].FN;
 
