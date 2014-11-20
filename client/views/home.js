@@ -66,16 +66,17 @@ Template.home.events({
         else
           Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
 
-        Session.set("search_tags",'')
+        Session.set("search_tags","")
 
         // When subscription is ready, display searchResult
+        Meteor.subscribe('APIfilesByKeyword',Session.get("search_keywords"))
         Meteor.subscribe('apiByKeyword',Session.get("search_keywords"),function(apis){
-          Meteor.subscribe('maintainersOfAPIs',apis)
-          console.log("AAAAAPI",apis)
           searchAPI()
           var keenEvent = {"keywords": Session.get("search_keywords")};
           Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         })
+
+
 
         // console.log("ChhhL",c,keenEvent);
       }

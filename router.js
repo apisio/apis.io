@@ -14,7 +14,7 @@ Router.map(function () {
     waitOn: function(){
       // if(this.params.search)
         // return [Meteor.subscribe('apisFiles'),Meteor.subscribe('apis'),Meteor.subscribe('maintainers')];
-        return Meteor.subscribe('maintainers')
+        return [Meteor.subscribe('maintainers'),Meteor.subscribe('apisCount')]
     },
     onBeforeAction: function(){
       Session.set('active', 'home');

@@ -77,13 +77,8 @@
   </h4>
   <span class="glyphicon glyphicon-user"></span>by
   {{#with getMaintainerOfAPIfile apiFileUrl}}
-    {{#if maintainer}}
-      <a href="{{maintainerLink maintainer}}">
-      {{displayMaintainerName maintainer}}</a>|
-    {{else}}
       <a href="{{maintainerLink maintainers}}">
       {{displayMaintainerName maintainers}}</a>|
-    {{/if}}
   {{/with}}
   <span class="glyphicon glyphicon-calendar"></span>
     {{displayModifiedDate updatedAt}}
