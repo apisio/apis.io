@@ -17,13 +17,20 @@ Router.map(function () {
 			var limit = parseInt(self.request.query.limit,10) || 10;
 			var skip = parseInt(self.request.query.skip,10) || 0;
 
+			var filterFields = {}
+			filterFields["_id"]  = 0; //never return _id
+
+			if(self.request.query.fields){ // add &fields= param to filter fields
+				_.each(self.request.query.fields.split(','), function(f){
+					filterFields[f] = 1
+				});
+			}
+
 			var data = APIs.find({},
 				{
 					limit: limit,
 					skip: skip,
-					fields:{
-						_id:0
-					},
+					fields:filterFields,
 					sort:{createdAt:-1}
 				}
 				).fetch();
@@ -38,7 +45,7 @@ Router.map(function () {
 			delete nextQuery.skip
 			//FIXME asynchronous in generating URI with different skip value
 			//FIXME return paging:{} http://stackoverflow.com/questions/13872273/api-pagination-best-practices
-			
+
 			var pagingData = {
 				"next":generatePaginationURL(nextQuery,'apis') + "skip=" + nextSkip,
 				"previous":generatePaginationURL(nextQuery,'apis') + "skip=" + previousSkip
@@ -70,13 +77,13 @@ Router.map(function () {
 					  	        	status: "success",
 					  	        	message: "Thank you for your submission."
 					  	        });
-	
+
 			    		  	if(err)
 			    		  		var response = formatResponse({
 					  	        	status: "fail",
 					  	        	message: _.isArray(err.reason) ? err.reason[0].message : err.reason
 					  	        });
-	
+
 			    		  	self.response.end(response);
 			    		});
 		    		}
