@@ -11,7 +11,18 @@ Router.map(function () {
   	action: function(){
   	  this.response.statusCode = 200;
   	  initHeaders(this);
-      var response = '{"status": "success","data": {"links":{"listAPI [GET]": "'+API_PATH +'/apis","addAPI [POST]": "'+API_PATH +'/apis/add","searchAPI [GET]": "'+API_PATH +'/search","listMaintainers [GET]": "'+API_PATH +'/maintainers"}}}';
+      var domain = process.env.ROOT_URL.split('-')[0].replace(/https*:\/\//,'')
+      if(domain == "staging"){
+        domain = "http://staging.apis.io"
+      }else if (domain == "apisio"){
+        domain =  "http://apis.io"
+      }else{
+        domain = process.env.ROOT_URL;
+        domain=domain.substring(0, domain.length - 1);
+      }
+      console.log("DOMAIN",domain)
+
+      var response = '{"status": "success","data": {"links":{"listAPI [GET]": "'+domain+API_PATH +'/apis","addAPI [POST]": "'+domain+API_PATH +'/apis/add","searchAPI [GET]": "'+domain+API_PATH +'/search","listMaintainers [GET]": "'+domain+API_PATH +'/maintainers"}}}';
 	    this.response.end(response);
   	}
   }),
@@ -170,7 +181,7 @@ generatePaginationURL = function(query,path){
   }else if (domain == "apisio"){
     result += "http://apis.io"
   }else{
-    result += process.env.ROOT_URL; 
+    result += process.env.ROOT_URL;
   }
 
   if(process.env.ROOT_URL[process.env.ROOT_URL.length-1] =='/')
@@ -192,6 +203,6 @@ objToURIquery = function(obj){
       console.log("SKIP",obj[index]);
     }
   });
-  
+
   return result;
 }
