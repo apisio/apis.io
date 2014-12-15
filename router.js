@@ -68,6 +68,7 @@ Router.map(function () {
     onBeforeAction: function(){
       Session.set('active', 'lint');
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -80,6 +81,7 @@ Router.map(function () {
     onBeforeAction: function(){
       Session.set('active', 'builder');
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -93,6 +95,7 @@ Router.map(function () {
       Session.set('active', 'about');
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -106,6 +109,7 @@ Router.map(function () {
       Session.set('active', 'apiSearchAPIIndex');
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -119,6 +123,7 @@ Router.map(function () {
       Session.set('active', 'FAQ');
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -132,6 +137,7 @@ Router.map(function () {
       Session.set('active', 'opensource');
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -149,6 +155,7 @@ Router.map(function () {
       Session.set('active', 'addAPI');
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   });
 
@@ -204,6 +211,7 @@ Router.map(function () {
     onBeforeAction:function(){
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     },
   	data: function() {
   		return {
@@ -219,6 +227,7 @@ Router.map(function () {
     onBeforeAction:function(){
       GAnalytics.pageview();
       Meteor.call("sendKeenEvent","pathCollection",{path: this.path});
+      this.next()
     }
   });
 
