@@ -53,7 +53,7 @@ Router.map(function () {
   //TODO /maintainers
   // refactor
 
-  this.route('apiListAPIs', {
+  this.route('apipingAPIs', {
   	path:  API_PATH +"/apis/ping",
   	where: "server",
   	action:function(){

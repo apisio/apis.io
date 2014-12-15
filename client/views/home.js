@@ -31,7 +31,7 @@ Template.home.events({
       e.preventDefault();
       Session.set('apisResult', []);
 
-      var search_val = $("#search_input").val();
+      var search_val = $("#search_input").val().trim();
 
       //add search param to browser url
       var stateObj = { search: search_val };
@@ -64,7 +64,7 @@ Template.home.events({
         if(search_val=="*")
           Session.set("search_keywords"," ");
         else
-          Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
+          Session.set("search_keywords", search_val)//.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\$&")); //taken from atmosphere repo
 
         Session.set("search_tags","")
 
@@ -75,8 +75,6 @@ Template.home.events({
           var keenEvent = {"keywords": Session.get("search_keywords")};
           Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         })
-
-
 
         // console.log("ChhhL",c,keenEvent);
       }
@@ -96,9 +94,24 @@ Template.home.events({
 });
 
 Template.searchForm.rendered = function () {
-  if(!_.isUndefined(Session.get("search_keywords")) || !_.isUndefined(Session.get("search_tags"))) { //load results if search param in URL
-    searchAPI()
-  }
+    // if search param defined in URL
+    // subscribe to collections
+    // load result
+    if(!_.isUndefined(Session.get("search_keywords"))){
+        Meteor.subscribe('APIfilesByKeyword',Session.get("search_keywords"))
+        Meteor.subscribe('apiByKeyword',Session.get("search_keywords"),function(apis){
+          searchAPI()
+          var keenEvent = {"keywords": Session.get("search_keywords")};
+          Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+        })
+    }else if(!_.isUndefined(Session.get("search_tags"))){
+        Meteor.subscribe('apiByKeyword',Session.get("search_tags"),function(apis){
+          Meteor.subscribe('maintainersOfAPIs',apis)
+          searchAPI()
+          var keenEvent = {"keywords_tags": Session.get("search_tags")};
+          Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+        });
+    }
 };
 
 Template.apisList.events({

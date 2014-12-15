@@ -14,12 +14,12 @@ Router.map(function () {
     waitOn: function(){
       // if(this.params.search)
         // return [Meteor.subscribe('apisFiles'),Meteor.subscribe('apis'),Meteor.subscribe('maintainers')];
-        return [Meteor.subscribe('maintainers'),Meteor.subscribe('apisCount')]
+        return [Meteor.subscribe('apisCount'),Meteor.subscribe('maintainersCount')]
     },
     onBeforeAction: function(){
       Session.set('active', 'home');
 
-      var search_val = this.params.search;
+      var search_val = this.params.query.search;
 
       // If search parameter specified
       if(search_val){
@@ -30,8 +30,6 @@ Router.map(function () {
           switch(arr[0]){
             case 'tag':
               Session.set("search_tags", arr[1].trim());
-              // var keenEvent = {"keywords_tags": Session.get("search_tags")};
-              // Meteor.call('sendKeenEvent','searchCollection',keenEvent);
               break;
             default:
               FlashMessages.sendError("Search format is incorrect");
@@ -41,15 +39,13 @@ Router.map(function () {
           if(search_val=="*")
             Session.set("search_keywords"," ");
           else
-            Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
-          // var keenEvent = {"keywords": Session.get("search_keywords")};
-          // Meteor.call('sendKeenEvent','searchCollection',keenEvent);
-          // console.log("ChhhL",c,keenEvent);
+            Session.set("search_keywords", search_val)//.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\$&")); //taken from atmosphere repo
         }
       }
 
       Meteor.call("sendKeenEvent","pathCollection",{path:'/'});
       GAnalytics.pageview();
+      this.next()
     }
   });
 

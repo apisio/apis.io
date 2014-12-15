@@ -59,8 +59,8 @@ Template.navbar.events({
         if(search_val=="*")
           Session.set("search_keywords"," ");
         else
-          Session.set("search_keywords", search_val.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&")); //taken from atmosphere repo
-        
+          Session.set("search_keywords", search_val)//.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\$&")); //taken from atmosphere repo
+
         var keenEvent = {"keywords": Session.get("search_keywords")};
         Meteor.call('sendKeenEvent','searchCollection',keenEvent);
       }

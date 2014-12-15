@@ -49,6 +49,10 @@ Meteor.publish('apisCount',function(){
 	Counts.publish(this, 'apisCount', APIs.find());
 });
 
+Meteor.publish('maintainersCount',function(){
+	Counts.publish(this, 'maintainersCount', Maintainers.find());
+});
+
 Meteor.publish('maintainerCount',function(){
 	return Maintainers.find({}).count()
 });

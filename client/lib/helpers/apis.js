@@ -2,6 +2,10 @@ UI.registerHelper('nbAPIs', function () {
 	return Counts.get('apisCount')
 });
 
+UI.registerHelper('nbMaintainers', function () {
+	return Counts.get('maintainersCount')
+});
+
 UI.registerHelper('displayModifiedDate',function(d){
 	return moment(d).fromNow();
 });
