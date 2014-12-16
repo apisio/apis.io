@@ -27,7 +27,7 @@
       "oneOf": [
         {
           "required": [
-            "name", "description", "baseURL","humanURL", "properties", "contact"
+            "name", "description", "image","baseURL","humanURL", "properties", "contact"
           ],
           "properties": {
             "name": {
@@ -40,7 +40,7 @@
             },
             "image": {
               "type": "string",
-              "description": "URL of an image representing the API" 
+              "description": "URL of an image representing the API"
             },
             "baseURL": {
               "type": "string",

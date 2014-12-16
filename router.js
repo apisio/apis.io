@@ -20,6 +20,11 @@ Router.map(function () {
       Session.set('active', 'home');
 
       var search_val = this.params.query.search;
+      if(this.params.query.limit)
+          Session.set('paging_limit',parseInt(this.params.query.limit,10))
+
+      if(this.params.query.offset)
+          Session.set('paging_skip',parseInt(this.params.query.offset,10))
 
       // If search parameter specified
       if(search_val){

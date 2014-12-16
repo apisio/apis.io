@@ -46,6 +46,9 @@
     {{/each}}
     {{#with apis}}
       {{#if displayMore}}
+        <div class="form-inline form-group rows-per-page">
+          <input id="limitField" style="width:50px;" class="form-control" type="text" value="{{pagingLimit}}"> results per page -
+        </div>
         <a id="displayMore">More results...</a>
       {{/if}}
     {{/with}}

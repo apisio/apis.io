@@ -9,8 +9,10 @@ Template.home.rendered = function () {
     $(".linedwrap").remove()
 
   //init paging values
-  Session.set('paging_skip', 0);
-  Session.set('paging_limit', 5);
+  if(_.isUndefined(Session.get('paging_skip')))
+      Session.set('paging_skip', 0);
+  if(_.isUndefined(Session.get('paging_limit')))
+      Session.set('paging_limit', 5);
 };
 
 Template.home.events({
@@ -137,7 +139,18 @@ Template.apisList.events({
 
     Session.set('paging_skip',skip)
     searchAPI();
-  }
+    },
+    'change #limitField':function(e){
+
+        var limit = parseInt(Session.get('paging_limit'),10) || 5;
+        var skip = parseInt(Session.get('paging_skip'),10) + limit
+        var new_limit = parseInt($("#limitField").val(),10)
+
+        Session.set('paging_limit',new_limit)
+        Session.set('paging_skip',skip)
+        addStateToUrl('limit',new_limit)
+        searchAPI();
+    }
 });
 
 Template.apisList.helpers({
@@ -239,11 +252,23 @@ searchAPI = function () {
         $("#homePageContent").slideDown();
         FlashMessages.sendError("No API was found :(");
       }
-      apisResult = apisResult.concat(result)
+      apisResult = apisResult.concat(result);
       console.log("APIsresult",apisResult);
       Session.set('apisResult',apisResult);
       return apisResult;
     }
     if(Session.equals("search_keywords", "") || Session.equals("search_tags", "value"))
-      Session.set('apisResult',null)
+      Session.set('apisResult',null);
+}
+
+
+// Change query param in URL
+function addStateToUrl(type,value){
+    var uri = new URI(window.location)
+    currentQuery = uri.search(true);
+    console.log(currentQuery)
+    uri.search(function(data) {
+      data[type] = value;
+    });
+    history.pushState({type:value},"",uri.href())
 }

@@ -55,6 +55,7 @@ mongo@1.0.9
 mrt:bootswatch-yeti@0.3.8
 mrt:flash-messages@1.0.0
 mrt:moment@2.6.0
+mrt:uri-js@1.10.2
 npm-container@1.0.0
 observe-sequence@1.0.3
 ordered-dict@1.0.1

@@ -17,7 +17,7 @@ UI.registerHelper('displayKeywords',function(){
 	if(!_.isEmpty(Session.get("search_tags"))){
 		return "tag:"+Session.get("search_tags");
 	}
-	
+
 })
 
 //Display the spec versions supported
@@ -48,3 +48,7 @@ UI.registerHelper('displayMore',function () {
 		return true
 	}
 })
+
+UI.registerHelper('pagingLimit',function(){
+	return Session.get('paging_limit')
+});
