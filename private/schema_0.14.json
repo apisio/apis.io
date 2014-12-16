@@ -15,7 +15,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "name"
+          "description": "name",
+          "minLength":5
         }
       },
       "additionalProperties": {
@@ -32,11 +33,13 @@
           "properties": {
             "name": {
               "type": "string",
-              "description": "name"
+              "description": "name",
+              "minLength":5
             },
             "description": {
               "type": "string",
-              "description": "description of the API"
+              "description": "description of the API",
+              "minLength":5
             },
             "image": {
               "type": "string",
@@ -55,7 +58,8 @@
             "tags": {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "string",
+                "minLength":1
               },
               "description": "tags to describe the API"
             },
@@ -106,20 +110,23 @@
       },
       "properties": {
       	"FN":{
-      		"type":"string"
+      		"type":"string",
+            "minLength":1
       	},
       	"email":{
       		"type":"string",
       		"format" : "email"
       	},
       	"organizationName":{
-      		"type":"string"
+      		"type":"string",
+            "minLength":1
       	},
       	"adr":{
       		"type":"string"
       	},
       	"tel":{
-      		"type":"string"
+      		"type":"string",
+            "minLength":1
       	},
       	"X-twitter":{
       		"type":"string"
@@ -136,8 +143,8 @@
       		"pattern": "^(http)|(https)://(.*)$"
       	},
         "url": {
-          "type": "string",
-          "pattern": "^(http)|(https)://(.*)$"
+            "type": "string",
+            "pattern": "^(http)|(https)://(.*)$"
         }
       }
     },
@@ -167,7 +174,8 @@
       ],
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "minLength":1
         },
         "url": {
           "type": "string",
@@ -182,15 +190,18 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the service described"
+      "description": "The name of the service described",
+      "minLength":5
     },
     "description": {
       "type": "string",
-      "description": "Description of the service"
+      "description": "Description of the service",
+      "minLength":5
     },
     "url": {
       "type": "string",
-      "description": "URL where the apis.json file will live"
+      "description": "URL where the apis.json file will live",
+      "pattern": "^(http)|(https)://(.*)$"
     },
     "image": {
       "type": "string",
