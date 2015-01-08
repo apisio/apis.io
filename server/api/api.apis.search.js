@@ -10,11 +10,12 @@ Router.map(function () {
 	  	path:  API_PATH +"/search",
 	  	where: "server",
 	    onAfterAction: function(){
-	      Meteor.call("sendSimpleKeenEvent","APICallsCollection",{
-	        path: this.path.url,
-	        query: this.request.query,
-	        status: this.response.statusCode
-	      });
+			var self = this
+			Meteor.call("sendSimpleKeenEvent","APICallsCollection",{
+				path: self.path.url,
+				query: self.request.query,
+				status: self.response.statusCode
+			});
 	    },
 	  	action: function(){
 	  		var self = this
@@ -85,12 +86,12 @@ Router.map(function () {
 					delete nextQuery.skip
 					//FIXME asynchronous in generating URI with different skip value
 					//FIXME return paging:{} http://stackoverflow.com/questions/13872273/api-pagination-best-practices
-					
+
 					var pagingData = {
 						"next":generatePaginationURL(nextQuery,'search') + "skip=" + nextSkip,
 						"previous":generatePaginationURL(nextQuery,'search') + "skip=" + previousSkip
 					};
-					
+
 					var response = formatResponse({
 						status: "success",
 						limit: parseInt(limit,10),
