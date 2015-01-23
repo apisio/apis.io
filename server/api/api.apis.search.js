@@ -12,7 +12,7 @@ Router.map(function () {
 	    onAfterAction: function(){
 			var self = this
 			Meteor.call("sendSimpleKeenEvent","APICallsCollection",{
-				path: self.path.url,
+				path: self.url,
 				query: self.request.query,
 				status: self.response.statusCode
 			});
