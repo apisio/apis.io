@@ -24,12 +24,12 @@ Meteor.publish('apiByKeyword',function (keywords) {
 Meteor.publish('maintainersOfAPIs',function(keywords){
 	var urls = []
 	var apis = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},{fields:{apiFileUrl:1}})
-	console.log(apis.count());
+	// console.log(apis.count());
 	apis.forEach(function(api){
 		// if(!urls.indexOf(api.apiFileUrl))
 			urls.push(api.apiFileUrl)
 	})
-	console.log("APIURLS",urls);
+	// console.log("APIURLS",urls);
 	return APIFiles.find({url:{$in: urls}},{fields:{maintainers:1}})
 })
 

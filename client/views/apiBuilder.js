@@ -66,13 +66,15 @@ Template.editorForm.rendered = function () {
           "image": {
             "type": "string",
             "format": "url",
+            "required":true,
             "pattern": "^(http)|(https)://(.*)$",
-            "description": "Image to represent the API"
+            "description": "Image URL to illustrate the API on APIs.io"
           },
           "specificationVersion":{
             "type":"string",
             "enum":["0.14"],
-            "default":"0.14"
+            "default":"0.14",
+            "required":true
           },
           "apis": {
             "type": "array",
@@ -210,7 +212,8 @@ Template.editorForm.rendered = function () {
               },
               "image": {
                 "type": "string",
-                "description": "URL of an image representing the API" 
+                "description": "Image URL to illustrate the API on APIs.io",
+                "required":true
               },
               "baseURL": {
                 "type": "string",
@@ -250,7 +253,7 @@ Template.editorForm.rendered = function () {
           }
         }
       }
-       
+
   });
 
   document.getElementById('submit').addEventListener('click',function() {
