@@ -49,14 +49,11 @@ Template.home.events({
           case 'tag':
             Session.set("search_tags", arr[1].trim());
             Session.set('search_keywords', '');
-
-            Meteor.subscribe('apiByKeyword',Session.get("search_tags"),function(apis){
-              Meteor.subscribe('maintainersOfAPIs',apis)
-              searchAPI()
-              var keenEvent = {"keywords_tags": Session.get("search_tags")};
-              Meteor.call('sendKeenEvent','searchCollection',keenEvent);
-            });
-
+            Meteor.subscribe('apiByTag',Session.get("search_tags"))
+            Meteor.subscribe('maintainersOfAPIs',Session.get("search_tags"))
+            searchAPI()
+            var keenEvent = {"keywords_tags": Session.get("search_tags")};
+            Meteor.call('sendKeenEvent','searchCollection',keenEvent);
             break;
           default:
             FlashMessages.sendError("Search format is incorrect");
@@ -107,11 +104,11 @@ Template.searchForm.rendered = function () {
           Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         })
     }else if(!_.isUndefined(Session.get("search_tags"))){
-        Meteor.subscribe('apiByKeyword',Session.get("search_tags"),function(apis){
-          Meteor.subscribe('maintainersOfAPIs',apis)
-          searchAPI()
-          var keenEvent = {"keywords_tags": Session.get("search_tags")};
-          Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+        Meteor.subscribe('apiByTag',Session.get("search_tags"),function(apis){
+        Meteor.subscribe('APIfilesByKeyword',Session.get("search_tags"))
+        searchAPI()
+        var keenEvent = {"keywords_tags": Session.get("search_tags")};
+        Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         });
     }
 };

@@ -41,7 +41,9 @@ Meteor.publish('APIfilesByKeyword',function(keywords) {
 
 Meteor.publish('apiByTag',function (keywords) {
 	keywords = new RegExp(keywords, "i");
+	// console.log("KEEEE",keywords)
 	var results = APIs.find({tags:keywords})
+	// console.log(results.fetch())
 	return results;
 });
 
