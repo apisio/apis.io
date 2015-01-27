@@ -24,7 +24,7 @@ Template.addNewAPI.events({
                 }
               });
 
-             
+
             }else{
               console.log("validateSchemaFromURL error from frontend",error);
               FlashMessages.sendError(error);
@@ -41,7 +41,7 @@ Template.addNewAPI.events({
       //   return validCard;
       // });
     // });
-    
+
     return false;
   }
 });
@@ -58,7 +58,6 @@ AutoForm.hooks({
 
       var uri = new URI(insertDoc.url);
       console.log(uri);
-      console.log(new URI("hiha/jaijia"));
 
       // //Is the value submitted an url ?
       // var isValidUrl = APIFiles.simpleSchema().namedContext().validateOne({url: insertDoc.url}, "url", {modifier: false});
