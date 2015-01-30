@@ -22,8 +22,8 @@ Meteor.methods({
 		var errors = validator.error;
 
 		console.log("errors",errors);
-		
-		// if vCard field on maintainer 
+
+		// if vCard field on maintainer
 		if(typeof data.maintainers != "undefined" && data.maintainers[0].vCard){
             var validCard = Async.runSync(function(done) {
             	//TODO add error if vcard URL fails
@@ -61,7 +61,7 @@ Meteor.methods({
 					message += err.message.replace(/"/g, '\'').replace('[A-Za-z0-9\\-]','anything') +" at "+ path;
 				});
 			}
-				
+
 			throw new Meteor.Error(400,message);
 		}
 	},
@@ -80,7 +80,7 @@ Meteor.methods({
         if(response.statusCode===200){ //if URL works
         	if(response.headers['content-type'].indexOf("text/plain")== -1 && response.headers['content-type'].indexOf("application/json") == -1){
         		console.log("ERROR content type",response.headers['content-type']);
-        		throw new Meteor.Error(400,"The url should point to an apis.json file.");
+        		throw new Meteor.Error(400,"The url should point to an apis.json file. Wrong content-type, should be text/plain or pplication/json");
         	}
         	if(response.data != null  || response.content !=null){
 	          var data = response.data || JSON.parse(response.content)
