@@ -80,7 +80,7 @@ Meteor.methods({
         if(response.statusCode===200){ //if URL works
         	if(response.headers['content-type'].indexOf("text/plain")== -1 && response.headers['content-type'].indexOf("application/json") == -1){
         		console.log("ERROR content type",response.headers['content-type']);
-        		throw new Meteor.Error(400,"The url should point to an apis.json file. Wrong content-type, should be text/plain or pplication/json");
+        		throw new Meteor.Error(400,"The url should point to an apis.json file. Wrong content-type, should be text/plain or application/json");
         	}
         	if(response.data != null  || response.content !=null){
 	          var data = response.data || JSON.parse(response.content)
