@@ -53,7 +53,7 @@
                             {{#each APItags}}
                                 <a class="api_tag" href="#"><span class="label label-info">{{name}}</span></a>
                             {{/each}}
-                        <div class="links">    
+                        <div class="links">
 	                        <ul>
 								{{#each urls}}
 									<li><span class="glyphicon glyphicon-link"></span><a href="{{url}}">{{type}}</a></li>
@@ -68,13 +68,17 @@
             </div>
           </div>
         </div>
-	
+
 </template>
 
 <template name="oldBlock">
 	<h3>{{name}}</h3>
 	<p>{{description}}</p>
-	<img src="{{image}}" width="150">
+	{{#if image}}
+		<img src="{{ image}}" alt="{{name}} api logo" width="150">
+	{{else}}
+		<img src="/img/default.svg" alt="{{name}} api logo" width="150"/>
+	{{/if}}
 	<ul>
 		{{#each urls}}
 			<li><a href="{{url}}">{{type}}</a></li>
