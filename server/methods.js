@@ -21,7 +21,7 @@ Meteor.methods({
           APIs.remove(api._id);
         });
 
-        //RELOAD APIs defined 
+        //RELOAD APIs defined
         Meteor.call("loadDataFromJSON",apifile._id,url);
         return 'ok'
       }else{
@@ -47,7 +47,7 @@ Meteor.methods({
           console.log("EXISTING",bookfileID)
         }else{
           var bookfileID = APIFiles.insert({url: url}); // insert new Object in DB
-        } 
+        }
 
         // iterate on keys of json file
         for (var key in api) {
@@ -108,7 +108,7 @@ Meteor.methods({
          APIs.update({_id:currentID},{$set:{
           createdAt: new Date()
          }})
-      } 
+      }
 
       // iterate on keys of json file
       for (var key in api) {
@@ -130,7 +130,7 @@ Meteor.methods({
       if(process.env.ENV!="DEV"){
         Meteor.call('sendYo',api.name); //send a YO
       }
-      
+
     },
     createAuthor: function(author){
       console.log("create author called",author);
@@ -138,12 +138,12 @@ Meteor.methods({
         var current = Maintainers.findOne({$or:[{FN: author.FN},{organizationName:author.organizationName}]});
       else
         var current = Maintainers.findOne({FN: author.FN});
-      
+
       if(current){
         var currentID = current._id;
       }else{
         var currentID = Maintainers.insert({});// insert new Object in DB
-      } 
+      }
 
       // iterate on keys of json file
       for (var key in author) {
@@ -312,7 +312,7 @@ Meteor.methods({
       }else{
         throw new Meteor.Error(400, "Wrong Captcha");
       }
-      
+
     },
     insertFromUrl: function(url){
       //Valid format first calling validateFormatFromURL
@@ -354,7 +354,7 @@ Meteor.methods({
         console.log(e);
         if(e.reason[0].type=="keyNotInSchema")
           throw new Meteor.Error(e.error,"API.json format error, "+e.reason[0].name+" not allowed by the schema");
-        
+
         throw new Meteor.Error(e.error, e.reason);
       }
 
@@ -362,7 +362,7 @@ Meteor.methods({
     validateFormat:function(api){
       try{
           var context = APIFiles.simpleSchema().namedContext('myContext');
-          
+
           if(typeof api === 'object'){
             var valid = context.validate(api);
           }else{
@@ -374,7 +374,7 @@ Meteor.methods({
           }else{
             var invalidKeys = context.invalidKeys();
             if(_.isArray(invalidKeys)){
-              //if multiple keys are invalid, 
+              //if multiple keys are invalid,
               var err = _.map(invalidKeys,function(k){
                 if(k.type ="keyNotInSchema")
                   return k.message.replace(/null/,k.name); //FIXME in autoform ?
@@ -392,7 +392,7 @@ Meteor.methods({
         }else{
           if(e.reason[0].type=="keyNotInSchema")
             throw new Meteor.Error(e.error,"API.json format error, '"+e.reason[0].name+"' not allowed by the schema");
-          
+
           throw new Meteor.Error(e.error, e.reason);
         }
       }
