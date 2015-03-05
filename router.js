@@ -208,7 +208,7 @@ Router.map(function () {
   	path: '/maintainers/:slug',
   	template: 'maintainerShow',
     waitOn: function(){
-      return [Meteor.subscribe('maintainer',this.params.slug),Meteor.subscribe('apisFiles')];
+      return [Meteor.subscribe('maintainer',this.params.slug),Meteor.subscribe('apisFilesByMaintainer',this.params.slug)];
     },
     yieldTemplates: {
       'navbar': {to: 'navbar'},

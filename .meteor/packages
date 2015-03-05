@@ -27,3 +27,5 @@ mrt:uri-js
 
 momentjs:moment
 wizonesolutions:underscore-string
+msavin:mongol
+raix:handlebar-helpers

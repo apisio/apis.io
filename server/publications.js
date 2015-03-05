@@ -2,6 +2,10 @@ Meteor.publish('apisFiles',function(){
 	return APIFiles.find({},{fields:{url:1,maintainers:1}}); //reduce the load to the fields we are using
 });
 
+Meteor.publish('apisFilesByMaintainer',function(maintainerSlug){
+	return APIFiles.find({$or:[{"maintainers.slug": maintainerSlug},{"maintainer.slug": maintainerSlug}]},{fields:{url:1,maintainers:1,apis:1,name:1}})
+});
+
 Meteor.publish('apisFile',function(slug){
 	return APIFiles.find({slug:slug});
 });
