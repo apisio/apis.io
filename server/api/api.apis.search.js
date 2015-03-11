@@ -6,9 +6,10 @@
 var API_PATH = Meteor.settings.public.API_PATH
 
 Router.map(function () {
-	this.route('searchAPIs', {
+	this.route('api.apis.search', {
 	  	path:  API_PATH +"/search",
 	  	where: "server",
+		controller: 'APIcontroller',
 	    onAfterAction: function(){
 			var self = this
 			Meteor.call("sendSimpleKeenEvent","APICallsCollection",{

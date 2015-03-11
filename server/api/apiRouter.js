@@ -5,9 +5,10 @@
 var API_PATH = Meteor.settings.public.API_PATH
 
 Router.map(function () {
-  this.route('apiPath', {
+  this.route('api.index', {
   	path: API_PATH,
   	where: "server",
+	controller: 'APIcontroller',
   	action: function(){
   	  this.response.statusCode = 200;
   	  initHeaders(this);
@@ -27,9 +28,10 @@ Router.map(function () {
   	}
   }),
 
-  this.route('apiDoc',{
+  this.route('api.swagger',{
     path: API_PATH +"/api-doc",
     where:"server",
+    controller: 'APIcontroller',
     action: function(){
       initHeaders(this);
       this.response.setHeader("Access-Control-Allow-Headers", "Content-Type, api_key, Authorization" );
@@ -53,9 +55,10 @@ Router.map(function () {
   //TODO /maintainers
   // refactor
 
-  this.route('apipingAPIs', {
+  this.route('api.apis.ping', {
   	path:  API_PATH +"/apis/ping",
   	where: "server",
+	controller: 'APIcontroller',
   	action:function(){
  		  initHeaders(this);
   		//POST with {"url":"http://foo.bar/myapi.json"}

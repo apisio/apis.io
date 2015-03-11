@@ -6,9 +6,10 @@
 var API_PATH = Meteor.settings.public.API_PATH
 
 Router.map(function () {
-	this.route('apiListAPIs', {
+	this.route('api.apis.list', {
   	path:  API_PATH +"/apis",
   	where: "server",
+	controller: 'APIcontroller',
   	action: function(){
   		var self = this
 	  	initHeaders(self);

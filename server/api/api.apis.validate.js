@@ -6,9 +6,10 @@
 var API_PATH = Meteor.settings.public.API_PATH
 
 Router.map(function () {
-	this.route('apiValidate', {
+	this.route('api.apis.validate', {
   	path:  API_PATH +"/validate",
   	where: "server",
+	controller: 'APIcontroller',
   	action: function(){
   		var self = this
 	  	initHeaders(self);
@@ -25,7 +26,7 @@ Router.map(function () {
 	    		try{
 	    			var result = Meteor.call('validateSchemaFromURL',self.request.body.url,"0.14")
 	    			if(result == "valid"){
-		    		    
+
 	    		  		var response = formatResponse({
 			  	        	status: "success",
 			  	        	message: "valid"

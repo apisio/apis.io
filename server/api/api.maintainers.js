@@ -1,9 +1,10 @@
 var API_PATH = Meteor.settings.public.API_PATH
 
 Router.map(function () {
-	this.route('apiListMaintainers', {
+	this.route('api.maintainers.list', {
   	path:  API_PATH +"/maintainers/",
   	where: "server",
+	controller: 'APIcontroller',
   	action:function(){
   	  initHeaders(this);
   	  if (this.request.method == 'GET') {
@@ -22,7 +23,7 @@ Router.map(function () {
         // OPTIONS
         this.response.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
         this.response.end("OPTIONS Response");
-      } 
+      }
 	}
   });
 })
