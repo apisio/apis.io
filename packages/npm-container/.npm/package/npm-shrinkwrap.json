@@ -1,5 +1,24 @@
 {
   "dependencies": {
+    "3scale": {
+      "version": "0.5.0",
+      "dependencies": {
+        "libxmljs": {
+          "version": "0.13.0",
+          "dependencies": {
+            "bindings": {
+              "version": "1.1.1"
+            },
+            "nan": {
+              "version": "1.5.1"
+            }
+          }
+        },
+        "qs": {
+          "version": "2.3.3"
+        }
+      }
+    },
     "URIjs": {
       "version": "1.13.1"
     },

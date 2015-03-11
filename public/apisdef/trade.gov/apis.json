@@ -1,0 +1,222 @@
+{
+  "name": "Trade APIs",
+  "description": "This is an inventory of APIs available at the International Trade Administration",
+  "image": "http://developer.trade.gov/images/trade_url_white2.png",
+  "tags": [
+    "Market Research Library",
+    "ITA Offices & Centers",
+    "Trade Events",
+    "Trade Leads",
+    "Trade News & Articles"
+  ],
+  "created": "2014-10-02",
+  "modified": "2014-10-02",
+  "url": "http://localhost:3000/apisdef/trade.gov/apis.json",
+  "specificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "Market Research Library",
+      "description": "This API provides metadata for country and industry reports that are produced by ITA's trade experts and are available in ITA's online market research library. Categorized by country and industry, these reports include: Market Research Reports, Best Market Reports, and Country Commercial Guides.",
+      "image": "http://developer.trade.gov/images/trade_url_white2.png",
+      "humanURL": "http://developer.trade.gov/market-research-library.html",
+      "baseURL": "http://developer.trade.gov/market-research-library.html",
+      "tags": [
+        "Trade",
+        "ITA",
+        "Market Research Reports",
+        "Best Market Reports",
+        "Country Commercial Guides",
+        "API"
+      ],
+      "properties": [
+       {
+          "type": "X-Portal",
+          "url": "http://developer.trade.gov/market-research-library.html"
+        },
+        {
+          "type": "X-Documentation",
+          "url": "http://developer.trade.gov/market-research-library.html"
+        },
+        {
+          "type": "Swagger",
+          "url": "http://developer.trade.gov.apievangelist.com/definitions/market-research-library.json"
+        },
+        {
+          "type": "TermsOfService",
+          "url": "http://developer.trade.gov/tos.html"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Market Research Library API",
+          "email": "DataServices@trade.gov"
+        }
+      ]
+    },
+    {
+      "name": "ITA Offices & Centers",
+      "description": "This API provides contact and address information for all of ITA's domestic and international export assistance centers. Incorporating these listings into directories of business counseling services is one example of how developers can use this API to assist exporters.",
+      "image": "http://developer.trade.gov/images/trade_url_white2.png",
+      "humanURL": "http://developer.trade.gov/ita-office-locations.html",
+      "baseURL": "http://developer.trade.gov/ita-office-locations.html",
+      "tags": [
+      	"Trade",
+      	"ITA",
+        "centers",
+        "address",
+        "API"
+      ],
+      "properties": [
+      {
+          "type": "X-Portal",
+          "url": "http://developer.trade.gov/ita-office-locations.html"
+        },
+        {
+          "type": "X-Documentation",
+          "url": "http://developer.trade.gov/ita-office-locations.html"
+        },
+        {
+          "type": "Swagger",
+          "url": "http://developer.trade.gov.apievangelist.com/definitions/ita-office-locations.json"
+        },
+        {
+          "type": "TermsOfService",
+          "url": "http://developer.trade.gov/tos.html"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "ITA Offices & Centers API",
+          "email": "DataServices@trade.gov"
+        }
+      ]
+    },
+    {
+      "name": "Trade Events",
+      "description": "The Trade Events API provides data on events for U.S. businesses interested in selling their products and services overseas. These events include industry conferences, webinars, lectures and trade missions organized by the U.S. Dept. of Commerce. Developers can use this API to keep businesses aware of the latest events in their industry or location.",
+      "image": "http://developer.trade.gov/images/trade_url_white2.png",
+      "humanURL": "http://developer.trade.gov/trade-events.html",
+      "baseURL": "http://developer.trade.gov/trade-events.html",
+      "tags": [
+      	"Trade",
+      	"ITA",
+        "news",
+        "articles",
+        "API"
+      ],
+      "properties": [
+     {
+          "type": "X-Portal",
+          "url": "http://developer.trade.gov/trade-events.html"
+        },
+        {
+          "type": "X-Documentation",
+          "url": "http://developer.trade.gov/trade-events.html"
+        },
+        {
+          "type": "Swagger",
+          "url": "http://developer.trade.gov.apievangelist.com/definitions/trade-events.json"
+        },
+        {
+          "type": "TermsOfService",
+          "url": "http://developer.trade.gov/tos.html"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Trade Events API",
+          "email": "DataServices@trade.gov"
+        }
+      ]
+    },
+    {
+      "name": "Trade Leads",
+      "description": "The Trade Leads API provides contract opportunities for U.S. businesses selling their products and services overseas.",
+      "image": "http://developer.trade.gov/images/trade_url_white2.png",
+      "humanURL": "http://developer.trade.gov/trade-leads.html",
+      "baseURL": "http://developer.trade.gov/trade-leads.html",
+      "tags": [
+      	"Trade",
+      	"ITA",
+        "leads",
+        "opportunities",
+        "products",
+        "services",
+        "API"
+      ],
+      "properties": [
+       {
+          "type": "X-Portal",
+          "url": "http://developer.trade.gov/trade-leads.html"
+        },
+        {
+          "type": "X-Documentation",
+          "url": "http://developer.trade.gov/trade-leads.html"
+        },
+        {
+          "type": "Swagger",
+          "url": "http://developer.trade.gov.apievangelist.com/definitions/trade-leads.json"
+        },
+        {
+          "type": "TermsOfService",
+          "url": "http://developer.trade.gov/tos.html"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Trade Leads API",
+          "email": "DataServices@trade.gov"
+        }
+      ]
+    },
+    {
+      "name": "Trade News & Articles",
+      "description": "The Trade News & Articles API provides in-depth news and articles written by Trade Specialists working in the Federal government.",
+      "image": "http://developer.trade.gov/images/trade_url_white2.png",
+      "humanURL": "http://developer.trade.gov/trade-news-articles.html",
+      "baseURL": "http://developer.trade.gov/trade-news-articles.html",
+      "tags": [
+      	"Trade",
+      	"ITA",
+        "events",
+        "conferences",
+        "webinars",
+        "lectures",
+        "trade missions",
+        "API"
+      ],
+      "properties": [
+        {
+          "type": "X-Portal",
+          "url": "http://developer.trade.gov/trade-news-articles.html"
+        },
+        {
+          "type": "X-Documentation",
+          "url": "http://developer.trade.gov/trade-news-articles.html"
+        },
+        {
+          "type": "Swagger",
+          "url": "http://developer.trade.gov.apievangelist.com/definitions/trade-news-articles.json"
+        },
+        {
+          "type": "TermsOfService",
+          "url": "http://developer.trade.gov/tos.html"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Trade News & Articles API",
+
+          "email": "DataServices@trade.gov"
+        }
+      ]
+    }
+  ],
+  "include": [],
+  "maintainers": [
+    {
+      "FN": "Trade APIs",
+      "email": "DataServices@trade.gov"
+    }
+  ]
+}

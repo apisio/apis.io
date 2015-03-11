@@ -17,7 +17,7 @@ UI.registerHelper('displayKeywords',function(){
 	if(!_.isEmpty(Session.get("search_tags"))){
 		return "tag:"+Session.get("search_tags");
 	}
-	
+
 })
 
 //Display the spec versions supported
@@ -34,4 +34,21 @@ UI.registerHelper('displaySpecVersions',function(){
 
 UI.registerHelper('specVersions',function(){
 	return Meteor.settings.public.specVersions;
+});
+
+//Reach end of results to displayKeywords
+UI.registerHelper('displayMore',function () {
+	var skip = Session.get('paging_skip');
+	var limit = Session.get('paging_limit');
+	var total = Session.get('paging_total');
+
+	if(skip >= (total-limit)){ //reached the limit
+		return false
+	}else{
+		return true
+	}
+})
+
+UI.registerHelper('pagingLimit',function(){
+	return Session.get('paging_limit')
 });

@@ -1,5 +1,9 @@
 UI.registerHelper('nbAPIs', function () {
-	return APIs.find().count();
+	return Counts.get('apisCount')
+});
+
+UI.registerHelper('nbMaintainers', function () {
+	return Counts.get('maintainersCount')
 });
 
 UI.registerHelper('displayModifiedDate',function(d){
@@ -24,6 +28,12 @@ UI.registerHelper('getAPIFile',function (url){
 	if(apiFile)
 		return apiFile;
 });
+
+UI.registerHelper('getMaintainerOfAPIfile',function (url) {
+	var apiFile = APIFiles.findOne({url:url},{fields:{maintainers:1}});
+	if(apiFile)
+		return apiFile;
+})
 
 UI.registerHelper('displayAPIImage',function(){
 	if(this.image)

@@ -14,7 +14,9 @@
       ],
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "name",
+          "minLength":5
         }
       },
       "additionalProperties": {
@@ -26,43 +28,54 @@
       "oneOf": [
         {
           "required": [
-            "name", "description", "baseURL","humanURL", "properties", "contact"
+            "name", "description", "image","baseURL","humanURL", "properties", "contact"
           ],
           "properties": {
             "name": {
-              "type": "string"
+              "type": "string",
+              "description": "name",
+              "minLength":5
             },
             "description": {
-              "type": "string"
+              "type": "string",
+              "description": "description of the API",
+              "minLength":5
             },
             "image": {
-              "type": "string"
+              "type": "string",
+              "description": "URL of an image representing the API"
             },
             "baseURL": {
               "type": "string",
-              "pattern": "^(http)|(https)://(.*)$"
+              "pattern": "^(http)|(https)://(.*)$",
+              "description": "baseURL"
             },
             "humanURL": {
               "type": "string",
-              "pattern": "^(http)|(https)://(.*)$"
+              "pattern": "^(http)|(https)://(.*)$",
+              "description": "humanURL"
             },
             "tags": {
               "type": "array",
               "items": {
-                "type": "string"
-              }
+                "type": "string",
+                "minLength":1
+              },
+              "description": "tags to describe the API"
             },
             "properties": {
               "type": "array",
               "items": {
                 "$ref": "#/definitions/urls"
-              }
+              },
+              "description": "URLs"
             },
             "contact": {
               "type": "array",
               "items": {
                 "$ref": "#/definitions/contact"
-              }
+              },
+              "description": "Contact to reach if questions about API"
             },
             "meta": {
               "type": "array",
@@ -97,20 +110,23 @@
       },
       "properties": {
       	"FN":{
-      		"type":"string"
+      		"type":"string",
+            "minLength":1
       	},
       	"email":{
       		"type":"string",
       		"format" : "email"
       	},
       	"organizationName":{
-      		"type":"string"
+      		"type":"string",
+            "minLength":1
       	},
       	"adr":{
       		"type":"string"
       	},
       	"tel":{
-      		"type":"string"
+      		"type":"string",
+            "minLength":1
       	},
       	"X-twitter":{
       		"type":"string"
@@ -127,8 +143,8 @@
       		"pattern": "^(http)|(https)://(.*)$"
       	},
         "url": {
-          "type": "string",
-          "pattern": "^(http)|(https)://(.*)$"
+            "type": "string",
+            "pattern": "^(http)|(https)://(.*)$"
         }
       }
     },
@@ -158,7 +174,8 @@
       ],
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "minLength":1
         },
         "url": {
           "type": "string",
@@ -173,52 +190,64 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the service described"
+      "description": "The name of the service described",
+      "minLength":5
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "description": "Description of the service",
+      "minLength":5
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "description": "URL where the apis.json file will live",
+      "pattern": "^(http)|(https)://(.*)$"
     },
     "image": {
-      "type": "string"
+      "type": "string",
+      "description": "Image to represent the API"
     },
    "created":{
       "type":"string",
-      "format":"date"
+      "format":"date",
+      "description": "Date when the file was created"
     },
    "modified":{
       "type":"string",
-      "format":"date"
+      "format":"date",
+      "description": "Date when the file was modified"
     },
     "specificationVersion":{
-      "type":"string"
+      "type":"string",
+      "description": "APIs.json spec version, latest is 0.14"
     },
     "apis": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/apis"
-      }
+      },
+      "description":"All the APIs of this service"
     },
     "maintainers": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/contact"
-      }
+      },
+      "description": "Maintainers of the apis.json file"
     },
     "tags": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/tags"
-      }
+      },
+      "description": "Tags to describe the service"
     },
    "include": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/include"
-      }
-    },
-    "definitions": {}
+      },
+      "description": "Links to other apis.json definitions included in this service"
+    }
   }
 }

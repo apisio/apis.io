@@ -1,0 +1,94 @@
+<template name="apisio.api.doc">
+	<h1>APIs.io API</h1>
+	<p>You can use our v1 API to get and add data to APIs.io</p>
+	<p>Root domain for the API is http://apis.io/api/</p>
+	<h2>APIs</h2>
+	<div>
+		<h4>GET /apis</h4>
+		<p>List all the APIs available</p>
+		<code>
+			curl -X GET http://apis.io/api/apis
+		</code>
+		<script src="https://gist.github.com/picsoung/b3559de1c514c5bcda0d.js"></script>
+	</div>
+	<div>
+		<h4>POST /apis</h4>
+		<p>Add a new apis.json file to the search engine</p>
+		<p>Request format <code>{"url":"http://mydomain.com/apis.json"}</code></p>
+		<code>
+			curl -X POST http://apis.io/api/apis -d {"url":"http://mydomain.com/apis.json"}
+		</code>
+	</div>
+	<div>
+		<h4>GET /search</h4>
+		<p>Search for apis</p>
+		<code>
+			curl -X GET http://apis.io/api/search
+		</code>
+		<br /><br /><br />
+		<table class="table table-striped table-bordered">
+			<thead>
+				<th>Parameter</th>
+				<th>Required</th>
+				<th>Example</th>
+				<th>Description</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>q</td>
+					<td>yes</td>
+					<td><code>q=images</code></td>
+					<td>keyword to search for</td>
+				</tr>
+				<tr>
+					<td>fields</td>
+					<td>no</td>
+					<td><code>fields=name,description</code></td>
+					<td>Fields to be returned in results</td>
+				</tr>
+				<tr>
+					<td>sort</td>
+					<td>no</td>
+					<td><code>sort=createAt</code></td>
+					<td>Sort results by a certain field</td>
+				</tr>
+				<tr>
+					<td>swagger</td>
+					<td>no</td>
+					<td><code>swagger=true</code></td>
+					<td>Return APIs that have a swagger spec</td>
+				</tr>
+				<tr>
+					<td>limit</td>
+					<td>no</td>
+					<td><code>limit=10</code></td>
+					<td>Number of results to return</td>
+				</tr>
+				<tr>
+					<td>skip</td>
+					<td>no</td>
+					<td><code>skip=10</code></td>
+					<td>Used in paging, to skip the first # results</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<h4>POST /ping</h4>
+		<p>Update the newest version of a file that's already in the search engine</p>
+		<p>Request format <code>{"url":"http://mydomain.com/apis.json"}</code></p>
+		<code>
+			curl -X POST http://apis.io/api/apis/ping -d {"url":"http://mydomain.com/apis.json"}
+		</code>
+	</div>
+
+	<h2>Maintainers</h2>
+	<div>
+		<h4>GET /maintainers</h4>
+		<p>List all the maintainers of APIs</p>
+		<code>
+			curl -X GET http://apis.io/api/maintainers
+		</code>
+	</div>
+	<br /><br /><br />
+</template>

@@ -23,6 +23,11 @@
 		},
 		"recaptcha":{
 			"privateKey":"YOUR_RECAPTCHA_PRIVATEKEY"
+		},
+		"threeScale":{
+			"app_id":"YOUR_3SCALE_API_ID",
+			"app_key":"YOUR_3SCALE_API_KEY",
+			"provider_key":"YOUR_3SCALE_PROVIDER_KEY"
 		}
 	}
 }

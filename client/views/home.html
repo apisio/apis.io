@@ -8,7 +8,7 @@
           {{> navBarLinks}}
         </ul>
       </div>
-   </div> 
+   </div>
   </div>
   <div class="col-md-12">
     {{> searchForm}}
@@ -26,10 +26,10 @@
         <div style="margin-top:5px; font-size:0.8em;" >
         Ex: <a class="suggested" data-keyword="*" href="#">all</a>, <a class="suggested" data-keyword="evangelist" href="#">evangelist</a>,<a class="suggested" data-keyword="tag:photos" href="#">photo</a>
 
-        <a style="right:20px; position:absolute;" href="{{pathFor 'addAPI'}}"><span class="glyphicon glyphicon-plus-sign"></span>Add API</a>
+        <a style="right:20px; position:absolute;" href="{{pathFor 'apis.new'}}"><span class="glyphicon glyphicon-plus-sign"></span>Add API</a>
 
         </div>
-</li> 
+</li>
         </ul>
     </div>
 </template>
@@ -41,9 +41,17 @@
 
 <template name="apisList">
   <div class="row">
-    {{#each apis}}  
+    {{#each apis}}
         {{> apiLineBlock}}
     {{/each}}
+    {{#with apis}}
+      {{#if displayMore}}
+        <div class="form-inline form-group rows-per-page">
+          <input id="limitField" style="width:50px;" class="form-control" type="text" value="{{pagingLimit}}"> results per page
+        </div>
+        <a id="displayMore">More results...</a>
+      {{/if}}
+    {{/with}}
   </div>
 </template>
 
@@ -51,7 +59,11 @@
   <div class="col-xs-12 col-sm-12 col-md-12 apiResultBlock">
     <div class="row" style="margin-left:0;">
       <div class="col-sm-2 col-md-1 logoDiv">
-        <img src="{{image}}" alt="{{name}} logo" class="group list-group-image api_logo">
+          {{#if image}}
+              <img src="{{image}}" alt="{{name}} logo" class="group list-group-image api_logo">
+          {{else}}
+              <img src="/img/default.svg" alt="{{name}} logo" class="group list-group-image api_logo"/>
+          {{/if}}
       </div>
       <div class="col-sm-4 col-md-5">
         {{> apiLineContent}}
@@ -71,17 +83,12 @@
     {{/if}}
   </h4>
   <span class="glyphicon glyphicon-user"></span>by
-  {{#with getAPIFile apiFileUrl}}
-    {{#if maintainer}}
-      <a href="{{maintainerLink maintainer}}">
-      {{displayMaintainerName maintainer}}</a>|
-    {{else}}
+  {{#with getMaintainerOfAPIfile apiFileUrl}}
       <a href="{{maintainerLink maintainers}}">
       {{displayMaintainerName maintainers}}</a>|
-    {{/if}}
-    <span class="glyphicon glyphicon-calendar"></span>
-    {{displayModifiedDate modified}}
   {{/with}}
+  <span class="glyphicon glyphicon-calendar"></span>
+    {{displayModifiedDate updatedAt}}
   <br />
 </template>
 
@@ -98,7 +105,7 @@
       {{/each}}
     </div>
   </div>
-    <div class="urls">    
+    <div class="urls">
       <ul>
         {{#if urls}}
           {{#each urls}}

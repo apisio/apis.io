@@ -9,13 +9,13 @@ UI.registerHelper('displayMaintainerName', function (m) {
     // return Maintainers.findOne({slug: m}).name;
 });
 
-UI.registerHelper('nbMaintainers', function () {
-	return Maintainers.find().count();
-});
+// UI.registerHelper('nbMaintainers', function () {
+// 	return Maintainers.find().count();
+// });
 
 UI.registerHelper('maintainerLink',function(m){
-	if(!_.isUndefined(m[0].FN)) //since 0.14
-		return "/maintainers/"+Maintainers.findOne({FN:m[0].FN}).slug;
+	// if(!_.isUndefined(m[0].FN)) //since 0.14
+	// 	return "/maintainers/"+m[0].slug;
 
 	return "/maintainers/"+m[0].slug;
 });
