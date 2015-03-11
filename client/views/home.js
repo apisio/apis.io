@@ -105,10 +105,10 @@ Template.searchForm.rendered = function () {
         })
     }else if(!_.isUndefined(Session.get("search_tags"))){
         Meteor.subscribe('apiByTag',Session.get("search_tags"),function(apis){
-        Meteor.subscribe('APIfilesByKeyword',Session.get("search_tags"))
-        searchAPI()
-        var keenEvent = {"keywords_tags": Session.get("search_tags")};
-        Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+            Meteor.subscribe('APIfilesByKeyword',Session.get("search_tags"))
+            searchAPI()
+            var keenEvent = {"keywords_tags": Session.get("search_tags")};
+            Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         });
     }
 };
