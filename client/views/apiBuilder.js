@@ -236,6 +236,7 @@ Template.editorForm.rendered = function () {
               },
               "properties": {
                 "type": "array",
+                "required":true,
                 "items": {
                   "$ref": "#/definitions/urls"
                 },
@@ -244,6 +245,7 @@ Template.editorForm.rendered = function () {
               "contact":{
                 "title":"contact",
                 "type":"array",
+                "required":true,
                 "items":{
                   "$ref": "#/definitions/contact_def",
                   "minItems": 1
