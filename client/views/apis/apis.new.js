@@ -20,7 +20,7 @@ Template.addNewAPI.events({
 
                 if(result_){
                   FlashMessages.sendInfo("Thank you for your submission, it should be added to the Database soon");
-                  Router.go('home');
+                  Router.go('index');
                 }
               });
 
@@ -88,7 +88,7 @@ AutoForm.hooks({
             }
             if(res=="ok"){
               FlashMessages.sendInfo("Thank you for your submission, should be added to the Database soon");
-              Router.go('home');
+              Router.go('index');
             }
           });
         }

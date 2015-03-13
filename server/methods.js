@@ -1,4 +1,4 @@
-var generateSlug = function(name,collection,id){ //FIXME when updating existing object no need to renegerate slug
+generateSlug = function(name,collection,id){ //FIXME when updating existing object no need to renegerate slug
     var new_slug = URLify2(name);
     var exist_api = collection.findOne({slug:new_slug});
     // console.log(name,new_slug,exist_api)
