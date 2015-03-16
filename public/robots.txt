@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow:
+Allow: /
+Disallow: /private
+
+Sitemap: http://apis.io/sitemap.xml
+Sitemap: http://apis.io/allAPIs_sitemap.xml

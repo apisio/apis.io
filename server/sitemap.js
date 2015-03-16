@@ -1,5 +1,7 @@
+sitemaps.ROOT_URL = 'http://apis.io/'
+
 sitemaps.add('/sitemap.xml', function() {
-    var updatedDate = "03/16/2015"
+  var updatedDate = "03/16/2015"
   // required: page
   // optional: lastmod, changefreq, priority, xhtmlLinks, images, videos
   return [
@@ -8,8 +10,7 @@ sitemaps.add('/sitemap.xml', function() {
     { page: '/builder', lastmod: new Date(updatedDate), changefreq: 'monthly'},
     { page: '/apiDoc', lastmod: new Date(updatedDate), changefreq: 'monthly'},
     { page: '/faq', lastmod: new Date(updatedDate), changefreq: 'monthly'},
-    { page: '/about', lastmod: new Date(updatedDate), changefreq: 'monthly'},
-    { page: '/about?jojo', lastmod: new Date(updatedDate), changefreq: 'monthly'}
+    { page: '/about', lastmod: new Date(updatedDate), changefreq: 'monthly'}
   ];
 });
 
