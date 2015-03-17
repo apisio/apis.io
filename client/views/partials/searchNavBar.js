@@ -10,7 +10,7 @@ Template.navbar.events({
 		Session.set('search_keywords','');
 		Session.set('search_tags','')
 
-		Router.go('home',{},{query: 'search='+search_val});
+		Router.go('index',{},{query: 'search='+search_val});
 		$(document).scrollTop(0);
     }
 });
