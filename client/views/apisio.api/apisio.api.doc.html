@@ -14,9 +14,9 @@
 	<div>
 		<h4>POST /apis</h4>
 		<p>Add a new apis.json file to the search engine</p>
-		<p>Request format <code>{"url":"http://mydomain.com/apis.json"}</code></p>
+		<p>Request format (x-www-form-urlencoded) <code>"url=http://mydomain.com/apis.json"</code></p>
 		<code>
-			curl -X POST http://apis.io/api/apis -d {"url":"http://mydomain.com/apis.json"}
+			curl -X POST http://apis.io/api/apis -d "url=http://mydomain.com/apis.json"
 		</code>
 	</div>
 	<div>

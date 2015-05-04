@@ -172,6 +172,7 @@ formatResponse = function(options){
 
 initHeaders = function(endpoint){
 	endpoint.response.setHeader("Content-Type", "application/json");
+    endpoint.response.setHeader("Accept", "application/json");
   endpoint.response.setHeader("Access-Control-Allow-Origin", "*");
   endpoint.response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 }
