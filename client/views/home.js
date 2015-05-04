@@ -225,9 +225,12 @@ searchAPI = function () {
         $("#homePageContent").slideDown();
         FlashMessages.sendError("No API was found :(");
       }
-      apisResult = apisResult.concat(result)
+
+      // merge two arrays and get unique items
+      apisResult = _.uniq(_.union(apisResult, result), false, function(item, key, a){ return item._id; });
       console.log("APIsresult",apisResult);
       Session.set('apisResult',apisResult);
+
     }else if(Session.get("search_tags")){ // if search are for tags
       console.log("TAG SEARCH", Session.get('search_tags'))
       var apisResult = []
