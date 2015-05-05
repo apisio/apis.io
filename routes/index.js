@@ -37,6 +37,8 @@ Router.map(function () {
             else
               Session.set("search_keywords", search_val)//.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\$&")); //taken from atmosphere repo
           }
+        }else{ //load home page
+          Meteor.subscribe('lastFiveAPIsModified')
         }
 
         Meteor.call("sendKeenEvent","pathCollection",{path:'/'});

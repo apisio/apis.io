@@ -12,7 +12,7 @@ Meteor.publish('apisFile',function(slug){
 
 Meteor.publish('apisFileFromAPISlug',function(slug){
 	var api = APIs.findOne({slug:slug});
-	return APIFiles.find({url: api.apiFileURL});
+	return APIFiles.find({url: api.apiFileUrl});
 });
 
 Meteor.publish('APIfilesByKeyword',function(keywords) {

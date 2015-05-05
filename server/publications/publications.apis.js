@@ -8,7 +8,7 @@ Meteor.publish('apis',function(){
 
 Meteor.publish('apiByKeyword',function (keywords) {
 	keywords = new RegExp(keywords, "i");
-	var results = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},{fields:{name:1,keywords:1,tags:1,humanURL:1,apiFileUrl:1,image:1,properties:1,updatedAt:1,authoritative:1}})
+	var results = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]},{fields:{name:1,description:1,keywords:1,tags:1,humanURL:1,apiFileUrl:1,image:1,properties:1,updatedAt:1,authoritative:1}})
 	return results;
 });
 
@@ -17,3 +17,8 @@ Meteor.publish('apiByTag',function (keywords) {
 	var results = APIs.find({tags:keywords})
 	return results;
 });
+
+
+Meteor.publish('lastFiveAPIsModified',function(){
+	return APIs.find({},{limit:5,fields:{name:1,updatedAt:1,apiFileUrl:1,slug:1},sort: {updatedAt: -1}});
+})
