@@ -13,11 +13,7 @@ This project is build using [Meteor](http://meteor.com). Meteor is a framework  
 ## Install your own locally
 
 1. Install Meteor as described [here](https://www.meteor.com/install)
-2. Clone repo locally
-```
-git clone git@github.com:apisio/apis.io.git
-cd apis.io
-```
+2. Clone repo locally `git clone git@github.com:apisio/apis.io.git`
 3. Rename `settings_tpl.json` into `settings.json` and change placeholders values with your own
 4. Launch meteor `meteor --settings settings.json`
 5. Go to `http://localhost:3000/apis/add` and submit the sample data from [API Evangelist](http://apievangelist.com) with URL `http://localhost:3000/samples/evangelist/apis.json`
@@ -28,6 +24,7 @@ You will now have one API listed from one Maintainer.
 To deploy your own version of APIs.io is very easy, they are several platform to host Meteor apps.
 ### On Scalingo
 [Scalingo](http://scalingo.com) is a new Heroku-like service coming from Europe, really easy to use and free up to 3 apps.
+
 1. Create an account on [Scalingo](http://scalingo.com).
 2. Install scalingo command line tool [link](http://cli.scalingo.com/)
 3. Login in your scalingo account with the CLI `scalingo login`

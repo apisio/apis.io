@@ -20,6 +20,7 @@ Template.home.events({
       var search_val = $("#search_input").val();
       if(e.keyCode != 13){ //when start typing and not 'return' key
         Session.set("apisResult", []);
+        Session.set("nb_results",null)
         $("#homePageContent").slideDown();
       }
 
@@ -100,8 +101,8 @@ Template.searchForm.rendered = function () {
         Meteor.subscribe('APIfilesByKeyword',Session.get("search_keywords"))
         Meteor.subscribe('apiByKeyword',Session.get("search_keywords"),function(apis){
           searchAPI()
-          var keenEvent = {"keywords": Session.get("search_keywords")};
-          Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+        //   var keenEvent = {"keywords": Session.get("search_keywords")};
+        //   Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         })
     }else if(!_.isUndefined(Session.get("search_tags"))){
         Meteor.subscribe('apiByTag',Session.get("search_tags"),function(apis){
@@ -179,7 +180,7 @@ searchAPI = function () {
           skip: Session.get('paging_skip') || 0
         });
 
-      var totalResult = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]}).count();
+      var totalResult = result.fetch().length;
 
       Session.set('paging_total', totalResult);
 
@@ -225,9 +226,12 @@ searchAPI = function () {
         $("#homePageContent").slideDown();
         FlashMessages.sendError("No API was found :(");
       }
-      apisResult = apisResult.concat(result)
+
+      // merge two arrays and get unique items
+      apisResult = _.uniq(_.union(apisResult, result), false, function(item, key, a){ return item._id; });
       console.log("APIsresult",apisResult);
       Session.set('apisResult',apisResult);
+
     }else if(Session.get("search_tags")){ // if search are for tags
       console.log("TAG SEARCH", Session.get('search_tags'))
       var apisResult = []

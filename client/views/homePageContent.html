@@ -17,11 +17,30 @@
             </p>
         </div>
         <div class="col-md-6">
-            <h2>Looking for the old APIs.io ?</h2>
-            <p>
-              The directory service that ran here before is still alive - you can find it <a href="http://legacy.apis.io" target="_blank">here</a> and the source code is available <a href ="https://github.com/apisio/legacy.apis.io">here</a>.
-            </p>
-            <p>We’re working hard to add all the APIs that were listed in the previous directory to the new search engine as soon as possible - stay tuned!</p>
+            <table class="table">
+              <caption><h2>Latest APIs added</h2></caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Maintainer</th>
+                  <th>When</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{#each newAPIs}}
+                <tr>
+                  <td><a target ="_parent" href="{{pathFor route='index' query=searchQuery }}">{{name}}</a></td>
+                  <td>
+                      {{#with getMaintainerOfAPIfile apiFileUrl}}
+                          <a href="{{maintainerLink maintainers}}">
+                          {{displayMaintainerName maintainers}}</a>
+                      {{/with}}
+                  </td>
+                  <td>{{ displayModifiedDate updatedAt}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
         </div>
       </div>
     </div>
