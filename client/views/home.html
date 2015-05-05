@@ -39,8 +39,20 @@
   {{> pages}}
 </template>
 
+<template name="resultsStats">
+    {{#if $.Session.get 'apisResult'}}
+    <p style="margin-left: 5px;
+  color: #ccc;
+  font-size: 12px;">
+        {{numberOfResults}} results found for <i><a target ="_parent" href="{{pathFor route='index' query=searchQuery }}">{{request}}</a></i>
+    </p>
+    {{/if}}
+</template>
+
 <template name="apisList">
+
   <div class="row">
+    {{> resultsStats}}
     {{#each apis}}
         {{> apiLineBlock}}
     {{/each}}
