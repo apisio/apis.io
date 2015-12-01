@@ -1,6 +1,6 @@
 {
   "name": "APIs.io",
-  "description": "This is the API to access APIs.io API searcg engine data.",
+  "description": "This is the API to access APIs.io API search engine data.",
   "image": "http://apis.io/logo_square.png",
   "tags": [
     "API",
