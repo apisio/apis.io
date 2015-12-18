@@ -186,24 +186,13 @@ Meteor.methods({
         }
       }
     },
-    validateCaptcha: function(challenge, resp){
-      console.log(challenge,resp)
+    validateCaptcha: function(captchaData){
       var self = this;
       var ip = self.connection.clientAddress;
-      var result = HTTP.post('http://www.google.com/recaptcha/api/verify', {params: {
-        privatekey:Meteor.settings.private.recaptcha.privateKey,
-        remoteip:ip,
-        challenge:challenge,
-        response:resp,
-      }});
-
-      console.log(result);
-
-      if(result.statusCode === 200){
-        if(result.content==="true\nsuccess")
-          return "success";
-
-        //if fails throw error
+      var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(ip, captchaData);
+      if(verifyCaptchaResponse.data.success === true ){
+        return verifyCaptchaResponse.data.success;
+      }else{
         throw new Meteor.Error(400, 'Error 400: Wrong captcha try again');
       }
     }

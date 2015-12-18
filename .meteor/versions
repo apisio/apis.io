@@ -1,6 +1,7 @@
 aldeed:autoform@1.0.0
 aldeed:simple-schema@1.0.2
 aldeed:template-extension@3.4.3
+appshore:recaptcha@2.0.6
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
