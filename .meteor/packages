@@ -10,7 +10,6 @@ aldeed:simple-schema
 iron:router
 meteorhacks:kadira
 datariot:ganalytics
-aldeed:autoform
 mrt:flash-messages
 http
 jparker:crypto-md5
@@ -19,7 +18,6 @@ mrt:bootswatch-yeti
 meteorhacks:npm
 
 
-npm-container
 pfafman:filesaver
 cunneen:json-editor
 tmeasday:publish-counts
@@ -30,3 +28,8 @@ wizonesolutions:underscore-string
 msavin:mongol
 raix:handlebar-helpers
 gadicohen:sitemaps
+
+
+npm-container
+aldeed:autoform
+standard-minifiers

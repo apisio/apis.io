@@ -24,7 +24,8 @@
         <ul class="item-stream unstyled search-input-stream" style="box-shadow: 0px 3px 20px -8px #888"> <li class="stream-item stream-header search-input-item"> <form class=""><input class="xlarge" id="search_input" name="search" placeholder="Search APIs on sms, photo, user etc..." dir="ltr" spellcheck="false" autofocus="" value="{{displayKeywords}}" type="text"> <button class="btn btn-large btn-warning" id="search_submit" type="submit" value="search"> <span class="glyphicon glyphicon-search"></span> </button></form>
 
         <div style="margin-top:5px; font-size:0.8em;" >
-        Ex: <a class="suggested" data-keyword="*" href="#">all</a>, <a class="suggested" data-keyword="evangelist" href="#">evangelist</a>,<a class="suggested" data-keyword="tag:photos" href="#">photo</a>
+        <!-- Ex: <a class="suggested" data-keyword="*" href="#">all</a>, <a class="suggested" data-keyword="evangelist" href="#">evangelist</a>,<a class="suggested" data-keyword="tag:photos" href="#">photo</a> -->
+        &nbsp;
 
         <a style="right:20px; position:absolute;" href="{{pathFor 'apis.new'}}"><span class="glyphicon glyphicon-plus-sign"></span>Add API</a>
 
@@ -107,7 +108,7 @@
 <template name="apiLineLinks">
   <div class="row">
     <div class="col-md-3">
-      <span class="glyphicon glyphicon-tags"></span>Tags :
+      <span class="glyphicon glyphicon-tags"></span>Tags:
     </div>
     <div class="col-md-9">
       {{#each APItags}}

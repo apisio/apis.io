@@ -1,21 +1,21 @@
 {
   "dependencies": {
     "3scale": {
-      "version": "0.5.0",
+      "version": "0.6.1",
       "dependencies": {
         "libxmljs": {
-          "version": "0.13.0",
+          "version": "0.16.1",
           "dependencies": {
             "bindings": {
-              "version": "1.1.1"
+              "version": "1.2.1"
             },
             "nan": {
-              "version": "1.5.1"
+              "version": "2.0.7"
             }
           }
         },
         "qs": {
-          "version": "2.3.3"
+          "version": "5.2.0"
         }
       }
     },
@@ -41,10 +41,10 @@
               "version": "0.3.0",
               "dependencies": {
                 "lru-cache": {
-                  "version": "2.5.0"
+                  "version": "2.7.3"
                 },
                 "sigmund": {
-                  "version": "1.0.0"
+                  "version": "1.0.1"
                 }
               }
             }
@@ -71,13 +71,13 @@
               "version": "0.1.31",
               "dependencies": {
                 "graceful-fs": {
-                  "version": "3.0.3"
+                  "version": "3.0.8"
                 },
                 "inherits": {
                   "version": "2.0.1"
                 },
                 "mkdirp": {
-                  "version": "0.5.0",
+                  "version": "0.5.1",
                   "dependencies": {
                     "minimist": {
                       "version": "0.0.8"
@@ -174,7 +174,7 @@
       "version": "0.0.9",
       "dependencies": {
         "underscore": {
-          "version": "1.7.0"
+          "version": "1.8.3"
         }
       }
     }
