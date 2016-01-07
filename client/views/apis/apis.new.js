@@ -3,7 +3,7 @@ Template.addNewAPI.events({
     e.preventDefault();
     e.stopPropagation();
     var url = $("#fileURL").val();
-    console.log($('#g-recaptcha-response').val());
+    // console.log($('#g-recaptcha-response').val());
     var specVersion = $("#specMenu").val();
       var validCaptcha = Meteor.call("validateCaptcha",$('#g-recaptcha-response').val(),function(err,res){
         if(err){
@@ -104,22 +104,22 @@ AutoForm.hooks({
   }
 });
 
-Template.addNewAPI.rendered = function () {
-  Recaptcha.create("6Lf-3vISAAAAAFzYNRv00qN12UP0f3VOyt66To5r",
-    "recaptchaDiv",
-    {
-      theme: "red",
-      callback: Recaptcha.focus_response_field
-    }
-  );
-};
-
-Template.addAPI.rendered = function () {
-  Recaptcha.create("6Lf-3vISAAAAAFzYNRv00qN12UP0f3VOyt66To5r",
-    "recaptchaDiv",
-    {
-      theme: "red",
-      callback: Recaptcha.focus_response_field
-    }
-  );
-};
+// Template.addNewAPI.rendered = function () {
+//   Recaptcha.create("6Lf-3vISAAAAAFzYNRv00qN12UP0f3VOyt66To5r",
+//     "recaptchaDiv",
+//     {
+//       theme: "red",
+//       callback: Recaptcha.focus_response_field
+//     }
+//   );
+// };
+//
+// Template.addAPI.rendered = function () {
+//   Recaptcha.create("6Lf-3vISAAAAAFzYNRv00qN12UP0f3VOyt66To5r",
+//     "recaptchaDiv",
+//     {
+//       theme: "red",
+//       callback: Recaptcha.focus_response_field
+//     }
+//   );
+// };
