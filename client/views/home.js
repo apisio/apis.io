@@ -12,7 +12,7 @@ Template.home.rendered = function () {
   if(_.isUndefined(Session.get('paging_skip')))
       Session.set('paging_skip', 0);
   if(_.isUndefined(Session.get('paging_limit')))
-      Session.set('paging_limit', 5);
+      Session.set('paging_limit', Meteor.settings.public.paging.results_per_page);
 };
 
 Template.home.events({
@@ -20,7 +20,7 @@ Template.home.events({
       var search_val = $("#search_input").val();
       if(e.keyCode != 13){ //when start typing and not 'return' key
         Session.set("apisResult", []);
-        Session.set("nb_results",null)
+        Session.set('nb_results',0)
         $("#homePageContent").slideDown();
       }
 
@@ -33,6 +33,8 @@ Template.home.events({
     'click #search_submit, form submit':function(e,context) {
       e.preventDefault();
       Session.set('apisResult', []);
+      Session.set('paging_skip', 0);
+      Session.set('paging_limit', Meteor.settings.public.paging.results_per_page);
 
       var search_val = $("#search_input").val().trim();
 
@@ -101,8 +103,8 @@ Template.searchForm.rendered = function () {
         Meteor.subscribe('APIfilesByKeyword',Session.get("search_keywords"))
         Meteor.subscribe('apiByKeyword',Session.get("search_keywords"),function(apis){
           searchAPI()
-        //   var keenEvent = {"keywords": Session.get("search_keywords")};
-        //   Meteor.call('sendKeenEvent','searchCollection',keenEvent);
+          var keenEvent = {"keywords": Session.get("search_keywords")};
+          Meteor.call('sendKeenEvent','searchCollection',keenEvent);
         })
     }else if(!_.isUndefined(Session.get("search_tags"))){
         Meteor.subscribe('apiByTag',Session.get("search_tags"),function(apis){
@@ -132,7 +134,7 @@ Template.apisList.events({
   'click #displayMore':function(e){
     e.preventDefault();
     //Change paging settings and reload results
-    var limit = parseInt(Session.get('paging_limit'),10) || 5;
+    var limit = parseInt(Session.get('paging_limit'),10) || Meteor.settings.public.paging.results_per_page;
     var skip = parseInt(Session.get('paging_skip'),10) + limit
 
     Session.set('paging_skip',skip)
@@ -140,7 +142,7 @@ Template.apisList.events({
     },
     'change #limitField':function(e){
 
-        var limit = parseInt(Session.get('paging_limit'),10) || 5;
+        var limit = parseInt(Session.get('paging_limit'),10) || Meteor.settings.public.paging.results_per_page;
         var skip = parseInt(Session.get('paging_skip'),10) + limit
         var new_limit = parseInt($("#limitField").val(),10)
 
@@ -158,13 +160,54 @@ Template.apisList.helpers({
   },
 });
 
+Template.apisList.rendered = function() {
+  // is triggered every time we scroll
+  $(window).scroll(function() {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+        // alert('bottom')
+        incrementLimit();
+    }
+  });
+}
+
+
+Template.resultsStats.helpers({
+    numberOfResults:function(){
+        return Session.get('paging_total');
+    },
+    request:function(){
+        return Session.get('search_keywords') || Session.get('search_tags')
+    },
+    searchQuery:function(){
+        return 'search='+(Session.get('search_keywords') || Session.get('search_tags'))
+    }
+})
+
+// **** FUNCTIONS *****
+
+var incrementLimit = function(){
+    var skip = Session.get('paging_skip');
+    var limit = Session.get('paging_limit');
+    var total = Session.get('paging_total');
+
+    if(skip >= (total-limit)){ //reached the limit
+        return false
+    }else{
+        limit = parseInt(Session.get('paging_limit'),10) || Meteor.settings.public.paging.results_per_page;
+        skip = parseInt(Session.get('paging_skip'),10) + limit
+
+        Session.set('paging_skip',skip)
+        searchAPI();
+    }
+}
+
 // find regExp in Array
-containsRegExp = function (collection, regex) {
+var containsRegExp = function (collection, regex) {
     return _.filter(collection, function(obj){ return obj.match(regex);});
 };
 
 // Function called to search in API database
-searchAPI = function () {
+var searchAPI = function () {
   if(Session.get("search_keywords")){
       keywords = new RegExp(Session.get("search_keywords"), "i");
 
@@ -176,11 +219,11 @@ searchAPI = function () {
         {$or:[{name:keywords},{description:keywords},{tags:keywords}]},
         {
           sort: {updatedAt: 1},
-          limit: Session.get('paging_limit') || 5,
+          limit: Session.get('paging_limit') || Meteor.settings.public.paging.results_per_page,
           skip: Session.get('paging_skip') || 0
         });
 
-      var totalResult = result.fetch().length;
+      var totalResult = APIs.find({$or:[{name:keywords},{description:keywords},{tags:keywords}]}).count();
 
       Session.set('paging_total', totalResult);
 
@@ -241,7 +284,7 @@ searchAPI = function () {
       keywords = new RegExp(Session.get("search_tags"), "i");
       result = APIs.find({tags:keywords}, {
           sort: {updatedAt: 1},
-          limit: Session.get('paging_limit') || 5,
+          limit: Session.get('paging_limit') || Meteor.settings.public.paging.results_per_page,
           skip: Session.get('paging_skip') || 0
         }).fetch();
       Session.set('nb_results',result.length)

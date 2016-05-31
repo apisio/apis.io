@@ -23,14 +23,14 @@
         <legend>Add an apis.json file</legend>
         <p>APIs.json format version(s) accepted: {{{displaySpecVersions}}}</p>
         <div class="form-group">
-            <label class="control-label" for="url">url (Web URL indicating the location of the latest version of this file)</label>
+            <label class="control-label" for="url">URL (web URL indicating the location of the latest version of this file)</label>
             <input type="url" name="url" id="fileURL" required="" data-schema-key="url" class="form-control">
             <span class="help-block"></span>
         </div>
         <label>Select the APIs.json spec. version</label>
         {{> selectSpecVersions}}
     </fieldset>
-    <div id="recaptchaDiv"></div>
+		{{> reCAPTCHA id='captcha2'}}
     <button type="submit" class="btn btn-primary">Insert</button>
   </form>
 </template>
